@@ -12,7 +12,7 @@ import Dashboard from './pages/users/Dashboard';
 import Wallets from './pages/Financials/wallets/Wallets';
 import Wallet from './pages/Financials/wallets/Wallet';
 import UserTransactions from './pages/Financials/transaction/UserTransactions';
-import Layout from './pages/Users/Layout';
+import Layout from './pages/Layout';
 
 const App = () => {
   return (
