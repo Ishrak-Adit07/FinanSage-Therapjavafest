@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import GradualText from "../../components/TextAnimations/GradualText";
-import Subscribe from "../../components/buttons/Subscribe";
+import Subscribe from "../../components/Buttons/Subscribe";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
