@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from "framer-motion";
-import Subscribe from '../../../components/buttons/Subscribe';
+import Subscribe from '../../../components/Buttons/Subscribe';
 
 const gridSquareVariants = {
     hidden: { opacity: 0 },
