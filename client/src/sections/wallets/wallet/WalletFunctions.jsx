@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import Subscribe from "../../../components/buttons/Subscribe";
 import { useNavigate } from "react-router-dom";
+import Subscribe from "../../../components/Buttons/Subscribe";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
