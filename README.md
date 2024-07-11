@@ -8,7 +8,7 @@ FinanSage-Therapjavafest is a web application designed for personal finance mana
 - **Frontend:** ReactJS
 
 ### Database
-- **MongoDB**
+- MongoDB
 
 ### Architecture
-- **Microservices**
+- Microservices

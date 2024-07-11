@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from '../../../constants';
-import TransactionIcon from '../../../components/cards/Transaction.icon';
-import Subscribe from '../../../components/buttons/Subscribe';
-import ToggleButton from '../../../components/buttons/ToggleButton';
+import TransactionIcon from '../../../components/Cards/Transaction.icon';
+import ToggleButton from '../../../components/Buttons/ToggleButton';
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
