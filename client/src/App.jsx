@@ -5,7 +5,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AuthRoutes from './routesProtection/AuthRoutes';
 import GuestRoutes from './routesProtection/GuestRoutes';
 
-import Layout from './pages/Layout';
 import Login from './pages/users/Login';
 import Register from './pages/users/Register';
 import Home from './pages/Home';
@@ -13,6 +12,7 @@ import Dashboard from './pages/users/Dashboard';
 import Wallets from './pages/Financials/wallets/Wallets';
 import Wallet from './pages/Financials/wallets/Wallet';
 import UserTransactions from './pages/Financials/transaction/UserTransactions';
+import Layout from './pages/Users/Layout';
 
 const App = () => {
   return (
