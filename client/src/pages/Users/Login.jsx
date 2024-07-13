@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
 import Alert from '../../messages/Alert';
 import { loginUser } from '../../controllers/user.controller';
+import LoginForm from '../../components/Forms/LoginForm';
 
 const Login = () => {
 
@@ -54,24 +55,7 @@ const Login = () => {
 
         <h1 className="title">Login to your account</h1>
 
-        <form onSubmit={handleLogin} className="justify-center items-center h-screen">
-
-            <input type="email" 
-                   placeholder="Email address" 
-                   className="input" 
-                   autoFocus 
-                   value={email} 
-                   onChange={(e) => setEmail(e.target.value)} />
-
-            <input type="password"
-                   placeholder="Password" 
-                   className="input" 
-                   value={password}
-                   onChange={(e) => setPassword(e.target.value)} />
-
-            <button type="submit" className="btn">Login</button>
-            {error && <Alert msg={error}/>}
-        </form>
+        <LoginForm />
 
     </section>
   );
