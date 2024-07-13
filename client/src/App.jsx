@@ -15,6 +15,7 @@ import Login from './pages/Users/Login';
 import Register from './pages/Users/Register';
 import Dashboard from './pages/Users/Dashboard';
 import Profile from './pages/Users/Profile';
+import CreateWallet from './pages/Financials/wallets/CreateWallet';
 
 const App = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
             <Route path="user/dashboard" element={<Dashboard />} />
             <Route path="user/profile" element={<Profile />} />
             <Route path="user/wallets" element={<Wallets />} />
-            <Route path="/walletDetails/:title" element={<Wallet />} />
+            <Route path="/wallet/details/:title" element={<Wallet />} />
+            <Route path="/wallet/create" element={<CreateWallet />} />
             <Route path="user/transactions" element={<UserTransactions />} />
 
           </Route>

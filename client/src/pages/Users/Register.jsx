@@ -76,14 +76,12 @@ const Register = () => {
             <input type="text" 
                    placeholder="Last name" 
                    className="input" 
-                   autoFocus 
                    value={formData.lastName} 
                    onChange={(e)=>{setFormData({...formData, lastName: e.target.value})}} />
 
             <input type="email" 
                    placeholder="Email address" 
                    className="input" 
-                   autoFocus 
                    value={formData.email} 
                    onChange={(e)=>{setFormData({...formData, email: e.target.value})}} />
 

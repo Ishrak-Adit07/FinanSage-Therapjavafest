@@ -47,7 +47,7 @@ const WalletCard = ({ Title, Balance, GithubLink, Description, TechStack }) => {
                         <div className="flex justify-start mb-2">
                           <Link 
                             title="See wallet details"
-                            to={`/walletDetails/${Title}`}
+                            to={`/wallet/details/${Title}`}
                             className="text-white hover:underline"
                           >
                             View details

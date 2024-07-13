@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import Subscribe from '../../../components/Buttons/Subscribe';
+import { useNavigate } from 'react-router-dom';
 
 const gridSquareVariants = {
     hidden: { opacity: 0 },
@@ -10,8 +11,10 @@ const gridSquareVariants = {
 
 const WalletCreate = () => {
 
+  const navigate = useNavigate();
+
   const handleCreateWalletButton = () =>{
-    console.log("Go to create wallet page");
+    navigate("/wallet/create");
   }
 
   return (
