@@ -14,6 +14,7 @@ import Layout from './pages/Layout';
 import Login from './pages/Users/Login';
 import Register from './pages/Users/Register';
 import Dashboard from './pages/Users/Dashboard';
+import Profile from './pages/Users/Profile';
 
 const App = () => {
   return (
@@ -26,8 +27,9 @@ const App = () => {
           <Route index element={<Home />} />
 
           <Route element={<AuthRoutes />}>
-    
+
             <Route path="user/dashboard" element={<Dashboard />} />
+            <Route path="user/profile" element={<Profile />} />
             <Route path="user/wallets" element={<Wallets />} />
             <Route path="/walletDetails/:title" element={<Wallet />} />
             <Route path="user/transactions" element={<UserTransactions />} />

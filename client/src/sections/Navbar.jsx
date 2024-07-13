@@ -45,6 +45,7 @@ const Navbar = ({scrollToAboutMe, scrollToProjects, scrollToContact}) => {
 
                 {user.email ? (
                     <div className="flex items-center gap-2">
+                        <Link title="Profile" to="user/profile" className="fa-solid fa-user nav-link"></Link>
                         <Link title="Dashboard" to="user/dashboard" className="fa-solid fa-user nav-link"></Link>
                         <Link title="Wallets" to="user/wallets" className="fa-solid fa-circle-plus nav-link"></Link>
                         <button title='Log out' onClick={handleLogOut} className='fa-solid fa-right-from-bracket nav-link'></button>

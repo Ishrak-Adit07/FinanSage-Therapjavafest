@@ -18,6 +18,8 @@ const Register = () => {
 
   //Form data states
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     confirmPassword: ""
@@ -63,6 +65,20 @@ const Register = () => {
         <h1 className="title">Create new account</h1>
 
         <form onSubmit={handleRegister} className="justify-center items-center h-screen">
+
+            <input type="text" 
+                   placeholder="First name" 
+                   className="input" 
+                   autoFocus 
+                   value={formData.firstName} 
+                   onChange={(e)=>{setFormData({...formData, firstName: e.target.value})}} />
+            
+            <input type="text" 
+                   placeholder="Last name" 
+                   className="input" 
+                   autoFocus 
+                   value={formData.lastName} 
+                   onChange={(e)=>{setFormData({...formData, lastName: e.target.value})}} />
 
             <input type="email" 
                    placeholder="Email address" 
