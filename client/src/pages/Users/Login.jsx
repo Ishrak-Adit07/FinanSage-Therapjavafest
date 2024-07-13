@@ -1,54 +1,9 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { UserContext } from '../../contexts/UserContext';
-import Alert from '../../messages/Alert';
-import { loginUser } from '../../controllers/user.controller';
+import React from 'react';
 import LoginForm from '../../components/Forms/LoginForm';
 
 const Login = () => {
-
-  //UserContext
-  const {setUser} = useContext(UserContext);
-
-  //UseNavigate
-  const navigate = useNavigate();
-
-  // Error state
-  const [error, setError] = useState(null);
-
-  // Form data states
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  // Handle Log in
-  const handleLogin = async(e) => {
-    e.preventDefault();
-    //console.log(email, password);
-
-    try {
-      //const loginResponseData = await loginUser(email, password);
-
-      const loginResponseData = true;
-      
-      if(loginResponseData){
-
-        setUser({
-          name: "Gale Hawthorne",
-          email,
-        });
-
-        navigate("/user/dashboard");
-        setError(null);
-      }
-    } catch (err) {
-      setError(err.message);
-    }
-    
-    // setEmail("");
-    // setPassword("");
-  }
 
   return (
     <section className="card">
