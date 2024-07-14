@@ -44,6 +44,45 @@ export const USER_WALLETS = [
     },
   ];
 
+  export const USER_BUDGETS = [
+    {
+      title: "Owltweet",
+      image: "Ot",
+      githubLink: "https://github.com/Ishrak-Adit07/Social-Media",
+      description:
+        "Web application for social media on harry potter theme with authentication.",
+      technologies: ["ReactJS", "MUI", "NodeJS", "ExpressJS", "MongoDB"],
+      balance: 275.75,
+    },
+    {
+      title: "HP Quiz-App",
+      image: "Qa",
+      githubLink: "https://github.com/Ishrak-Adit07/Quiz-app",
+      description:
+        "Web application for quiz on pre-stored questions.",
+      technologies: ["ReactJS", "NodeJS", "ExpressJS", "PostgreSQL"],
+      balance: 275.75,
+    },
+    {
+      title: "MERN Arch. Example Project",
+      image: "Mr",
+      githubLink: "https://github.com/Ishrak-Adit07/MERN-Todo",
+      description:
+        "A robust, fully functional MERN stack to-do list web app with user authentication and best coding practices.",
+      technologies: ["ReactJS", "tailwindcss", "NodeJS", "ExpressJS", "MongoDB"],
+      balance: 275.75,
+    },
+    {
+      title: "PERN Arch. Example Project",
+      image: "Pr",
+      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
+      description:
+        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
+      technologies: ["ReactJS", "tailwindcss", "NodeJS", "ExpressJS", "PostgreSQL"],
+      balance: 275.75,
+    },
+  ];
+
   export const WALLET_INCOME_TYPES = [
     {
       name: "Salary",
