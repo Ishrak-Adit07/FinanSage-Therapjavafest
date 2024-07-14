@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import GradualText from '../TextAnimations/GradualText';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import GradualText from "../TextAnimations/GradualText";
 
 const MailForm = () => {
   const [mail, setMail] = useState("");
@@ -21,11 +21,7 @@ const MailForm = () => {
         className="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-lg max-w-md w-full"
       >
         <h1 className="text-3xl font-semibold text-red-400 text-slate-300 mb-6 text-left">
-          {false && (
-            <GradualText
-              text={"Send a Mail!"}
-            />
-          )}
+          {false && <GradualText text={"Send a Mail!"} />}
           Send a Mail!
         </h1>
         <form onSubmit={onMailSend}>
@@ -75,7 +71,7 @@ const MailForm = () => {
               onChange={(e) => setBody(e.target.value)}
               className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer h-12 resize-none autofill:bg-transparent hide-scrollbar"
               placeholder=" "
-              style={{ height: 'auto' }}
+              style={{ height: "auto" }}
             />
             {!body && (
               <label

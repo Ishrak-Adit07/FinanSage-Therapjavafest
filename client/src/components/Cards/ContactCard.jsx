@@ -1,26 +1,21 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const ContactCard = () => {
   return (
     <div className="flex items-center justify-center px-4 py-8">
-      <motion.div
-        className="contact-card bg-gray-900 rounded-lg shadow-md p-6 sm:p-8 w-full max-w-md"
-      >
-        <h2 className="text-2xl text-left font-semibold mb-6">
-          Get in touch!
-        </h2>
+      <motion.div className="contact-card bg-gray-900 rounded-lg shadow-md p-6 sm:p-8 w-full max-w-md">
+        <h2 className="text-2xl text-left font-semibold mb-6">Get in touch!</h2>
         <ul className="text-lg">
           <li className="flex items-center mb-4">
             <i className="fa-solid fa-envelope mr-2 text-red-400"></i>
             <a
-            href="mailto:ishrak.adit07@gmail.com"
-            className="gradient-text hover:text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="mailto:ishrak.adit07@gmail.com"
+              className="gradient-text hover:text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              ishrak.adit07@gmail.com
+              finansage.official@gmail.com
             </a>
-
           </li>
           <li className="flex items-center mb-4">
             <i className="fa-solid fa-phone mr-2 text-red-400"></i>
@@ -44,8 +39,8 @@ const ContactCard = () => {
               Facebook
             </a>
           </li>
-          <li className="flex items-center mb-4">
-          <i className="fa-brands fa-square-github mr-2 bg-green-800"></i>
+          {false && <li className="flex items-center mb-4">
+            <i className="fa-brands fa-square-github mr-2 bg-green-800"></i>
             <a
               href="https://github.com/Ishrak-Adit07"
               className="gradient-text hover:text-transparent bg-gradient-to-r from-green-500 via-green-200 to-green-500 bg-clip-text"
@@ -54,9 +49,9 @@ const ContactCard = () => {
             >
               GitHub
             </a>
-          </li>
+          </li>}
           <li className="flex items-center mb-4">
-          <i className="fa-brands fa-linkedin mr-2 bg-blue-500"></i>
+            <i className="fa-brands fa-linkedin mr-2 bg-blue-500"></i>
             <a
               href="https://linkedin.com/in"
               className="hover:text-blue-500"
