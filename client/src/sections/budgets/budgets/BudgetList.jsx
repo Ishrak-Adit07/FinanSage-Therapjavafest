@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { USER_BUDGETS } from '../../../constants';
-import WalletCard from '../../../components/Cards/Wallet.Card';
+import BudgetCard from '../../../components/Cards/Budget.Card';
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -24,7 +24,7 @@ const BudgetList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <WalletCard Title={project.title} Balance={project.balance} Image={project.image} GithubLink={project.githubLink} Descroption={project.description} TechStack={project.technologies} />
+            <BudgetCard Title={project.title} Balance={project.balance} Image={project.image} GithubLink={project.githubLink} Descroption={project.description} TechStack={project.technologies} />
           </motion.div>
         ))}
       </motion.div>
