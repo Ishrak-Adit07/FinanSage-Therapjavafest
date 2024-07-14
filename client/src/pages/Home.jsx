@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import Hero from '../sections/Hero';
+import Contact from '../sections/company/Contact';
 
 const Home = () => {
 
@@ -34,6 +35,7 @@ const Home = () => {
               <Hero scrollToContact={scrollToContact}/>
               <Hero scrollToContact={scrollToContact}/>
               <Hero scrollToContact={scrollToContact}/>
+              <Contact scrollToContact={scrollToContact}/>
             </div>
           }
         </div>
