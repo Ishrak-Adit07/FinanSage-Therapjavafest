@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ToggleButton from "../../components/Buttons/ToggleButton";
 import { WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from "../../constants";
 import Alert from "../../messages/Alert";
+import BankTransactionForm from "../../components/Forms/BankTransactionForm";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -11,15 +12,10 @@ const gridSquareVariants = {
 };
 
 const BankCashFlow = () => {
-  const [showExpense, setShowExpense] = useState(false);
   const [transactionType, setTransactionType] = useState("");
 
   const handleTransactionTypeChange = (e) => {
     setTransactionType(e.target.value);
-  };
-
-  const handleTransactionToggle = () => {
-    setShowExpense(!showExpense);
   };
 
   const handleCashflow = (e) => {
@@ -42,17 +38,6 @@ const BankCashFlow = () => {
   const [bankAccount, setBankAccount] = useState("");
   const [wallet, setWallet] = useState("");
 
-  const flowType = [
-    {
-      type: "Wallet to Bank",
-      id: 1,
-    },
-    {
-      type: "Bank to Wallet",
-      id: 2,
-    },
-  ];
-
   const banks = ["Bank A", "Bank B", "Bank C"]; // Example bank names
   const wallets = ["Wallet X", "Wallet Y", "Wallet Z"]; // Example wallet names
 
@@ -72,11 +57,6 @@ const BankCashFlow = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <ToggleButton />
-            <button onClick={handleTransactionToggle} className="text-red-500">
-              Change
-            </button>
-
             <div className="mb-4">
               <label className="block text-slate-700 text-sm font-bold mb-2">
                 Transaction Type:
@@ -122,29 +102,14 @@ const BankCashFlow = () => {
               onSubmit={handleCashflow}
               className="justify-center items-center  text-slate-700"
             >
-              <input
-                type="number"
-                placeholder="Amount"
-                className="input"
-                autoFocus
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-              />
-
-              <input
-                type="text"
-                placeholder="Add note"
-                className="input"
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
-              />
-
               <select
                 className="input mt-2"
                 value={bank}
                 onChange={(e) => setBank(e.target.value)}
               >
-                <option value="" disabled>Select a Bank</option>
+                <option value="" disabled>
+                  Select a Bank
+                </option>
                 {banks.map((bankName, index) => (
                   <option key={index} value={bankName}>
                     {bankName}
@@ -165,13 +130,32 @@ const BankCashFlow = () => {
                 value={wallet}
                 onChange={(e) => setWallet(e.target.value)}
               >
-                <option value="" disabled>Select a Wallet</option>
+                <option value="" disabled>
+                  Select a Wallet
+                </option>
                 {wallets.map((walletName, index) => (
                   <option key={index} value={walletName}>
                     {walletName}
                   </option>
                 ))}
               </select>
+
+              <input
+                type="number"
+                placeholder="Amount"
+                className="input"
+                autoFocus
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+              />
+
+              <input
+                type="text"
+                placeholder="Add note"
+                className="input"
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+              />
 
               <button type="submit" className="btn mt-4">
                 Make Transaction
