@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../../contexts/UserContext';
 import Success from '../../messages/Success';
 import Alert from '../../messages/Alert';
+import Contact from '../../sections/company/Contact';
 
 const Dashboard = () => {
 
@@ -42,6 +43,8 @@ const Dashboard = () => {
           {!loading && 
             <h1>This is user dashboard</h1>
           }
+
+          {false && <Contact />}
 
           {deleteSuccess && <Success msg={"Post was deleted"}/>}
           {error && <Alert msg={error} />}
