@@ -1,10 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ToggleButton from "../../components/Buttons/ToggleButton";
-import { WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from "../../constants";
 import Alert from "../../messages/Alert";
-import BankTransactionForm from "../../components/Forms/BankTransactionForm";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
