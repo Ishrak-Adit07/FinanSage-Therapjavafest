@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { USER_WALLETS } from '../../../constants';
+import { USER_BUDGETS } from '../../../constants';
 
 const findByTitle = (title) => {
-  return USER_WALLETS.find(wallet => wallet.title === title);
+  return USER_BUDGETS.find(budget => budget.title === title);
 };
 
-const WalletDetails = ({title}) => {
+const BudgetDetails = ({title}) => {
 
   const resultByTitle = findByTitle(title);
 
@@ -20,4 +20,4 @@ const WalletDetails = ({title}) => {
   );
 }
 
-export default WalletDetails;
+export default BudgetDetails;
