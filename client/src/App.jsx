@@ -18,6 +18,7 @@ import Profile from './pages/Users/Profile';
 import CreateWallet from './pages/Financials/wallets/CreateWallet';
 import Budgets from './pages/budgets/Budgets';
 import Budget from './pages/budgets/Budget';
+import CreateBudget from './pages/budgets/CreateBudget';
 
 const App = () => {
   return (
@@ -40,7 +41,7 @@ const App = () => {
 
             <Route path="user/budgets" element={<Budgets />} />
             <Route path="/budget/details/:title" element={<Budget />} />
-            <Route path="/budget/create" element={<CreateWallet />} />
+            <Route path="/budget/create" element={<CreateBudget />} />
 
             <Route path="user/transactions" element={<UserTransactions />} />
 
