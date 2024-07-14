@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ToggleButton from "../../components/Buttons/ToggleButton";
 import { WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from "../../constants";
-import TransactionIcon from "../../components/Cards/Transaction.icon";
 import Alert from "../../messages/Alert";
 
 const gridSquareVariants = {
@@ -11,7 +10,7 @@ const gridSquareVariants = {
   show: { opacity: 1 },
 };
 
-const AddCashFlow = () => {
+const InterWalletCashFlow = () => {
   const [showExpense, setShowExpense] = useState(false);
 
   const handleTransactionToggle = () => {
@@ -37,7 +36,7 @@ const AddCashFlow = () => {
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center">
-      <h1 className="text-slate-700 text-bold">Add transaction to Wallet</h1>
+      <h1 className="text-slate-700 text-bold">Exchange money within Wallet</h1>
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
@@ -142,4 +141,4 @@ const AddCashFlow = () => {
   );
 };
 
-export default AddCashFlow;
+export default InterWalletCashFlow;
