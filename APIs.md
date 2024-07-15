@@ -79,7 +79,7 @@
 - **Body:**
   ```json
   {
-    "id": "Wallet ID"
+    "walletID": "Wallet ID"
   }
 
 ## Cashflow

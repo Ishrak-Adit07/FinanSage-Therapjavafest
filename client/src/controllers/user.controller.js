@@ -8,7 +8,7 @@ const registerUser = async (email, password, confirmPassword) => {
   }
 
   try {
-    const registerResponse = await fetch("/api/user/register", {
+    const response = await fetch("/api/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,9 +16,8 @@ const registerUser = async (email, password, confirmPassword) => {
       body: JSON.stringify({ email, password }),
     });
 
-    const responseData = await registerResponse.json();
-
-    if (!registerResponse.ok) {
+    const responseData = await response.json();
+    if (!responseData.success) {
       throw Error(responseData.error);
     }
 
@@ -38,7 +37,7 @@ const loginUser = async (email, password) => {
   }
 
   try {
-    const loginResponse = await fetch("/api/user/login", {
+    const response = await fetch("/api/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,9 +45,9 @@ const loginUser = async (email, password) => {
       body: JSON.stringify({ email, password }),
     });
 
-    const responseData = await loginResponse.json();
+    const responseData = await response.json();
 
-    if (!loginResponse.ok) {
+    if (!responseData.success) {
       throw Error(responseData.error);
     }
 
@@ -62,4 +61,34 @@ const loginUser = async (email, password) => {
   }
 };
 
-export { registerUser, loginUser };
+const deleteUser = async (userID) => {
+  if (!userID) {
+    throw Error("User Id is required");
+  }
+
+  try {
+    const response = await fetch("/api/user/delete", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userID }),
+    });
+
+    const responseData = await response.json();
+
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    localStorage.setItem("webToken", responseData.webToken);
+    localStorage.setItem("email", responseData.email);
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
+
+export { registerUser, loginUser, deleteUser };
