@@ -35,13 +35,16 @@
 ## Wallet
 
 ### Get All Wallets Of User
-- **Endpoint:** `http://localhost:4000/api/user/wallets/get`
-- **Method:** `GET`
-
-### Get Wallet By ID
-- **Endpoint:** `http://localhost:4000/api/user/wallet/get/:walletID`
+- **Endpoint:** `http://localhost:4000/api/user/wallets/get/:userID`
 - **Method:** `GET`
 - **Parameters:**
+  - `userID` (string): The ID of the User
+
+### Get Wallet By ID
+- **Endpoint:** `http://localhost:4000/api/user/wallet/get/:userID/:walletID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
   - `walletID` (string): The id of the wallet
 
 ### Create Wallet

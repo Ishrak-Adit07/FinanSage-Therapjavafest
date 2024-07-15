@@ -1,3 +1,29 @@
+const getAllWallets = async(userID) =>{
+  if (!userID) {
+    throw Error("User ID is required");
+  }
+
+  try {
+    const response = await fetch(`/api/user/wallets/get/${userID}`);
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+}
+
+const getWalletByID = async(userID) =>{
+  if (!userID) {
+    throw Error("User ID is required");
+  }
+}
+
 const createWallet = async (name, currency, initialBalance) => {
   if (!name || !currency || !initialBalance) {
     throw Error("All fields are required");
@@ -50,23 +76,22 @@ const deleteWallet = async (walletID) => {
   }
 };
 
-const editWalletTitle = async (walletID, newTitle) => {
-  if (!walletID || !newTitle) {
-    throw Error("All fields are required");
+const editWalletName = async (newName) => {
+  if (!newName) {
+    throw Error("New name is required");
   }
 
   try {
-    const editWalletTitleResponse = await fetch("/api/wallet/editTitle", {
-      method: "POST",
+    const response = await fetch("/api/wallet/edit/name", {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ walletID, newTitle }),
+      body: JSON.stringify({ newName }),
     });
 
-    const responseData = await editWalletTitleResponse.json();
-
-    if (!editWalletTitleResponse.ok) {
+    const responseData = await response.json();
+    if (!responseData.success) {
       throw Error(responseData.error);
     }
 
@@ -77,23 +102,22 @@ const editWalletTitle = async (walletID, newTitle) => {
   }
 };
 
-const editWalletDescription = async (walletID, newDescription) => {
-  if (!walletID || !newDescription) {
-    throw Error("All fields are required");
+const editWalletCurrency = async (newCurrency) => {
+  if (!newCurrency) {
+    throw Error("New currency is required");
   }
 
   try {
-    const editWalletDescriptionResponse = await fetch("/api/wallet/editTitle", {
-      method: "POST",
+    const response = await fetch("/api/wallet/edit/currency", {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ walletID, newDescription }),
+      body: JSON.stringify({ newCurrency }),
     });
 
-    const responseData = await editWalletDescriptionResponse.json();
-
-    if (!editWalletDescriptionResponse.ok) {
+    const responseData = await response.json();
+    if (!responseData.success) {
       throw Error(responseData.error);
     }
 
@@ -104,4 +128,4 @@ const editWalletDescription = async (walletID, newDescription) => {
   }
 };
 
-export { createWallet, deleteWallet, editWalletTitle, editWalletDescription };
+export { getAllWallets, getWalletByID, createWallet, deleteWallet, editWalletName, editWalletCurrency };
