@@ -39,8 +39,8 @@ const BankCashFlow = () => {
   const wallets = ["Wallet X", "Wallet Y", "Wallet Z"]; // Example wallet names
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center">
-      <h1 className="text-slate-700 text-bold">
+    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
+      <h1 className="text-slate-700 text-bold text-4xl">
         Exchange money within wallets and bank accounts
       </h1>
       <div className="lg:w-4/5 w-full">

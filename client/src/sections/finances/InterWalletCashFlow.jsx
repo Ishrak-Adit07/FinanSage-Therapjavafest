@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ToggleButton from "../../components/Buttons/ToggleButton";
-import { WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from "../../constants";
+import { USER_WALLETS, WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from "../../constants";
 import Alert from "../../messages/Alert";
 
 const gridSquareVariants = {
@@ -15,28 +15,30 @@ const InterWalletCashFlow = () => {
 
   const handleTransactionToggle = () => {
     setShowExpense(!showExpense);
-    setFlowType("");
   };
 
   const handleCashflow = (e) => {
     e.preventDefault();
-    console.log(flowType, amount, note);
-    setNote("");
+    console.log(amount, note);
+    setNote();
     setAmount();
-    setFlowType("");
+    setFromWallet("");
+    setToWallet("");
   };
 
   // Error state
   const [error, setError] = useState(null);
 
   // Form data states
-  const [flowType, setFlowType] = useState();
+
+  const [fromWallet, setFromWallet] = useState();
+  const [toWallet, setToWallet] = useState();
   const [amount, setAmount] = useState();
   const [note, setNote] = useState("");
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center">
-      <h1 className="text-slate-700 text-bold">Exchange money within Wallet</h1>
+    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
+      <h1 className="text-slate-700 text-bold text-4xl">Exchange money within Wallet</h1>
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
@@ -52,54 +54,6 @@ const InterWalletCashFlow = () => {
             <button onClick={handleTransactionToggle} className="text-red-500">
               Change
             </button>
-
-            {showExpense && (
-              <div className="text-slate-900 pb-4 items-center py-4 my-4 lg:items-start">
-                <motion.div
-                  variants={gridSquareVariants}
-                  className="flex flex-wrap justify-center lg:justify-start"
-                >
-                  <select
-                    className="w-full lg:w-1/2 items-center justify-center bg-indigo-200 text-slate-700 border border-slate-300 rounded-md p-2"
-                    value={flowType}
-                    onChange={(e) => setFlowType(e.target.value)}
-                  >
-                    <option value="" disabled selected hidden>
-                      Select an expense type
-                    </option>
-                    {WALLET_EXPENSE_TYPES.map((income, index) => (
-                      <option key={index} value={income.name}>
-                        {income.name}
-                      </option>
-                    ))}
-                  </select>
-                </motion.div>
-              </div>
-            )}
-
-            {!showExpense && (
-              <div className="text-slate-900 pb-4 items-center py-4 my-4 lg:items-start">
-                <motion.div
-                  variants={gridSquareVariants}
-                  className="flex flex-wrap justify-center lg:justify-start"
-                >
-                  <select
-                    className="w-full lg:w-1/2 items-center justify-center bg-indigo-200 text-slate-700 border border-slate-300 rounded-md p-2"
-                    value={flowType}
-                    onChange={(e) => setFlowType(e.target.value)}
-                  >
-                    <option value="" disabled selected hidden>
-                      Select an income type
-                    </option>
-                    {WALLET_INCOME_TYPES.map((income, index) => (
-                      <option key={index} value={income.name}>
-                        {income.name}
-                      </option>
-                    ))}
-                  </select>
-                </motion.div>
-              </div>
-            )}
           </motion.div>
 
           <motion.div
@@ -112,6 +66,36 @@ const InterWalletCashFlow = () => {
               onSubmit={handleCashflow}
               className="justify-center items-center  text-slate-700"
             >
+              <select
+                className="input mt-2"
+                value={fromWallet}
+                onChange={(e) => setFromWallet(e.target.value)}
+              >
+                <option value="" disabled>
+                  Select From Wallet
+                </option>
+                {USER_WALLETS.map((wallet, index) => (
+                  <option key={index} value={wallet.title}>
+                    {wallet.title}
+                  </option>
+                ))}
+              </select>
+
+              <select
+                className="input mt-2"
+                value={toWallet}
+                onChange={(e) => setToWallet(e.target.value)}
+              >
+                <option value="" disabled>
+                  Select To Wallet
+                </option>
+                {USER_WALLETS.map((wallet, index) => (
+                  <option key={index} value={wallet.title}>
+                    {wallet.title}
+                  </option>
+                ))}
+              </select>
+
               <input
                 type="number"
                 placeholder="Amount"
