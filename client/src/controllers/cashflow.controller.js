@@ -49,6 +49,32 @@ const createCashFlow = async (userID, walletID, cashFlow) => {
       throw Error(error.message);
     }
   };
+
+  const editCashFlowNote = async (userID, walletID, cashFlowID, newNote) => {
+    if (!userID || !walletID || !cashFlowID || !newNote) {
+      throw Error("All fields are required");
+    }
+  
+    try {
+      const response = await fetch("/api/user/cashFlow/edit/note", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userID, walletID, cashFlowID, newNote }),
+      });
+  
+      const responseData = await response.json();
+      if (!responseData.success) {
+        throw Error(responseData.error);
+      }
+  
+      return responseData;
+    } catch (error) {
+      console.error("Error:", error.message);
+      throw Error(error.message);
+    }
+  };
   
   const deleteCashFlow = async (userID, walletID, cashFlowID) => {
     if (!userID || !walletID || !cashFlowID) {
@@ -76,4 +102,4 @@ const createCashFlow = async (userID, walletID, cashFlow) => {
     }
   };
 
-  export { createCashFlow, deleteCashFlow, editCashFlowAmount }
+  export { createCashFlow, deleteCashFlow, editCashFlowAmount, editCashFlowNote }
