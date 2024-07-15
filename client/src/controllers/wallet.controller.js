@@ -18,9 +18,23 @@ const getAllWallets = async(userID) =>{
   }
 }
 
-const getWalletByID = async(userID) =>{
-  if (!userID) {
-    throw Error("User ID is required");
+const getWalletByID = async(userID, walletID) =>{
+  if (!userID || !walletID) {
+    throw Error("Both User ID and wallet ID are required");
+  }
+
+  try {
+    const response = await fetch(`/api/user/wallet/get/${userID}/${walletID}`);
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
   }
 }
 
