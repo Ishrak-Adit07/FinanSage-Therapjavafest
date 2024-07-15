@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { PieChart, Pie, ResponsiveContainer } from "recharts";
 
 const data = [
@@ -9,13 +10,13 @@ const data = [
   { name: "Group F", value: 189 },
 ];
 
-function StraightAnglePieChart() {
+function StraightAnglePieChart({headerText}) {
   return (
     <div
-      style={{ width: "100%", height: 400 }}
-      className="flex flex-wrap justify-center items-center mt-10"
+      style={{ width: "100%", height: 300 }}
+      className="flex flex-wrap justify-center items-center my-10"
     >
-      <h1 className="text-2xl">Straight Angle Pie Chart</h1>
+      <h1 className="text-2xl text-slate-500 mb-10">{headerText}</h1>
       <ResponsiveContainer>
         <PieChart>
           <Pie

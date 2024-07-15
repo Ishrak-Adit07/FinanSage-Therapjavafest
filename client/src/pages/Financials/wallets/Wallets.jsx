@@ -24,7 +24,6 @@ const Wallets = () => {
         {!loading && (
           <div>
             <CashGraph />
-            <CashGraph />
             <WalletCreate />
             <WalletList />
           </div>

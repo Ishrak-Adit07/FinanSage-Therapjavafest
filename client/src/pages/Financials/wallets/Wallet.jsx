@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import WalletGraph from '../../../sections/wallets/wallet/WalletGraph';
 import { useParams } from 'react-router-dom';
 import WalletDetails from '../../../sections/wallets/wallet/WalletDetails';
 import WalletFunctions from '../../../sections/wallets/wallet/WalletFunctions';
+import WalletGraph from '../../../sections/wallets/wallet/WalletGraph';
 
 const Wallet = () => {
   const [loading, setLoading] = useState(true);

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { PureComponent } from "react";
 import {
@@ -56,13 +57,13 @@ const data = [
   },
 ];
 
-function BiaxialLineChart() {
+function BiaxialLineChart({headerText}) {
   return (
     <div
       style={{ width: "100%", height: 400 }}
-      className="flex flex-wrap justify-center items-center mt-10"
+      className="flex flex-wrap justify-center items-center my-10"
     >
-      <h1 className="text-2xl mb-10">Biaxial Line Chart</h1>
+      <h1 className="text-2xl mb-10 text-slate-500">{headerText}</h1>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
