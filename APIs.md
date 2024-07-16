@@ -176,20 +176,14 @@
 ## Transactions
 
 ### Get All Bank Transactions Of User
-- **Endpoint:** `http://localhost:4000/api/user/transaction/banks`
-- **Method:** `POST`
-- **Body:**
-  ```json
-  {
-    "userID" : "User ID",
-  }
+- **Endpoint:** `http://localhost:4000/api/user/transactions/get/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
 
 ### Get All Bank Transactions Wuth A Certain Bank with User
 - **Endpoint:** `http://localhost:4000/api/user/transaction/bank`
-- **Method:** `POST`
-- **Body:**
-  ```json
-  {
-    "userID" : "User ID",
-    "bankID": "Bank ID"
-  }
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+  - `walletID` (string): The id of the wallet
