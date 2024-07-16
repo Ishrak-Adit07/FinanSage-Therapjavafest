@@ -1,4 +1,4 @@
-const getAllCashFlowsOfUser = async (userID) => {
+const getCashFlowsByUser = async (userID) => {
   if (!userID) {
     throw Error("User Id is required");
   }
@@ -18,7 +18,7 @@ const getAllCashFlowsOfUser = async (userID) => {
   }
 };
 
-const getAllCashFlowsByUserAndWallet = async (userID, walletID) => {
+const getCashFlowsByWallet = async (userID, walletID) => {
   if (!userID || !walletID) {
     throw Error("Both User Id and wallet ID are required");
   }
@@ -27,6 +27,32 @@ const getAllCashFlowsByUserAndWallet = async (userID, walletID) => {
     const response = await fetch(
       `/api/user/cashFlow/get/${userID}/${walletID}`
     );
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
+
+const getCashFlowsByWallets = async (userID, fromWalletID, toWalletID) => {
+  if (!userID || !fromWalletID || !toWalletID) {
+    throw Error("All fields are required");
+  }
+
+  try {
+    const response = await fetch("/api/user/cashFlow/wallets", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userID, fromWalletID, toWalletID }),
+    });
 
     const responseData = await response.json();
     if (!responseData.success) {
@@ -171,8 +197,9 @@ const deleteCashFlow = async (userID, walletID, cashFlowID) => {
 };
 
 export {
-  getAllCashFlowsOfUser,
-  getAllCashFlowsByUserAndWallet,
+  getCashFlowsByUser,
+  getCashFlowsByWallet,
+  getCashFlowsByWallets,
   createCashFlow,
   deleteCashFlow,
   editCashFlowAmount,
