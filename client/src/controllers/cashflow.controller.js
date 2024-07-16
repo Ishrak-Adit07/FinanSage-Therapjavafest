@@ -1,4 +1,4 @@
-const getAllCashFlowsOfUser = async(userID) =>{
+const getAllCashFlowsOfUser = async (userID) => {
   if (!userID) {
     throw Error("User Id is required");
   }
@@ -16,7 +16,29 @@ const getAllCashFlowsOfUser = async(userID) =>{
     console.error("Error:", error.message);
     throw Error(error.message);
   }
-}
+};
+
+const getAllCashFlowsByUserAndWallet = async (userID, walletID) => {
+  if (!userID || !walletID) {
+    throw Error("Both User Id and wallet ID are required");
+  }
+
+  try {
+    const response = await fetch(
+      `/api/user/cashFlow/get/${userID}/${walletID}`
+    );
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
 
 const createCashFlow = async (userID, walletID, cashFlow) => {
   if (!userID || !walletID || !cashFlow) {
@@ -150,6 +172,7 @@ const deleteCashFlow = async (userID, walletID, cashFlowID) => {
 
 export {
   getAllCashFlowsOfUser,
+  getAllCashFlowsByUserAndWallet,
   createCashFlow,
   deleteCashFlow,
   editCashFlowAmount,
