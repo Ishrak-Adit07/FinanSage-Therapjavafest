@@ -250,3 +250,33 @@
     "bankAccPin": "12345"
   }
   ```
+
+## Bank Accounts
+
+### Create Connection to Bank Account
+
+- **Endpoint:** `http://localhost:4000/api/user/bank/account/connect`
+- **Method:** `POST`
+- **Body:**
+  ```json
+  {
+    "userID": "User ID",
+    "bankID": "Bank ID",
+    "accountID": "Account ID",
+    "accPin": "12345"
+  }
+  ```
+
+### Delete Connection to Bank Account
+
+- **Endpoint:** `http://localhost:4000/api/user/bank/account/delete`
+- **Method:** `DELETE`
+- **Body:**
+  ```json
+  {
+    "userID": "User ID",
+    "bankID": "Bank ID",
+    "accountID": "Account ID",
+    "accPin": "12345"
+  }
+  ```
