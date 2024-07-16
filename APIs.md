@@ -182,8 +182,8 @@
   - `userID` (string): The ID of the User
 
 ### Get All Bank Transactions Wuth A Certain Bank with User
-- **Endpoint:** `http://localhost:4000/api/user/transaction/bank`
+- **Endpoint:** `http://localhost:4000/api/user/transactions/get/:userID/:bankID`
 - **Method:** `GET`
 - **Parameters:**
   - `userID` (string): The ID of the User
-  - `walletID` (string): The id of the wallet
+  - `bankID` (string): The id of the wallet

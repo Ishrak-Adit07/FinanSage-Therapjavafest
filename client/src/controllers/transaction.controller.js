@@ -18,14 +18,14 @@ const getTransactionsByUser = async (userID) => {
   }
 };
 
-const getTransactionsByBank = async (userID, walletID) => {
-  if (!userID || !walletID) {
-    throw Error("Both User Id and wallet ID are required");
+const getTransactionsByBank = async (userID, bankID) => {
+  if (!userID || !bankID) {
+    throw Error("Both User Id and Bank ID are required");
   }
 
   try {
     const response = await fetch(
-      `/api/user/cashFlow/get/${userID}/${walletID}`
+      `/api/user/transactions/get/${userID}/${bankID}`
     );
 
     const responseData = await response.json();
