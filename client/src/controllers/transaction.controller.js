@@ -66,4 +66,35 @@ const createTransaction = async (userID, bankID, transaction, bankAccPin) => {
   }
 };
 
-export { getTransactionsByUser, getTransactionsByBank, createTransaction };
+const deleteTransaction = async (userID, bankID, transactionID, bankAccPin) => {
+  if (!userID || !bankID || !transactionID || !bankAccPin) {
+    throw Error("All fields are required");
+  }
+
+  try {
+    const response = await fetch("/api/user/transaction/delete", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userID, bankID, transactionID, bankAccPin }),
+    });
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
+
+export {
+  getTransactionsByUser,
+  getTransactionsByBank,
+  createTransaction,
+  deleteTransaction,
+};
