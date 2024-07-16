@@ -187,3 +187,30 @@
 - **Parameters:**
   - `userID` (string): The ID of the User
   - `bankID` (string): The id of the wallet
+
+### Create Transaction
+- **Endpoint:** `http://localhost:4000/api/user/transaction/create`
+- **Method:** `POST`
+- **Body:**
+  ```json
+  {
+    "userID" : "User ID",
+    "bankID": "Bank ID",
+    "transaction" : {
+        "amount" : 0,
+        "type" : "type",
+        "note" : "Note added"
+    },
+    "bankAccPin" : "12345"
+  }
+
+### Delete CashFlow
+- **Endpoint:** `http://localhost:4000/api/user/cashflow/delete`
+- **Method:** `DELETE`
+- **Body:**
+  ```json
+  {
+    "userID" : "User ID",
+    "walletID": "Wallet ID",
+    "cashFlowID": "Cash Flow ID"
+  }

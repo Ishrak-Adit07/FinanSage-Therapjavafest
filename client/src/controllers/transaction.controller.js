@@ -40,4 +40,30 @@ const getTransactionsByBank = async (userID, bankID) => {
   }
 };
 
-export { getTransactionsByUser, getTransactionsByBank };
+const createTransaction = async (userID, bankID, transaction, bankAccPin) => {
+  if (!userID || !bankID || !transaction || !bankAccPin) {
+    throw Error("All fields are required");
+  }
+
+  try {
+    const response = await fetch("/api/user/transaction/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userID, bankID, transaction, bankAccPin }),
+    });
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
+
+export { getTransactionsByUser, getTransactionsByBank, createTransaction };
