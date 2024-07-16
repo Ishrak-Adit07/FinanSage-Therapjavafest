@@ -1,3 +1,23 @@
+const getAllCashFlowsOfUser = async(userID) =>{
+  if (!userID) {
+    throw Error("User Id is required");
+  }
+
+  try {
+    const response = await fetch(`/api/user/cashFlow/get/${userID}`);
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+}
+
 const createCashFlow = async (userID, walletID, cashFlow) => {
   if (!userID || !walletID || !cashFlow) {
     throw Error("All fields are required");
@@ -129,6 +149,7 @@ const deleteCashFlow = async (userID, walletID, cashFlowID) => {
 };
 
 export {
+  getAllCashFlowsOfUser,
   createCashFlow,
   deleteCashFlow,
   editCashFlowAmount,

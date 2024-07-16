@@ -88,23 +88,17 @@
 ## Cashflow
 
 ### Get All CashFlow Of A User
-- **Endpoint:** `http://localhost:4000/api/user/cashflow`
-- **Method:** `POST`
-- **Body:**
-  ```json
-  {
-    "userID" : "User ID"
-  }
+- **Endpoint:** `http://localhost:4000/api/user/cashflow/get/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
 
 ### Get All CashFlow Of A Certain Wallet Of User
-- **Endpoint:** `http://localhost:4000/api/user/cashflow/wallet`
-- **Method:** `POST`
-- **Body:**
-  ```json
-  {
-    "userID" : "User ID",
-    "walletID": "Wallet ID"
-  }
+- **Endpoint:** `http://localhost:4000/api/user/cashflow/get/:userID/:walletID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+  - `walletID` (string): The id of the wallet
 
 ### Get All CashFlow Within two Wallets Of User
 - **Endpoint:** `http://localhost:4000/api/user/cashflow/wallets`
