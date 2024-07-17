@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import AddCashFlow from '../../../sections/finances/AddCashFlow';
 import InterWalletCashFlow from '../../../sections/finances/InterWalletCashFlow';
 import BankCashFlow from '../../../sections/finances/BankCashFlow';
+import InterUserTransactions from '../../../sections/finances/InterUserTransaction';
 
 const UserTransactions = () => {
 
@@ -11,6 +11,7 @@ const UserTransactions = () => {
     <div className=''>
       <AddCashFlow />
       <InterWalletCashFlow />
+      <InterUserTransactions />
       <BankCashFlow />
     </div>
   );

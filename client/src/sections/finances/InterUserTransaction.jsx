@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ToggleButton from "../../components/Buttons/ToggleButton";
-import {
-  USER_WALLETS
-} from "../../constants";
+import { USER_WALLETS } from "../../constants";
 import Alert from "../../messages/Alert";
 
 const gridSquareVariants = {
@@ -12,7 +10,7 @@ const gridSquareVariants = {
   show: { opacity: 1 },
 };
 
-const InterWalletCashFlow = () => {
+const InterUserTransactions = () => {
   const [showExpense, setShowExpense] = useState(false);
 
   const handleTransactionToggle = () => {
@@ -21,11 +19,10 @@ const InterWalletCashFlow = () => {
 
   const handleCashflow = (e) => {
     e.preventDefault();
-    console.log(amount, note);
-    setNote();
+    console.log(fromUser, toUser, amount);
     setAmount();
-    setFromWallet("");
-    setToWallet("");
+    setFromUser("");
+    setToUser("");
   };
 
   // Error state
@@ -33,15 +30,14 @@ const InterWalletCashFlow = () => {
 
   // Form data states
 
-  const [fromWallet, setFromWallet] = useState();
-  const [toWallet, setToWallet] = useState();
+  const [fromUser, setFromUser] = useState();
+  const [toUser, setToUser] = useState();
   const [amount, setAmount] = useState();
-  const [note, setNote] = useState("");
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
       <h1 className="text-slate-700 text-bold text-4xl">
-        Inter Wallet Transactions
+        Inter User Transactions
       </h1>
       <div className="lg:w-4/5 w-full">
         <motion.div
@@ -70,35 +66,15 @@ const InterWalletCashFlow = () => {
               onSubmit={handleCashflow}
               className="justify-center items-center  text-slate-700"
             >
-              <select
-                className="input mt-2"
-                value={fromWallet}
-                onChange={(e) => setFromWallet(e.target.value)}
-              >
-                <option value="" disabled>
-                  Select From Wallet
-                </option>
-                {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
-                  </option>
-                ))}
-              </select>
 
-              <select
-                className="input mt-2"
-                value={toWallet}
-                onChange={(e) => setToWallet(e.target.value)}
-              >
-                <option value="" disabled>
-                  Select To Wallet
-                </option>
-                {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
-                  </option>
-                ))}
-              </select>
+              <input
+                type="text"
+                placeholder="Receiver ID"
+                className="input"
+                autoFocus
+                value={toUser}
+                onChange={(e) => setToUser(e.target.value)}
+              />
 
               <input
                 type="number"
@@ -109,16 +85,8 @@ const InterWalletCashFlow = () => {
                 onChange={(e) => setAmount(e.target.value)}
               />
 
-              <input
-                type="text"
-                placeholder="Add note"
-                className="input"
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
-              />
-
               <button type="submit" className="btn">
-                Add
+                Send
               </button>
               {error && <Alert msg={error} />}
             </form>
@@ -129,4 +97,4 @@ const InterWalletCashFlow = () => {
   );
 };
 
-export default InterWalletCashFlow;
+export default InterUserTransactions;

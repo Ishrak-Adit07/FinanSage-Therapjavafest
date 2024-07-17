@@ -140,7 +140,7 @@
     "userID": "User ID",
     "walletID": "Wallet ID",
     "cashFlow": {
-      "amount": 0,
+      "amount": 100,
       "type": "type",
       "note": "Note added"
     }
@@ -170,7 +170,7 @@
     "userID": "User ID",
     "walletID": "Wallet ID",
     "cashFlowID": "Cash Flow ID",
-    "newAmount": 0
+    "newAmount": 100
   }
   ```
 
@@ -229,7 +229,7 @@
     "userID": "User ID",
     "bankID": "Bank ID",
     "transaction": {
-      "amount": 0,
+      "amount": 100,
       "type": "type",
       "note": "Note added"
     },
@@ -278,5 +278,20 @@
     "bankID": "Bank ID",
     "accountID": "Account ID",
     "accPin": "12345"
+  }
+  ```
+
+## FinanSage Account
+
+### Send Money to Friend Account
+
+- **Endpoint:** `http://localhost:4000/api/user/transaction/finansage`
+- **Method:** `POST`
+- **Body:**
+  ```json
+  {
+    "fromUserID": "From User ID",
+    "toUserID": "To User ID",
+    "amount": 100
   }
   ```
