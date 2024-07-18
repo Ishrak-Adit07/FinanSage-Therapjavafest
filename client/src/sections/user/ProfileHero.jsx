@@ -27,11 +27,11 @@ const ProfileHero = () => {
   }
 
   const handleSeeBudgets = () =>{
-    navigate("/user/wallets")
+    navigate("/user/budgets")
   }
 
   const handleSeeAccounts = () =>{
-    navigate("/user/wallets")
+    navigate("/user/accounts/bank")
   }
 
   return (

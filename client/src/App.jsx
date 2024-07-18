@@ -19,6 +19,7 @@ import CreateWallet from './pages/Financials/wallets/CreateWallet';
 import Budgets from './pages/budgets/Budgets';
 import Budget from './pages/budgets/Budget';
 import CreateBudget from './pages/budgets/CreateBudget';
+import BankAccounts from './pages/accounts/BankAccounts';
 
 const App = () => {
   return (
@@ -42,6 +43,10 @@ const App = () => {
             <Route path="user/budgets" element={<Budgets />} />
             <Route path="/budget/details/:title" element={<Budget />} />
             <Route path="/budget/create" element={<CreateBudget />} />
+
+            <Route path="user/accounts/bank" element={<BankAccounts />} />
+            <Route path="/user/account/bank/details/:bankID" element={<Budget />} />
+            <Route path="/user/account/bank/create" element={<CreateBudget />} />
 
             <Route path="user/transactions" element={<UserTransactions />} />
 

@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import CashGraph from "../../../sections/finances/CashGraph";
-import WalletCreate from "../../../sections/wallets/wallets/WalletCreate";
-import WalletList from "../../../sections/wallets/wallets/WalletList";
+import BankAccountList from "../../sections/accounts/BankAccountsList";
 
-const Wallets = () => {
+const BankAccounts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,9 +20,7 @@ const Wallets = () => {
 
         {!loading && (
           <div>
-            <CashGraph />
-            <WalletCreate />
-            <WalletList />
+            <BankAccountList />
           </div>
         )}
       </div>
@@ -32,4 +28,4 @@ const Wallets = () => {
   );
 };
 
-export default Wallets;
+export default BankAccounts;
