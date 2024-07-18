@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
 
-const CreateWalletForm = () => {
+const CreateAccountForm = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
 
@@ -71,7 +71,7 @@ const CreateWalletForm = () => {
         />
 
         <button type="submit" className="btn mt-4">
-          Make Transaction
+          Connect
         </button>
         {error && <Alert msg={error} />}
       </form>
@@ -79,4 +79,4 @@ const CreateWalletForm = () => {
   );
 };
 
-export default CreateWalletForm;
+export default CreateAccountForm;

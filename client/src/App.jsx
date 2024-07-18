@@ -20,6 +20,7 @@ import Budgets from './pages/budgets/Budgets';
 import Budget from './pages/budgets/Budget';
 import CreateBudget from './pages/budgets/CreateBudget';
 import BankAccounts from './pages/accounts/BankAccounts';
+import CreateAccount from './pages/accounts/CreateAccount';
 
 const App = () => {
   return (
@@ -45,8 +46,8 @@ const App = () => {
             <Route path="/budget/create" element={<CreateBudget />} />
 
             <Route path="user/accounts/bank" element={<BankAccounts />} />
-            <Route path="/user/account/bank/details/:bankID" element={<Budget />} />
-            <Route path="/user/account/bank/create" element={<CreateBudget />} />
+            <Route path="/user/account/bank/details/:bankID" element={<CreateAccount />} />
+            <Route path="/user/account/bank/create" element={<CreateAccount />} />
 
             <Route path="user/transactions" element={<UserTransactions />} />
 
