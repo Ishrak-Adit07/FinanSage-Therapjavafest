@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import BankAccountList from "../../sections/accounts/BankAccountsList";
+import BankAccountCreate from "../../sections/accounts/BankAccountCreate";
 
 const BankAccounts = () => {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ const BankAccounts = () => {
         {!loading && (
           <div>
             <BankAccountList />
+            <BankAccountCreate />
           </div>
         )}
       </div>

@@ -35,8 +35,8 @@ const BankCashFlow = () => {
   const [bankAccount, setBankAccount] = useState("");
   const [wallet, setWallet] = useState("");
 
-  const banks = ["Bank A", "Bank B", "Bank C"]; // Example bank names
-  const wallets = ["Wallet X", "Wallet Y", "Wallet Z"]; // Example wallet names
+  const banks = ["Bank A", "Bank B", "Bank C"];
+  const wallets = ["Wallet X", "Wallet Y", "Wallet Z"];
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
