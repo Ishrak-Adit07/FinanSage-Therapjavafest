@@ -347,3 +347,14 @@ export const ANNULA_TAX_RATES = [
     rate: 5
   }
 ]
+
+export const CURRENCIES = [
+  "Euro",
+  "Dollar",
+  "Dinar",
+  "Rupee",
+  "Dirham",
+  "Taka",
+  "Yen",
+  "Canadian Dollar",
+]

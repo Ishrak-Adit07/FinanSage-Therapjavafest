@@ -35,6 +35,8 @@ import ReportUserTransactions from './pages/Financials/reports/ReportUserTransac
 import AllReports from './pages/Financials/reports/AllReports';
 import TransactionReports from './pages/Financials/reports/TransactionReports';
 import IncomeTax from './pages/Financials/tax/IncomeTax';
+import Resources from './pages/resources/Resources';
+import CurrencyConversion from './sections/resources/CurrencyConversion';
 
 const App = () => {
   return (
@@ -83,6 +85,9 @@ const App = () => {
             <Route path="user/report/transactions/user" element={<ReportUserTransactions />} />
 
             <Route path="user/tax/income/calculate" element={<IncomeTax />} />
+
+            <Route path="user/resources" element={<Resources />} />
+            <Route path="user/resources/currency/conversion" element={<CurrencyConversion />} />
 
           </Route>
 
