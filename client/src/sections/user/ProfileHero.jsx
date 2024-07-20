@@ -45,6 +45,11 @@ const ProfileHero = () => {
     navigate("/user/report/all");
   };
 
+  const handleSeeTaxes = () => {
+    navigate("/user/tax/income/calculate");
+  };
+
+
   const handleLogOut = () => {
     if (confirm("Are you sure you want to log out?")) {
       setUser({
@@ -104,6 +109,9 @@ const ProfileHero = () => {
                 text={"See my accounts"}
                 onClickAction={handleSeeAccounts}
               />
+            </div>
+            <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
+              <Subscribe text={"Income Tax"} onClickAction={handleSeeTaxes} />
             </div>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
               <Subscribe text={"Log out"} onClickAction={handleLogOut} />

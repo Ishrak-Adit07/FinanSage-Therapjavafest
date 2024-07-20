@@ -328,3 +328,22 @@ export const RECENT_CASHFLOWS = [
 ];
 
 export const RECENT_TRANSACTIONS = [];
+
+export const ANNULA_TAX_RATES = [
+  {
+    name: "Corporate",
+    rate: 10
+  },
+  {
+    name: "Business",
+    rate: 12
+  },
+  {
+    name: "Service",
+    rate: 8
+  },
+  {
+    name: "Student",
+    rate: 5
+  }
+]
