@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { RECENT_TRANSACTIONS } from "../../../constants";
 import TransactionDocCard from "../../../components/Cards/TransactionDocCard";
 
-const ReportUserBankTransactions = () => {
+const ReportUserBankTransactions = ({bank}) => {
   const [loading, setLoading] = useState(true);
   const [showTransacions, setShowTransactions] = useState(true);
 

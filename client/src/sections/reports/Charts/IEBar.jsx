@@ -10,6 +10,7 @@ const gridSquareVariants = {
 };
 
 const IEBar = ({ totalIncome, totalExpense, subHead }) => {
+  
   return (
     <div className="layoutSection pb-4 mt-40 align-center items-center justify-center">
       <h1 className="text-slate-900 text-4xl text-center">Cashflow Comparison</h1>
