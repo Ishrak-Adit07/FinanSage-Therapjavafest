@@ -2,19 +2,18 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { RECENT_TRANSACTIONS } from "../../../constants";
 import TransactionDocCard from "../../../components/Cards/TransactionDocCard";
 
-const ReportPeriodicalTransactions = ({ date, period }) => {
+const ReportPeriodicalTransactions = ({ date, period, reportTS }) => {
     const [loading, setLoading] = useState(true);
     const [showTransacions, setShowTransactions] = useState(true);
 
     useEffect(() => {
       setTimeout(async () => {
         setLoading(false);
-        if (RECENT_TRANSACTIONS.length === 0) setShowTransactions(false);
+        if (reportTS.length === 0) setShowTransactions(false);
       }, 1000);
-    }, []);
+    }, [reportTS]);
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
@@ -22,7 +21,7 @@ const ReportPeriodicalTransactions = ({ date, period }) => {
         <h1 className="text-slate-900 text-4xl text-center">Transactions History</h1>
         <h1 className="text-slate-700 text-2xl text-center mt-2">in this time period</h1>
         {showTransacions &&
-          RECENT_TRANSACTIONS.map((transaction, index) => (
+          reportTS.map((transaction, index) => (
             <motion.div
               key={index}
               className="w-full"

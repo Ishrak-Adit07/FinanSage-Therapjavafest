@@ -2,17 +2,16 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { RECENT_CASHFLOWS } from "../../../constants";
 import CashFlowDocCard from "../../../components/Cards/CashFlowDocCard";
 
-const ReportWalletCashFlows = ({ wallet }) => {
+const ReportWalletCashFlows = ({ wallet, reportFlows }) => {
   const [showCashFlows, setShowCashFlows] = useState(true);
 
   useEffect(() => {
     setTimeout(async () => {
-      if (RECENT_CASHFLOWS.length === 0) setShowCashFlows(false);
+      if (reportFlows.length === 0) setShowCashFlows(false);
     }, 1000);
-  }, []);
+  }, [reportFlows]);
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
@@ -20,7 +19,7 @@ const ReportWalletCashFlows = ({ wallet }) => {
       <h1 className="text-slate-900 text-4xl text-center">Cashflow History</h1>
       <h1 className="text-slate-700 text-2xl text-center mt-2">for this wallet</h1>
         {showCashFlows &&
-          RECENT_CASHFLOWS.map((transaction, index) => (
+          reportFlows.map((transaction, index) => (
             <motion.div
               key={index}
               className="w-full"
