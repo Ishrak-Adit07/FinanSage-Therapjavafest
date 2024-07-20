@@ -15,49 +15,49 @@ import {
 const data = [
   {
     name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    income: 4000,
+    expense: 2400,
     amt: 2400,
   },
   {
     name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    income: 3000,
+    expense: 1398,
     amt: 2210,
   },
   {
     name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    income: 2000,
+    expense: 9800,
     amt: 2290,
   },
   {
     name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    income: 2780,
+    expense: 3908,
     amt: 2000,
   },
   {
     name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    income: 1890,
+    expense: 4800,
     amt: 2181,
   },
   {
     name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    income: 2390,
+    expense: 3800,
     amt: 2500,
   },
   {
     name: "Page G",
-    uv: 3490,
-    pv: 4300,
+    income: 3490,
+    expense: 4300,
     amt: 2100,
   },
 ];
 
-function BiaxialLineChart({ headerText }) {
+function IEBiaxialLineChart({ headerText }) {
   return (
     <div
       style={{ width: "100%", height: 400 }}
@@ -85,15 +85,15 @@ function BiaxialLineChart({ headerText }) {
           <Line
             yAxisId="left"
             type="monotone"
-            dataKey="pv"
+            dataKey="expense"
             stroke="#8884d8"
             activeDot={{ r: 8 }}
           />
-          <Line yAxisId="right" type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line yAxisId="right" type="monotone" dataKey="income" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 }
 
-export default BiaxialLineChart;
+export default IEBiaxialLineChart;

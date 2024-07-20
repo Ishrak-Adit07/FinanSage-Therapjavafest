@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import BiaxialLineChart from "../../components/Charts/BiAxialLineChart";
+import IEBiaxialLineChart from "../../components/Charts/IEBiaxialLineChart";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -22,7 +22,7 @@ const CashGraph = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center w-full">
-            <BiaxialLineChart headerText={"User Cashflow Overview"} />
+            <IEBiaxialLineChart headerText={"User Cashflow Overview"} />
           </div>
         </motion.div>
       </motion.div>
