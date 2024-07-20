@@ -18,6 +18,26 @@ const getCashFlowsByUser = async (userID) => {
   }
 };
 
+const getRecentCashFlowsByUser = async (userID) => {
+  if (!userID) {
+    throw Error("User Id is required");
+  }
+
+  try {
+    const response = await fetch(`/api/user/cashFlow/get/recent/${userID}`);
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
+
 const getCashFlowsByWallet = async (userID, walletID) => {
   if (!userID || !walletID) {
     throw Error("Both User Id and wallet ID are required");
@@ -92,8 +112,34 @@ const createCashFlow = async (userID, walletID, cashFlow) => {
   }
 };
 
-const editCashFlowAmount = async (userID, walletID, cashFlowID, newAmount) => {
-  if (!userID || !walletID || !cashFlowID || !newAmount) {
+const editCashFlowWallet = async (userID, cashFlowID, newWalletID) => {
+  if (!userID || !cashFlowID || !newWalletID) {
+    throw Error("All fields are required");
+  }
+
+  try {
+    const response = await fetch("/api/user/cashFlow/edit/wallet", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userID, cashFlowID, newWalletID }),
+    });
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw Error(responseData.error);
+    }
+
+    return responseData;
+  } catch (error) {
+    console.error("Error:", error.message);
+    throw Error(error.message);
+  }
+};
+
+const editCashFlowAmount = async (userID, cashFlowID, newAmount) => {
+  if (!userID || !cashFlowID || !newAmount) {
     throw Error("All fields are required");
   }
 
@@ -103,7 +149,7 @@ const editCashFlowAmount = async (userID, walletID, cashFlowID, newAmount) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userID, walletID, cashFlowID, newAmount }),
+      body: JSON.stringify({ userID, cashFlowID, newAmount }),
     });
 
     const responseData = await response.json();
@@ -118,8 +164,8 @@ const editCashFlowAmount = async (userID, walletID, cashFlowID, newAmount) => {
   }
 };
 
-const editCashFlowNote = async (userID, walletID, cashFlowID, newNote) => {
-  if (!userID || !walletID || !cashFlowID || !newNote) {
+const editCashFlowNote = async (userID, cashFlowID, newNote) => {
+  if (!userID || !cashFlowID || !newNote) {
     throw Error("All fields are required");
   }
 
@@ -129,7 +175,7 @@ const editCashFlowNote = async (userID, walletID, cashFlowID, newNote) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userID, walletID, cashFlowID, newNote }),
+      body: JSON.stringify({ userID, cashFlowID, newNote }),
     });
 
     const responseData = await response.json();
@@ -144,8 +190,8 @@ const editCashFlowNote = async (userID, walletID, cashFlowID, newNote) => {
   }
 };
 
-const editCashFlowType = async (userID, walletID, cashFlowID, newType) => {
-  if (!userID || !walletID || !cashFlowID || !newType) {
+const editCashFlowType = async (userID, cashFlowID, newType) => {
+  if (!userID || !cashFlowID || !newType) {
     throw Error("All fields are required");
   }
 
@@ -155,7 +201,7 @@ const editCashFlowType = async (userID, walletID, cashFlowID, newType) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userID, walletID, cashFlowID, newType }),
+      body: JSON.stringify({ userID, cashFlowID, newType }),
     });
 
     const responseData = await response.json();
@@ -198,10 +244,12 @@ const deleteCashFlow = async (userID, walletID, cashFlowID) => {
 
 export {
   getCashFlowsByUser,
+  getRecentCashFlowsByUser,
   getCashFlowsByWallet,
   getCashFlowsByWallets,
   createCashFlow,
   deleteCashFlow,
+  editCashFlowWallet,
   editCashFlowAmount,
   editCashFlowNote,
   editCashFlowType,

@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
+import Subscribe from "../Buttons/Subscribe";
 
 const LoginForm = () => {
   //UserContext
@@ -39,7 +40,10 @@ const LoginForm = () => {
     } catch (err) {
       setError(err.message);
     }
-    
+  };
+
+  const goToRegister = () => {
+    navigate("/register");
   };
 
   return (
@@ -67,6 +71,9 @@ const LoginForm = () => {
 
         <button type="submit" className="btn">
           Login
+        </button>
+        <button className="btn mt-4" onClick={goToRegister}>
+          Register
         </button>
         {error && <Alert msg={error} />}
       </form>

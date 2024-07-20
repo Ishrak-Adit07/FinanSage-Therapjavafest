@@ -109,6 +109,13 @@
 - **Parameters:**
   - `userID` (string): The ID of the User
 
+  ### Get All Recent CashFlow Of A User
+
+- **Endpoint:** `http://localhost:4000/api/user/cashflow/get/recent/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+
 ### Get All CashFlow Of A Certain Wallet Of User
 
 - **Endpoint:** `http://localhost:4000/api/user/cashflow/get/:userID/:walletID`
@@ -129,6 +136,13 @@
     "toWalletID": "To wallet ID"
   }
   ```
+
+### Get Recent CashFlows Of A User
+- **Function:** 50-100 latest cashflows of the user
+- **Endpoint:** `http://localhost:4000/api/user/cashflow/get/recent/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
 
 ### Create CashFlow
 
@@ -160,6 +174,19 @@
   }
   ```
 
+### Edit CashFlow Wallet
+
+- **Endpoint:** `http://localhost:4000/api/user/cashflow/edit/wallet`
+- **Method:** `PUT`
+- **Body:**
+  ```json
+  {
+    "userID": "User ID",
+    "cashFlowID": "Cash Flow ID",
+    "newWalletID": "New Wallet ID"
+  }
+  ```
+
 ### Edit CashFlow Amount
 
 - **Endpoint:** `http://localhost:4000/api/user/cashflow/edit/amount`
@@ -168,7 +195,6 @@
   ```json
   {
     "userID": "User ID",
-    "walletID": "Wallet ID",
     "cashFlowID": "Cash Flow ID",
     "newAmount": 100
   }
@@ -182,7 +208,6 @@
   ```json
   {
     "userID": "User ID",
-    "walletID": "Wallet ID",
     "cashFlowID": "Cash Flow ID",
     "newNote": "New note"
   }
@@ -196,7 +221,6 @@
   ```json
   {
     "userID": "User ID",
-    "walletID": "Wallet ID",
     "cashFlowID": "Cash Flow ID",
     "newType": "New Type"
   }
@@ -293,5 +317,43 @@
     "fromUserID": "From User ID",
     "toUserID": "To User ID",
     "amount": 100
+  }
+  ```
+
+## Reports
+
+### Get Daily Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/day/:userID`
+- **Method:** `POST`
+- **Body:**
+  ```json
+  {
+    "date": "Report Date"
+  }
+  ```
+
+### Get Weekly Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/week/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+
+### Get Monthly Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/month/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+
+### Get Certain Wallet Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/wallet/:userID`
+- **Method:** `POST`
+- **Body:**
+  ```json
+  {
+    "walletID": "Wallet ID"
   }
   ```

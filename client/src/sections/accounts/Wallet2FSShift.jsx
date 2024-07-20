@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Alert from "../../messages/Alert";
 import ToggleButton from "../../components/Buttons/ToggleButton";
 import { USER_WALLETS } from "../../constants";
-import Alert from "../../messages/Alert";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
 };
 
-const InterWalletCashFlow = () => {
+const Wallet2FSShift = () => {
   const [showExpense, setShowExpense] = useState(false);
 
   const handleTransactionToggle = () => {
@@ -19,11 +19,9 @@ const InterWalletCashFlow = () => {
 
   const handleCashflow = (e) => {
     e.preventDefault();
-    console.log(amount, note);
-    setNote();
+    console.log(amount);
     setAmount();
     setFromWallet("");
-    setToWallet("");
   };
 
   // Error state
@@ -32,14 +30,12 @@ const InterWalletCashFlow = () => {
   // Form data states
 
   const [fromWallet, setFromWallet] = useState();
-  const [toWallet, setToWallet] = useState();
   const [amount, setAmount] = useState();
-  const [note, setNote] = useState("");
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
       <h1 className="text-slate-700 text-bold text-4xl">
-        Inter Wallet Transactions
+        Shift Money from Wallet to FS Account
       </h1>
       <div className="lg:w-4/5 w-full">
         <motion.div
@@ -83,21 +79,6 @@ const InterWalletCashFlow = () => {
                 ))}
               </select>
 
-              <select
-                className="input mt-2"
-                value={toWallet}
-                onChange={(e) => setToWallet(e.target.value)}
-              >
-                <option value="" disabled>
-                  Select To Wallet
-                </option>
-                {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
-                  </option>
-                ))}
-              </select>
-
               <input
                 type="number"
                 placeholder="Amount"
@@ -107,16 +88,8 @@ const InterWalletCashFlow = () => {
                 onChange={(e) => setAmount(e.target.value)}
               />
 
-              <input
-                type="text"
-                placeholder="Add note"
-                className="input"
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
-              />
-
               <button type="submit" className="btn">
-                Add
+                Shift Money
               </button>
               {error && <Alert msg={error} />}
             </form>
@@ -127,4 +100,4 @@ const InterWalletCashFlow = () => {
   );
 };
 
-export default InterWalletCashFlow;
+export default Wallet2FSShift;

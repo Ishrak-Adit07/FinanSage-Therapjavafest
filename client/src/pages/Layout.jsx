@@ -3,6 +3,7 @@ import React, { useContext, useRef } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { UserContext } from '../contexts/UserContext';
 import Navbar from '../sections/Navbar';
+import Footer from '../sections/Footer';
 
 const Layout = () => {
 
@@ -61,7 +62,6 @@ const Layout = () => {
             <Outlet />
         
         </main>
-
 
     </>
   )

@@ -21,6 +21,19 @@ import Budget from './pages/budgets/Budget';
 import CreateBudget from './pages/budgets/CreateBudget';
 import BankAccounts from './pages/accounts/BankAccounts';
 import CreateAccount from './pages/accounts/CreateAccount';
+import FinanSageAccount from './pages/accounts/FinanSageAccount';
+import BankAccount from './pages/accounts/BankAccount';
+import EditCashFlow from './pages/Financials/cashFlow/EditCashFlow';
+import CashFlowReports from './pages/Financials/reports/CashFlowReports';
+import ReportToday from './pages/Financials/reports/ReportToday';
+import ReportDaily from './pages/Financials/reports/ReportDaily';
+import ReportWeekly from './pages/Financials/reports/ReportWeekly';
+import ReportMonthly from './pages/Financials/reports/ReportMonthly';
+import ReportWallet from './pages/Financials/reports/ReportWallet';
+import ReportBankTransactions from './pages/Financials/reports/ReportBankTransactions';
+import ReportUserTransactions from './pages/Financials/reports/ReportUserTransactions';
+import AllReports from './pages/Financials/reports/AllReports';
+import TransactionReports from './pages/Financials/reports/TransactionReports';
 
 const App = () => {
   return (
@@ -46,10 +59,27 @@ const App = () => {
             <Route path="/budget/create" element={<CreateBudget />} />
 
             <Route path="user/accounts/bank" element={<BankAccounts />} />
-            <Route path="/user/account/bank/details/:bankID" element={<CreateAccount />} />
+            <Route path="/user/account/bank/details/:bankID" element={<BankAccount />} />
             <Route path="/user/account/bank/create" element={<CreateAccount />} />
 
+            <Route path="user/account/finanSage" element={<FinanSageAccount />} />
+
             <Route path="user/transactions" element={<UserTransactions />} />
+            <Route path="user/cashFlow/edit/:typeIncome/:id" element={<EditCashFlow />} />
+
+            <Route path="user/report/all" element={<AllReports />} />
+
+            <Route path="user/report/cashFlow" element={<CashFlowReports />} />
+            <Route path="user/report/transaction" element={<TransactionReports />} />
+
+            <Route path="user/report/cashFlow/today" element={<ReportToday />} />
+            <Route path="user/report/cashFlow/day" element={<ReportDaily />} />
+            <Route path="user/report/cashFlow/week" element={<ReportWeekly />} />
+            <Route path="user/report/cashFlow/month" element={<ReportMonthly />} />
+            <Route path="user/report/cashFlow/wallet" element={<ReportWallet />} />
+
+            <Route path="user/report/transactions/bank" element={<ReportBankTransactions />} />
+            <Route path="user/report/transactions/user" element={<ReportUserTransactions />} />
 
           </Route>
 

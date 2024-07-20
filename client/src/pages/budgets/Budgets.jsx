@@ -24,7 +24,6 @@ const Budgets = () => {
         {!loading && (
           <div>
             <CashGraph />
-            <CashGraph />
             <BudgetCreate />
             <BudgetList />
           </div>

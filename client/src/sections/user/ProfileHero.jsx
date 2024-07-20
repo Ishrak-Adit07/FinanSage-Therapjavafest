@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HERO_CONTENT } from "../../constants";
 import Subscribe from "../../components/Buttons/Subscribe";
 import HeroImage from "../../assets/images/Profile.jpg";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -15,30 +18,52 @@ const userName = "Ishrak Adit";
 const userStatus = "Regular";
 
 const ProfileHero = () => {
-
   const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
 
   const handldeDownload = () => {
     console.log("Downloading CV");
   };
 
-  const handleSeeWallets = () =>{
-    navigate("/user/wallets")
-  }
+  const goToFinanSageAccount = () => {
+    navigate("/user/account/finanSage");
+  };
 
-  const handleSeeBudgets = () =>{
-    navigate("/user/budgets")
-  }
+  const handleSeeWallets = () => {
+    navigate("/user/wallets");
+  };
 
-  const handleSeeAccounts = () =>{
-    navigate("/user/accounts/bank")
-  }
+  const handleSeeBudgets = () => {
+    navigate("/user/budgets");
+  };
+
+  const handleSeeAccounts = () => {
+    navigate("/user/accounts/bank");
+  };
+
+  const handleSeeReports = () => {
+    navigate("/user/report/all");
+  };
+
+  const handleLogOut = () => {
+    if (confirm("Are you sure you want to log out?")) {
+      setUser({
+        name: null,
+        email: null,
+      });
+
+      localStorage.removeItem("email");
+      localStorage.removeItem("webToken");
+
+      navigate("/");
+    }
+  };
 
   return (
-    <div className="layoutSection text-slate-200 pb-4">
+    <div className="layoutSection text-slate-200 pb-4 flex flex-wrap items-center justify-center">
       <motion.div
         variants={gridSquareVariants}
-        className="flex flex-wrap items-center justify-center lg:justify-start"
+        className="flex flex-wrap items-center justify-center"
       >
         <motion.div
           className="w-full lg:w-1/2"
@@ -57,15 +82,31 @@ const ProfileHero = () => {
               {HERO_CONTENT}
             </p>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe text={"See my wallets"} onClickAction={handldeDownload} />
+              <Subscribe
+                text={"FinanSage Account"}
+                onClickAction={goToFinanSageAccount}
+              />
+              <Subscribe
+                text={"See Reports"}
+                onClickAction={handleSeeReports}
+              />
             </div>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe text={"See my budgets"} onClickAction={handldeDownload} />
+              <Subscribe
+                text={"See my wallets"}
+                onClickAction={handleSeeWallets}
+              />
+              <Subscribe
+                text={"See my budgets"}
+                onClickAction={handleSeeBudgets}
+              />
+              <Subscribe
+                text={"See my accounts"}
+                onClickAction={handleSeeAccounts}
+              />
             </div>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe text={"See my wallets"} onClickAction={handleSeeWallets} />
-              <Subscribe text={"See my budgets"} onClickAction={handleSeeBudgets} />
-              <Subscribe text={"See my accounts"} onClickAction={handleSeeAccounts} />
+              <Subscribe text={"Log out"} onClickAction={handleLogOut} />
             </div>
           </div>
         </motion.div>
@@ -76,14 +117,14 @@ const ProfileHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
-          <div className="flex justify-center max-w-xl">
-            {/* <a href="https://www.facebook.com/ishrak.adit"> */}
-            <img
-              src={HeroImage}
-              alt="Ishrak Adit"
-              className="w-1/2 h-auto object-cover rounded-full shadow-lg mt-20"
-            />
-            {/* </a> */}
+          <div className="">
+            <Link title="FinanSage Account" to="/user/account/finanSage">
+              <img
+                src={HeroImage}
+                alt="Ishrak Adit"
+                className="w-3/4 object-cover rounded-full shadow-lg mt-20"
+              />
+            </Link>
           </div>
         </motion.div>
       </motion.div>

@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import Hero from '../sections/Hero';
 import Contact from '../sections/company/Contact';
+import Footer from '../sections/Footer';
 
 const Home = () => {
 
@@ -36,6 +37,7 @@ const Home = () => {
               <Hero scrollToContact={scrollToContact}/>
               <Hero scrollToContact={scrollToContact}/>
               <Contact scrollToContact={scrollToContact}/>
+              <Footer />
             </div>
           }
         </div>

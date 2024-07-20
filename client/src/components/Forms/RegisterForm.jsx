@@ -45,7 +45,10 @@ const RegisterForm = () => {
     } catch (e) {
       setError(e.message);
     }
+  };
 
+  const goToLogin = () => {
+    navigate("/login");
   };
 
   return (
@@ -107,6 +110,10 @@ const RegisterForm = () => {
 
         <button type="submit" className="btn">
           Register
+        </button>
+
+        <button className="btn mt-4" onClick={goToLogin}>
+          Login
         </button>
 
         {error && <Alert msg={error} />}
