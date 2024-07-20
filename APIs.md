@@ -387,3 +387,18 @@
 - **Parameters:**
   - `userID` (string): The ID of the User
   - `user2ID` (string): The ID of the Other User
+
+## Tax
+
+### Calculate Tax of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/tax/calculate`
+- **Method:** `POST`
+- **Body:**
+  ```json
+  {
+    "userID": "Report Date",
+    "wallets": ["WalletIDs to consider"],
+    "types": ["Income types to consider"]
+  }
+  ```
