@@ -37,10 +37,11 @@ const ReportUserUserTransactions = () => {
               )}
             </motion.div>
           ))}
-          {
-            !showTransacions &&
-            <h1 className="text-2xl my-10 text-center">There are no transactions for this User</h1>
-          }
+        {!showTransacions && (
+          <h1 className="text-2xl my-10 text-center">
+            There are no transactions for this User
+          </h1>
+        )}
       </div>
     </section>
   );
