@@ -357,3 +357,33 @@
     "walletID": "Wallet ID"
   }
   ```
+
+### Get Bank Transactions Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/transactions/banks/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+
+### Get User Transactions Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/transactions/users/:userID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+
+### Get Certain Bank Transactions Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/transactions/bank/:userID/:bankID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+  - `bankID` (string): The ID of the Bank
+
+### Get Certain User Transactions Report of a User
+
+- **Endpoint:** `http://localhost:4000/api/user/report/get/transactions/user/:userID/:user2ID`
+- **Method:** `GET`
+- **Parameters:**
+  - `userID` (string): The ID of the User
+  - `user2ID` (string): The ID of the Other User
