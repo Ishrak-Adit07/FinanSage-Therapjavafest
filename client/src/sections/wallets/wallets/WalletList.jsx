@@ -16,7 +16,7 @@ const WalletList = () => {
         variants={gridSquareVariants}
         className="flex flex-wrap justify-center lg:justify-start"
       >
-        {USER_WALLETS.map((project, index) => (
+        {USER_WALLETS.map((wallet, index) => (
           <motion.div
             key={index}
             className="w-full lg:w-1/2 items-center justify-center"
@@ -24,7 +24,7 @@ const WalletList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <WalletCard Title={project.title} Balance={project.balance} Image={project.image} GithubLink={project.githubLink} Descroption={project.description} TechStack={project.technologies} />
+            <WalletCard name={wallet.name} currency={wallet.currency} cashFlowIDs={wallet.cashFlowIDs} balance={wallet.balance}/>
           </motion.div>
         ))}
       </motion.div>

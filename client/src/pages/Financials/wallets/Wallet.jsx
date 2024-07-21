@@ -4,11 +4,12 @@ import { useParams } from 'react-router-dom';
 import WalletDetails from '../../../sections/wallets/wallet/WalletDetails';
 import WalletFunctions from '../../../sections/wallets/wallet/WalletFunctions';
 import WalletGraph from '../../../sections/wallets/wallet/WalletGraph';
+import WalletSettings from '../../../sections/wallets/wallet/WalletSettings';
 
 const Wallet = () => {
   const [loading, setLoading] = useState(true);
 
-  const {title} = useParams();
+  const {id} = useParams();
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,9 +25,10 @@ const Wallet = () => {
         )}
         {!loading && (
           <div>
-            <WalletGraph />
-            <WalletDetails title={title}/>
+            <WalletDetails id={id}/>
             <WalletFunctions />
+            <WalletGraph />
+            <WalletSettings />
           </div>
         )}
       </div>

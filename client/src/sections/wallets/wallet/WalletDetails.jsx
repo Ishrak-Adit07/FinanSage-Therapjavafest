@@ -3,19 +3,19 @@
 import React from 'react';
 import { USER_WALLETS } from '../../../constants';
 
-const findByTitle = (title) => {
-  return USER_WALLETS.find(wallet => wallet.title === title);
+const findByID = (id) => {
+  return USER_WALLETS.find(wallet => wallet.name === id);
 };
 
-const WalletDetails = ({title}) => {
+const WalletDetails = ({id}) => {
 
-  const resultByTitle = findByTitle(title);
+  const resultByID = findByID(id);
 
   return (
     <div>
-      <p>{resultByTitle.title}</p>
-      <p>{resultByTitle.balance}</p>
-      <p>{resultByTitle.description}</p>
+      {false && <h1 className='text-4xl text-bold text-slate-700 text-center my-10'>Wallet Details</h1>}
+      <h1 className='text-4xl text-bold text-slate-700 text-center my-2'>{resultByID.name}</h1>
+      <h1 className='text-2xl text-bold text-slate-700 text-center my-2'>Balance: {resultByID.balance} {resultByID.currency}</h1>
     </div>
   );
 }

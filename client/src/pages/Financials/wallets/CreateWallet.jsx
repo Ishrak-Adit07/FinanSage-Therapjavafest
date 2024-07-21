@@ -1,8 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { UserContext } from '../../../contexts/UserContext';
-import Alert from '../../../messages/Alert';
+import React from 'react';
 import CreateWalletForm from '../../../components/Forms/CreateWalletForm';
 
 const CreateWallet = () => {

@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import Subscribe from "../../../components/Buttons/Subscribe";
 import StraightAnglePieChart from "../../../components/Charts/StraightAnglePieChart";
 
 const gridSquareVariants = {
@@ -10,9 +9,6 @@ const gridSquareVariants = {
 };
 
 const WalletGraph = () => {
-  const handleTargetContact = () => {
-    console.log("This is for contact");
-  };
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4">
@@ -27,18 +23,11 @@ const WalletGraph = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center w-full">
-            <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
-              Single Wallet Cash Graph
-            </h1>
+            {false && <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
+              Wallet Cash Graph
+            </h1>}
 
-            <StraightAnglePieChart headerText={"Single wallet Cashflow Overview"}/>
-
-            <div className="flex items-center justify-center gap-5 mt-10 w-full">
-              <Subscribe
-                text={"Download CV"}
-                onClickAction={handleTargetContact}
-              />
-            </div>
+            <StraightAnglePieChart headerText={"Wallet Cashflow Overview"}/>
           </div>
         </motion.div>
       </motion.div>

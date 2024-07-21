@@ -55,11 +55,11 @@ const App = () => {
             <Route path="user/profile" element={<Profile />} />
 
             <Route path="user/wallets" element={<Wallets />} />
-            <Route path="/wallet/details/:title" element={<Wallet />} />
+            <Route path="/wallet/details/:id" element={<Wallet />} />
             <Route path="/wallet/create" element={<CreateWallet />} />
 
             <Route path="user/budgets" element={<Budgets />} />
-            <Route path="/budget/details/:title" element={<Budget />} />
+            <Route path="/budget/details/:id" element={<Budget />} />
             <Route path="/budget/create" element={<CreateBudget />} />
 
             <Route path="user/accounts/bank" element={<BankAccounts />} />

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const WalletCard = ({ Title, Balance, GithubLink, Description, TechStack }) => {
+const WalletCard = ({ name, currency, cashFlowIDs, balance }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -30,8 +30,8 @@ const WalletCard = ({ Title, Balance, GithubLink, Description, TechStack }) => {
             >
               <div className="h-full w-full">
                 <div className="flex items-center justify-between">
-                  <h1 className="text-2xl font-semibold text-left">{Title}</h1>
-                  <h1 className="text-2xl font-thin text-right">{Balance}$</h1>
+                  <h1 className="text-2xl font-semibold text-left">{name}</h1>
+                  <h1 className="text-2xl font-thin text-right">{balance}</h1>
                 </div>
 
                 <motion.div
@@ -45,22 +45,21 @@ const WalletCard = ({ Title, Balance, GithubLink, Description, TechStack }) => {
                       <div className="flex justify-start mb-2">
                         <Link
                           title="See wallet details"
-                          to={`/wallet/details/${Title}`}
+                          to={`/wallet/details/${name}`}
                           className="text-white hover:underline"
                         >
                           View details
                         </Link>
                       </div>
-                      <h2 className="text-sm font-thin mb-2">{Description}</h2>
+                      <h2 className="text-sm font-thin mb-2">{currency}</h2>
                       <h2 className="text-sm font-thin">
-                        Tech Stack: {TechStack.join(", ")}
+                        CashFlow IDs: {cashFlowIDs.join(", ")}
                       </h2>
                     </div>
                   )}
                 </motion.div>
               </div>
             </motion.div>
-            {/* </a> */}
           </div>
         </motion.div>
       </motion.div>

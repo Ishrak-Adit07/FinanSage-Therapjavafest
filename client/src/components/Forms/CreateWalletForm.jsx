@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
+import { CURRENCIES } from "../../constants";
 
 const CreateWalletForm = () => {
   const navigate = useNavigate();
@@ -12,7 +13,6 @@ const CreateWalletForm = () => {
     walletName: "",
     currency: "",
     initialBalance: null,
-    userID: [],
   });
 
   //Handle Register
@@ -20,14 +20,14 @@ const CreateWalletForm = () => {
     e.preventDefault();
 
     try {
-      //const registerResponseData = await registerUser(formData.email, formData.password, formData.confirmPassword);
+      //const responseData = await createWallet(formData.walletName, formData.currency, formData.initialBalance);
 
-      const registerResponseData = true;
+      const responseData = true;
 
-      if (registerResponseData) {
-        navigate("/user/dashboard");
-
+      if (responseData) {
+        console.log(formData);
         setError(null);
+        navigate("/user/wallets");
       }
     } catch (e) {
       setError(e.message);
@@ -51,15 +51,22 @@ const CreateWalletForm = () => {
           }}
         />
 
-        <input
-          type="text"
-          placeholder="Currency"
-          className="input"
+        <select
+          className="input mt-2"
           value={formData.currency}
           onChange={(e) => {
             setFormData({ ...formData, currency: e.target.value });
           }}
-        />
+        >
+          <option value="" disabled>
+            Select Currency
+          </option>
+          {CURRENCIES.map((currency, index) => (
+            <option key={index} value={currency}>
+              {currency}
+            </option>
+          ))}
+        </select>
 
         <input
           type="number"
