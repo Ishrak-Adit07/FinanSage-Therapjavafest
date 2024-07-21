@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import FS2WalletShift from '../../sections/accounts/FS2WalletShift';
-import Wallet2FSShift from '../../sections/accounts/Wallet2FSShift';
 import FSAccountDetails from '../../sections/accounts/FSAccountDetails';
 import FSAccountTransactions from '../../sections/accounts/FSAccountTransactions';
 import { RECENT_TRANSACTIONS } from '../../constants';
+import Bank2FSShift from '../../sections/accounts/Bank2FSShift';
+import FS2BankShift from '../../sections/accounts/FS2BankShift';
 
 const FinanSageAccount = () => {
   const [loading, setLoading] = useState(true);
@@ -26,9 +25,10 @@ const FinanSageAccount = () => {
         )}
         {!loading && (
           <div>
+            <h1 className='text-3xl text-slate-500 text-center text-bold'>FinanSage User Account</h1>
             <FSAccountDetails />
-            <FS2WalletShift />
-            <Wallet2FSShift />
+            <FS2BankShift />
+            <Bank2FSShift />
             <FSAccountTransactions fsTS={fsTS}/>
           </div>
         )}
