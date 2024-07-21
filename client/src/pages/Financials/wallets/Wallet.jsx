@@ -7,6 +7,7 @@ import WalletGraph from '../../../sections/wallets/wallet/WalletGraph';
 import WalletSettings from '../../../sections/wallets/wallet/WalletSettings';
 import { RECENT_CASHFLOWS } from '../../../constants';
 import WalletCashFlows from '../../../sections/wallets/wallet/WalletCashFlows';
+import WalletAddCashFlow from '../../../sections/wallets/wallet/WalletAddCashFlow';
 
 const Wallet = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ const Wallet = () => {
         {!loading && (
           <div>
             <WalletDetails id={id}/>
+            <WalletAddCashFlow />
             <WalletFunctions />
             <WalletGraph />
             <WalletCashFlows reportFlows={walletFlows}/>

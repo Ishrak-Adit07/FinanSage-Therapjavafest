@@ -19,9 +19,8 @@ const InterWalletCashFlow = () => {
 
   const handleCashflow = (e) => {
     e.preventDefault();
-    console.log(amount, note);
-    setNote();
-    setAmount();
+    console.log(amount);
+    setAmount("");
     setFromWallet("");
     setToWallet("");
   };
@@ -34,10 +33,9 @@ const InterWalletCashFlow = () => {
   const [fromWallet, setFromWallet] = useState();
   const [toWallet, setToWallet] = useState();
   const [amount, setAmount] = useState();
-  const [note, setNote] = useState("");
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
+    <div className="layoutSection border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
       <h1 className="text-slate-700 text-bold text-4xl">
         Inter Wallet Transactions
       </h1>
@@ -52,8 +50,7 @@ const InterWalletCashFlow = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <ToggleButton />
-            <button onClick={handleTransactionToggle} className="text-red-500">
+            <button onClick={handleTransactionToggle} className="chbtn">
               Change
             </button>
           </motion.div>
@@ -66,7 +63,7 @@ const InterWalletCashFlow = () => {
           >
             <form
               onSubmit={handleCashflow}
-              className="justify-center items-center  text-slate-700"
+              className="justify-center items-center text-slate-700"
             >
               <select
                 className="input mt-2"
@@ -74,11 +71,11 @@ const InterWalletCashFlow = () => {
                 onChange={(e) => setFromWallet(e.target.value)}
               >
                 <option value="" disabled>
-                  Select From Wallet
+                  Select Wallet to Transfer From
                 </option>
                 {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
+                  <option key={index} value={wallet.name}>
+                    {wallet.name}
                   </option>
                 ))}
               </select>
@@ -89,11 +86,11 @@ const InterWalletCashFlow = () => {
                 onChange={(e) => setToWallet(e.target.value)}
               >
                 <option value="" disabled>
-                  Select To Wallet
+                  Select to Wallet to Transfer To
                 </option>
                 {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
+                  <option key={index} value={wallet.name}>
+                    {wallet.name}
                   </option>
                 ))}
               </select>
@@ -105,14 +102,6 @@ const InterWalletCashFlow = () => {
                 autoFocus
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-              />
-
-              <input
-                type="text"
-                placeholder="Add note"
-                className="input"
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
               />
 
               <button type="submit" className="btn">

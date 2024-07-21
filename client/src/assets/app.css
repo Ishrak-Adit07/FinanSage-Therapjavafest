@@ -47,4 +47,8 @@ body,
   .smbtn {
     @apply block bg-indigo-500 text-white rounded-md p-2 active:bg-indigo-600;
   }
+
+  .chbtn {
+    @apply block text-slate-200 bg-slate-600 active:bg-slate-700 p-2 rounded-lg shadow-md
+  }
 }

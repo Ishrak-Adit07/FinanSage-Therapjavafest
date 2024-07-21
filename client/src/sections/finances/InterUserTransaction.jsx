@@ -50,8 +50,7 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <ToggleButton />
-            <button onClick={handleTransactionToggle} className="text-red-500">
+            <button onClick={handleTransactionToggle} className="chbtn">
               Change
             </button>
           </motion.div>
