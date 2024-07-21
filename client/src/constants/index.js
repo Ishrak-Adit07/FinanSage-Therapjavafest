@@ -358,3 +358,33 @@ export const CURRENCIES = [
   "Yen",
   "Canadian Dollar",
 ]
+
+export const MARKET_POS = [
+  {
+    name: "DOHS",
+    change: 4.87
+  },
+  {
+    name: "MEG",
+    change: 1.27
+  },
+  {
+    name: "ZXY",
+    change: 0.97
+  }
+];
+
+export const MARKET_NEG = [
+  {
+    name: "ABC",
+    change: -1.54
+  },
+  {
+    name: "NID",
+    change: -0.78
+  },
+  {
+    name: "AIM",
+    change: -0.39
+  }
+];

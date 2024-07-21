@@ -6,12 +6,28 @@ import { useNavigate } from "react-router-dom";
 const Resources = () => {
   const navigate = useNavigate();
 
+  const goToArticles = () => {
+    navigate("/user/resources/articles");
+  };
+
+  const goToBusiness = () => {
+    navigate("/user/resources/business");
+  };
+
   const goToCurrencyConversion = () => {
     navigate("/user/resources/currency/conversion");
   };
 
   return (
-    <div className="justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
+      <Subscribe
+        text={"Articles"}
+        onClickAction={goToArticles}
+      />
+      <Subscribe
+        text={"Business"}
+        onClickAction={goToBusiness}
+      />
       <Subscribe
         text={"Currency Conversion"}
         onClickAction={goToCurrencyConversion}

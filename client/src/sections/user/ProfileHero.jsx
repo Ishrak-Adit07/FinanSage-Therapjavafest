@@ -53,6 +53,10 @@ const ProfileHero = () => {
     navigate("/user/resources");
   };
 
+  const handleSeeNews = () => {
+    navigate("/user/news");
+  };
+
   const handleLogOut = () => {
     if (confirm("Are you sure you want to log out?")) {
       setUser({
@@ -116,6 +120,7 @@ const ProfileHero = () => {
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
               <Subscribe text={"Taxes"} onClickAction={handleSeeTaxes} />
               <Subscribe text={"Resources"} onClickAction={handleSeeResources} />
+              <Subscribe text={"News"} onClickAction={handleSeeNews} />
             </div>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
               <Subscribe text={"Log out"} onClickAction={handleLogOut} />

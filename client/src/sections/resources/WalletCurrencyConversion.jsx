@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { CURRENCIES } from "../../constants";
+import { CURRENCIES, USER_WALLETS } from "../../constants";
 import Subscribe from "../../components/Buttons/Subscribe";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ const gridSquareVariants = {
   show: { opacity: 1 },
 };
 
-const CurrencyConversion = () => {
+const WalletCurrencyConversion = () => {
   const navigate = useNavigate();
 
   const convertCurrency = () => {
@@ -36,7 +36,7 @@ const CurrencyConversion = () => {
   return (
     <div className="layoutSection text-slate-200 pb-4 items-center justify-center my-20">
       <h1 className="text-4xl text-center text-slate-400">
-        Currency Conversion
+        Wallet Currency Conversion
       </h1>
       <motion.div
         variants={gridSquareVariants}
@@ -55,11 +55,11 @@ const CurrencyConversion = () => {
               onChange={(e) => setFromCurrency(e.target.value)}
             >
               <option value="" disabled>
-                Select Currency
+                Select Wallet
               </option>
-              {CURRENCIES.map((currency, index) => (
-                <option key={index} value={currency}>
-                  {currency}
+              {USER_WALLETS.map((wallet, index) => (
+                <option key={index} value={wallet.title}>
+                  {wallet.title}
                 </option>
               ))}
             </select>
@@ -118,4 +118,4 @@ const CurrencyConversion = () => {
   );
 };
 
-export default CurrencyConversion;
+export default WalletCurrencyConversion;

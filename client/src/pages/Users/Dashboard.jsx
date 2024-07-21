@@ -2,8 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import Success from "../../messages/Success";
-import Alert from "../../messages/Alert";
 import Contact from "../../sections/company/Contact";
 import CashGraph from "../../sections/finances/CashGraph";
 import RecentTransactions from "../../sections/finances/RecentTransactions";
