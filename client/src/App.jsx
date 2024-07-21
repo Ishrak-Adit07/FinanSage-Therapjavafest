@@ -16,9 +16,6 @@ import Register from './pages/Users/Register';
 import Dashboard from './pages/Users/Dashboard';
 import Profile from './pages/Users/Profile';
 import CreateWallet from './pages/Financials/wallets/CreateWallet';
-import Budgets from './pages/budgets/Budgets';
-import Budget from './pages/budgets/Budget';
-import CreateBudget from './pages/budgets/CreateBudget';
 import BankAccounts from './pages/accounts/BankAccounts';
 import CreateAccount from './pages/accounts/CreateAccount';
 import FinanSageAccount from './pages/accounts/FinanSageAccount';
@@ -38,6 +35,9 @@ import IncomeTax from './pages/Financials/tax/IncomeTax';
 import Resources from './pages/resources/Resources';
 import CurrencyConversionPage from './pages/resources/CurrencyConversionPage';
 import News from './pages/news/News';
+import Budgets from './pages/Financials/budgets/Budgets';
+import Budget from './pages/Financials/budgets/Budget';
+import CreateBudget from './pages/Financials/budgets/CreateBudget';
 
 const App = () => {
   return (
