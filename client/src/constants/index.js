@@ -390,3 +390,69 @@ export const MARKET_PORTAL_NEWS = [
     newsLink: "https://dailytribune.com/finance/news-1234"
   }
 ];
+
+export const FINANSAGE_FEATURES = [
+  {
+    name: "Wallets",
+    bgLink: "",
+    features: [
+      "Create virtual wallet",
+      "Add and track incomes and expenses daylong",
+      "Get instant reports any time",
+      "Use separate wallets for relevant works"
+    ]
+  },
+  {
+    name: "Budgets",
+    bgLink: "",
+    features: [
+      "Create budget plan",
+      "Add and track expenses for relevant cause",
+      "Get instant reports any time",
+      "Use separate budgets for relevant works"
+    ]
+  },
+  {
+    name: "Instant Reports",
+    bgLink: "",
+    features: [
+      "Get instant graphical and numerical analysis for all wallets",
+      "Reports on daily, weekly or monthly bases",
+      "Reports on budget tracking",
+      "Reports on bank and inter-user transactions"
+    ]
+  },
+]
+
+export const PERSON_SPECIFIC_FEATURES = [
+  {
+    name: "Corporate",
+    bgLink: "",
+    features: [
+      "Create virtual wallet",
+      "Add and track incomes and expenses daylong",
+      "Get instant reports any time",
+      "Use separate wallets for relevant works"
+    ]
+  },
+  {
+    name: "Business",
+    bgLink: "",
+    features: [
+      "Create budget plan",
+      "Add and track expenses for relevant cause",
+      "Get instant reports any time",
+      "Use separate budgets for relevant works"
+    ]
+  },
+  {
+    name: "Student",
+    bgLink: "",
+    features: [
+      "Get instant graphical and numerical analysis for all wallets",
+      "Reports on daily, weekly or monthly bases",
+      "Reports on budget tracking",
+      "Reports on bank and inter-user transactions"
+    ]
+  },
+]

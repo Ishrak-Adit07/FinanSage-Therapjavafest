@@ -20,7 +20,7 @@ const Contact = ({ scrollToContact }) => {
 
   return (
     <section ref={sectionRef} id="target-contact">
-      <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 items-center py-4 lg:items-start">
+      <div className="layoutSection text-slate-200 border-neutral-900 pb-4 items-center py-4 lg:items-start">
         <motion.div
           variants={gridSquareVariants}
           className="flex flex-wrap justify-center lg:justify-start"

@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-import { FINANSAGE_FEATURES } from "../../constants";
+import { PERSON_SPECIFIC_FEATURES } from "../../constants";
 import FeatureCard from "../../components/Cards/FeatureCard";
 
-const Features = () => {
+const PersonSpecificeFeatures = () => {
   return (
     <div className="my-20">
       <h1 className="text-4xl text-center text-slate-500">
-        FinanSage Features
+        Who Should Use FinanSage and Why
       </h1>
-      {FINANSAGE_FEATURES.map((feature, index) => (
+      {PERSON_SPECIFIC_FEATURES.map((feature, index) => (
         <motion.div
           key={index}
           className="w-full"
@@ -32,4 +32,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default PersonSpecificeFeatures;

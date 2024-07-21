@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Hero from '../sections/Hero';
 import Contact from '../sections/company/Contact';
 import Footer from '../sections/Footer';
+import Features from '../sections/company/Features';
+import PersonSpecificeFeatures from '../sections/company/PersonSpecificFeatures';
 
 const Home = () => {
 
@@ -33,7 +35,8 @@ const Home = () => {
           {!loading &&
             <div>
               <Hero scrollToContact={scrollToContact}/>
-              
+              <Features />
+              <PersonSpecificeFeatures />
               <Contact scrollToContact={scrollToContact}/>
               <Footer />
             </div>
