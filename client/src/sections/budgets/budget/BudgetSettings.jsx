@@ -26,7 +26,7 @@ const BudgetSettings = () => {
   //     navigate("/user/wallets");
   //   };
 
-  const handleEditWalletName = () => {
+  const handleEditBudgetName = () => {
     console.log(newBudgetName);
     setNewBudgetName("");
   };
@@ -51,13 +51,14 @@ const BudgetSettings = () => {
   const handleDeleteWallet = () => {
     if (confirm("Are you sure you want to delete this wallet?")) {
       navigate("/user/wallets");
-    } else {
-      navigate("/");
     }
   };
 
   return (
-    <div className="layoutSection text-slate-700 border-b border-neutral-900 pb-4">
+    <div className="layoutSection text-slate-700 border-neutral-900 pb-4 flex flex-col mt-10">
+      <div className="flex flex-wrap items-center justify-center w-full">
+              <Subscribe text={"Settings"} onClickAction={handleShowSettings} />
+      </div>
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center"
@@ -69,9 +70,6 @@ const BudgetSettings = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center">
-            <div className="flex flex-wrap items-center justify-center w-full">
-              <Subscribe text={"Settings"} onClickAction={handleShowSettings} />
-            </div>
             {showSettings && (
               <div className="flex flex-col items-center justify-center gap-5 mt-6 w-full">
                 <div className="flex flex-wrap w-full items-center justify-center">
@@ -85,10 +83,9 @@ const BudgetSettings = () => {
                       setNewBudgetName(e.target.value);
                     }}
                   />
-                  <Subscribe
-                    text={"Edit Name"}
-                    onClickAction={handleEditWalletName}
-                  />
+                  <button className="chbtn" onClick={handleEditBudgetName}>
+                    Edit Name
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap w-full items-center justify-center">
@@ -101,10 +98,9 @@ const BudgetSettings = () => {
                       setNewBudget(e.target.value);
                     }}
                   />
-                  <Subscribe
-                    text={"Edit Name"}
-                    onClickAction={handleEditBudget}
-                  />
+                  <button className="chbtn" onClick={handleEditBudget}>
+                    Edit Budget
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap w-full items-center justify-center">
@@ -124,15 +120,14 @@ const BudgetSettings = () => {
                       </option>
                     ))}
                   </select>
-                  <Subscribe
-                    text={"Edit Currency"}
-                    onClickAction={handleEditCurrency}
-                  />
+                  <button className="chbtn" onClick={handleEditCurrency}>
+                    Edit Currency
+                  </button>
                 </div>
-                <Subscribe
-                  text={"Delete Wallet"}
-                  onClickAction={handleDeleteWallet}
-                />
+
+                <button className="chbtn" onClick={handleDeleteWallet}>
+                  Delete Budget
+                </button>
               </div>
             )}
           </div>

@@ -5,6 +5,7 @@ import BudgetDetails from '../../../sections/budgets/budget/BudgetDetails';
 import BudgetFunctions from '../../../sections/budgets/budget/BudgetFunctions';
 import BudgetSettings from '../../../sections/budgets/budget/BudgetSettings';
 import BudgetGraph from '../../../sections/budgets/budget/BudgetGraph';
+import BudgetLinkWallet from '../../../sections/budgets/budget/BudgetLinkWallet';
 
 const Budget = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ const Budget = () => {
             <BudgetFunctions />
             <BudgetGraph />
             <BudgetSettings />
+            <BudgetLinkWallet />
           </div>
         )}
       </div>

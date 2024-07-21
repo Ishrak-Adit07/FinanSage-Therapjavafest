@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
+import { BANK_ACCOUNTS } from "../../constants";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -17,12 +18,9 @@ const BankCashFlow = () => {
 
   const handleCashflow = (e) => {
     e.preventDefault();
-    console.log(amount, note, bank, bankAccount, wallet);
-    setNote("");
+    console.log(amount, bank);
     setAmount("");
     setBank("");
-    setBankAccount("");
-    setWallet("");
   };
 
   // Error state
@@ -30,13 +28,7 @@ const BankCashFlow = () => {
 
   // Form data states
   const [amount, setAmount] = useState("");
-  const [note, setNote] = useState("");
   const [bank, setBank] = useState("");
-  const [bankAccount, setBankAccount] = useState("");
-  const [wallet, setWallet] = useState("");
-
-  const banks = ["Bank A", "Bank B", "Bank C"];
-  const wallets = ["Wallet X", "Wallet Y", "Wallet Z"];
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
@@ -105,34 +97,11 @@ const BankCashFlow = () => {
                 onChange={(e) => setBank(e.target.value)}
               >
                 <option value="" disabled>
-                  Select a Bank
+                  Select Bank Account
                 </option>
-                {banks.map((bankName, index) => (
-                  <option key={index} value={bankName}>
-                    {bankName}
-                  </option>
-                ))}
-              </select>
-
-              <input
-                type="text"
-                placeholder="Bank Account Number"
-                className="input mt-2"
-                value={bankAccount}
-                onChange={(e) => setBankAccount(e.target.value)}
-              />
-
-              <select
-                className="input mt-2"
-                value={wallet}
-                onChange={(e) => setWallet(e.target.value)}
-              >
-                <option value="" disabled>
-                  Select a Wallet
-                </option>
-                {wallets.map((walletName, index) => (
-                  <option key={index} value={walletName}>
-                    {walletName}
+                {BANK_ACCOUNTS.map((bank, index) => (
+                  <option key={index} value={bank.id}>
+                    {bank.BankName} : {bank.AccID}
                   </option>
                 ))}
               </select>
@@ -144,14 +113,6 @@ const BankCashFlow = () => {
                 autoFocus
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-              />
-
-              <input
-                type="text"
-                placeholder="Add note"
-                className="input"
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
               />
 
               <button type="submit" className="btn mt-4">

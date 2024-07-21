@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from "framer-motion";
-import Subscribe from '../../../components/Buttons/Subscribe';
 import { useNavigate } from 'react-router-dom';
 
 const gridSquareVariants = {
@@ -30,7 +29,7 @@ const BudgetCreate = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
           <div className='flex justify-center items-center w-full'>
-            <Subscribe text={"Create new budget"} onClickAction={handleCreateBudgetButton}/>
+            <button className='chbtn' onClick={handleCreateBudgetButton}>Create Budget</button>
           </div>
         </motion.div >
       </motion.div>
