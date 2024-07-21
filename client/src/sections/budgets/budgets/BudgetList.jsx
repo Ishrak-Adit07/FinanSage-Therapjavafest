@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { USER_BUDGETS } from '../../../constants';
 import BudgetCard from '../../../components/Cards/Budget.Card';
+import { USER_BUDGETS } from '../../../constants';
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -16,7 +16,7 @@ const BudgetList = () => {
         variants={gridSquareVariants}
         className="flex flex-wrap justify-center lg:justify-start"
       >
-        {USER_BUDGETS.map((project, index) => (
+        {USER_BUDGETS.map((budget, index) => (
           <motion.div
             key={index}
             className="w-full lg:w-1/2 items-center justify-center"
@@ -24,7 +24,7 @@ const BudgetList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <BudgetCard Title={project.title} Balance={project.balance} Image={project.image} GithubLink={project.githubLink} Descroption={project.description} TechStack={project.technologies} />
+            <BudgetCard name={budget.name} currency={budget.currency} balance={budget.balance} budget={budget.budget} cashFlowIDs={budget.cashFlowIDs} />
           </motion.div>
         ))}
       </motion.div>

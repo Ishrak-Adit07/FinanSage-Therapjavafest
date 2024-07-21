@@ -51,10 +51,10 @@ const BudgetCard = ({ name, currency, budget, cashFlowIDs, balance }) => {
                           View details
                         </Link>
                       </div>
-                      <h2 className="text-sm font-thin mb-2">{budget}</h2>
-                      <h2 className="text-sm font-thin mb-2">{currency}</h2>
+                      <h2 className="text-sm font-thin mb-2">Budget: {budget}</h2>
+                      <h2 className="text-sm font-thin mb-2">Currency: {currency}</h2>
                       <h2 className="text-sm font-thin">
-                        Tech Stack: {cashFlowIDs.join(", ")}
+                        CashFlow IDs: {cashFlowIDs.join(", ")}
                       </h2>
                     </div>
                   )}

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import CashGraph from "../../sections/finances/CashGraph";
-import BudgetCreate from "../../sections/budgets/budgets/BudgetCreate";
-import BudgetList from "../../sections/budgets/budgets/BudgetList";
+import CashGraph from "../../../sections/finances/CashGraph";
+import BudgetList from "../../../sections/budgets/budgets/BudgetList";
+import BudgetCreate from "../../../sections/budgets/budgets/BudgetCreate";
 
 
 const Budgets = () => {

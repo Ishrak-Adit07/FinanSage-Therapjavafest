@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import CreateWalletForm from '../../components/Forms/CreateWalletForm';
+import CreateWalletForm from '../../../components/Forms/CreateWalletForm';
 
 const CreateBudget = () => {
 

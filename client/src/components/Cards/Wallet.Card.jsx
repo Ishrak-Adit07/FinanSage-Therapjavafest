@@ -51,7 +51,7 @@ const WalletCard = ({ name, currency, cashFlowIDs, balance }) => {
                           View details
                         </Link>
                       </div>
-                      <h2 className="text-sm font-thin mb-2">{currency}</h2>
+                      <h2 className="text-sm font-thin mb-2">Currency: {currency}</h2>
                       <h2 className="text-sm font-thin">
                         CashFlow IDs: {cashFlowIDs.join(", ")}
                       </h2>
