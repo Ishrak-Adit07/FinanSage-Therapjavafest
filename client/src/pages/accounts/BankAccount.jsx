@@ -2,12 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BankAccountDetails from '../../sections/accounts/BankAccountDetails';
-import BankCashFlow from '../../sections/finances/BankCashFlow';
+import BankAccountFunctions from '../../sections/accounts/BankAccountFunctions';
+import BankAccountSettings from '../../sections/accounts/BankAccountSettings';
+import BankAccountTransactions from '../../sections/accounts/BankAccountTransactions';
+import { RECENT_TRANSACTIONS } from '../../constants';
 
 const BankAccount = () => {
   const [loading, setLoading] = useState(true);
 
   const {id} = useParams();
+  let bankTS = RECENT_TRANSACTIONS;
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,7 +28,9 @@ const BankAccount = () => {
         {!loading && (
           <div>
             <BankAccountDetails id={id}/>
-            <BankCashFlow />
+            <BankAccountFunctions />
+            <BankAccountTransactions bankTS={bankTS}/>
+            <BankAccountSettings />
           </div>
         )}
       </div>

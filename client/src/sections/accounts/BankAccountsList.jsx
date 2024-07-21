@@ -24,7 +24,7 @@ const BankAccountList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <BankAccountCard  BankName={bank.BankName} AccID={bank.AccID} Balance={bank.Balance}/>
+            <BankAccountCard  id={bank.id} BankName={bank.BankName} AccID={bank.AccID} Balance={bank.Balance}/>
           </motion.div>
         ))}
       </motion.div>

@@ -62,7 +62,7 @@ const FS2WalletShift = () => {
           >
             <form
               onSubmit={handleCashflow}
-              className="justify-center items-center  text-slate-700"
+              className="justify-center items-center text-slate-700"
             >
 
               <select
@@ -74,8 +74,8 @@ const FS2WalletShift = () => {
                   Select To Wallet
                 </option>
                 {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
+                  <option key={index} value={wallet.name}>
+                    {wallet.name}
                   </option>
                 ))}
               </select>

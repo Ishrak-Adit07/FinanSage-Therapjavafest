@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom';
 import FS2WalletShift from '../../sections/accounts/FS2WalletShift';
 import Wallet2FSShift from '../../sections/accounts/Wallet2FSShift';
 import FSAccountDetails from '../../sections/accounts/FSAccountDetails';
+import FSAccountTransactions from '../../sections/accounts/FSAccountTransactions';
+import { RECENT_TRANSACTIONS } from '../../constants';
 
 const FinanSageAccount = () => {
   const [loading, setLoading] = useState(true);
 
-  const {title} = useParams();
+  let fsTS = RECENT_TRANSACTIONS;
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,6 +29,7 @@ const FinanSageAccount = () => {
             <FSAccountDetails />
             <FS2WalletShift />
             <Wallet2FSShift />
+            <FSAccountTransactions fsTS={fsTS}/>
           </div>
         )}
       </div>

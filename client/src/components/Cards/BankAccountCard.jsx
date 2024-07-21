@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const BankAccountCard = ({ BankName, AccID, Balance }) => {
+const BankAccountCard = ({ id, BankName, AccID, Balance }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -45,7 +45,7 @@ const BankAccountCard = ({ BankName, AccID, Balance }) => {
                       <div className="flex justify-start mb-2">
                         <Link
                           title="See wallet details"
-                          to={`/wallet/details/${name}`}
+                          to={`/user/account/bank/details/${id}`}
                           className="text-white hover:underline"
                         >
                           View details
