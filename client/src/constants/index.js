@@ -388,3 +388,31 @@ export const MARKET_NEG = [
     change: -0.39
   }
 ];
+
+export const MARKET_PORTAL_NEWS = [
+  {
+    title: "Eventful Day at Wall St., Mixed Reactions",
+    preview: "abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd ...",
+    newsLink: "https://dailytribune.com/finance/news-1234"
+  },
+  {
+    title: "Eventful Day at Wall St., Mixed Reactions",
+    preview: "abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd ...",
+    newsLink: "https://dailytribune.com/finance/news-1234"
+  },
+  {
+    title: "Eventful Day at Wall St., Mixed Reactions",
+    preview: "abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd ...",
+    newsLink: "https://dailytribune.com/finance/news-1234"
+  },
+  {
+    title: "Eventful Day at Wall St., Mixed Reactions",
+    preview: "abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd ...",
+    newsLink: "https://dailytribune.com/finance/news-1234"
+  },
+  {
+    title: "Eventful Day at Wall St., Mixed Reactions",
+    preview: "abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd abcd ...",
+    newsLink: "https://dailytribune.com/finance/news-1234"
+  }
+];
