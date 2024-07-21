@@ -6,6 +6,7 @@ import BudgetFunctions from '../../../sections/budgets/budget/BudgetFunctions';
 import BudgetSettings from '../../../sections/budgets/budget/BudgetSettings';
 import BudgetGraph from '../../../sections/budgets/budget/BudgetGraph';
 import BudgetLinkWallet from '../../../sections/budgets/budget/BudgetLinkWallet';
+import BudgetAddTransaction from '../../../sections/budgets/budget/BudgetAddTransaction';
 
 const Budget = () => {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ const Budget = () => {
         {!loading && (
           <div>
             <BudgetDetails id={id}/>
+            <BudgetAddTransaction />
             <BudgetFunctions />
             <BudgetGraph />
             <BudgetSettings />
