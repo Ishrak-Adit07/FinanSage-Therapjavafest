@@ -185,19 +185,10 @@ export const RECENT_CASHFLOWS = [
   {
     id : "12344334",
     wallet: {
-      title: "PERN Arch. Example Project",
-      image: "Pr",
-      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
-      description:
-        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
-      technologies: [
-        "ReactJS",
-        "tailwindcss",
-        "NodeJS",
-        "ExpressJS",
-        "PostgreSQL",
-      ],
-      balance: 275.75,
+      name: "Office",
+      currency: "Dollar",
+      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      balance: 478.25,
     },
     type: "Income",
     amount: 100,
@@ -206,19 +197,10 @@ export const RECENT_CASHFLOWS = [
   {
     id : "34839283",
     wallet: {
-      title: "PERN Arch. Example Project",
-      image: "Pr",
-      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
-      description:
-        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
-      technologies: [
-        "ReactJS",
-        "tailwindcss",
-        "NodeJS",
-        "ExpressJS",
-        "PostgreSQL",
-      ],
-      balance: 275.75,
+      name: "Market",
+      currency: "Taka",
+      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      balance: 276.75,
     },
     type: "Expense",
     amount: 100,
@@ -227,19 +209,10 @@ export const RECENT_CASHFLOWS = [
   {
     id : "28193402",
     wallet: {
-      title: "PERN Arch. Example Project",
-      image: "Pr",
-      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
-      description:
-        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
-      technologies: [
-        "ReactJS",
-        "tailwindcss",
-        "NodeJS",
-        "ExpressJS",
-        "PostgreSQL",
-      ],
-      balance: 275.75,
+      name: "Office",
+      currency: "Dollar",
+      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      balance: 478.25,
     },
     type: "Income",
     amount: 100,
@@ -248,18 +221,9 @@ export const RECENT_CASHFLOWS = [
   {
     id : "12834564",
     wallet: {
-      title: "PERN Arch. Example Project",
-      image: "Pr",
-      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
-      description:
-        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
-      technologies: [
-        "ReactJS",
-        "tailwindcss",
-        "NodeJS",
-        "ExpressJS",
-        "PostgreSQL",
-      ],
+      name: "Owltweet",
+      currency: "Dirham",
+      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
       balance: 275.75,
     },
     type: "Expense",
@@ -269,19 +233,10 @@ export const RECENT_CASHFLOWS = [
   {
     id : "98345032",
     wallet: {
-      title: "PERN Arch. Example Project",
-      image: "Pr",
-      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
-      description:
-        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
-      technologies: [
-        "ReactJS",
-        "tailwindcss",
-        "NodeJS",
-        "ExpressJS",
-        "PostgreSQL",
-      ],
-      balance: 275.75,
+      name: "Market",
+      currency: "Taka",
+      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      balance: 276.75,
     },
     type: "Expense",
     amount: 100,
@@ -290,19 +245,10 @@ export const RECENT_CASHFLOWS = [
   {
     id : "98230832",
     wallet: {
-      title: "PERN Arch. Example Project",
-      image: "Pr",
-      githubLink: "https://github.com/Ishrak-Adit07/ToDoList",
-      description:
-        "A robust, fully functional PERN stack to-do list web app with user authentication and best coding practices.",
-      technologies: [
-        "ReactJS",
-        "tailwindcss",
-        "NodeJS",
-        "ExpressJS",
-        "PostgreSQL",
-      ],
-      balance: 275.75,
+      name: "Market",
+      currency: "Taka",
+      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      balance: 276.75,
     },
     type: "Income",
     amount: 100,

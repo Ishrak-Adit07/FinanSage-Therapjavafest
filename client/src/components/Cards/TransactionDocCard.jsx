@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
-const TransactionDocCard = ({ walletName, type, amount, date }) => {
+const TransactionDocCard = ({ id, walletName, type, amount, date }) => {
   return (
     <div>
       <div className="straightCard w-full flex flex-col justify-between">

@@ -1,26 +1,25 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { RECENT_CASHFLOWS } from "../../constants";
-import CashFlowDocCard from "../../components/Cards/CashFlowDocCard";
+import CashFlowDocCard from "../../../components/Cards/CashFlowDocCard";
 
-const RecentCashFlows = () => {
-  const [loading, setLoading] = useState(true);
+const WalletCashFlows = ({ reportFlows }) => {
   const [showCashFlows, setShowCashFlows] = useState(true);
 
   useEffect(() => {
     setTimeout(async () => {
-      setLoading(false);
-      if (RECENT_CASHFLOWS.length === 0) setShowCashFlows(false);
+      if (reportFlows.length === 0) setShowCashFlows(false);
     }, 1000);
-  }, []);
+  }, [reportFlows]);
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
       <div>
-        <h1 className="text-4xl my-10 text-center">Recent Cash Flows</h1>
+      <h1 className="text-slate-900 text-4xl text-center">Cashflow History</h1>
+      <h1 className="text-slate-700 text-2xl text-center mt-2">for this wallet</h1>
         {showCashFlows &&
-          RECENT_CASHFLOWS.map((cashFlow, index) => (
+          reportFlows.map((cashFlow, index) => (
             <motion.div
               key={index}
               className="w-full"
@@ -42,7 +41,7 @@ const RecentCashFlows = () => {
           ))}
         {!showCashFlows && (
           <h1 className="text-2xl my-10 text-center">
-            There are no recent cashflows
+            There are no cashflows in this wallet
           </h1>
         )}
       </div>
@@ -50,4 +49,4 @@ const RecentCashFlows = () => {
   );
 };
 
-export default RecentCashFlows;
+export default WalletCashFlows;

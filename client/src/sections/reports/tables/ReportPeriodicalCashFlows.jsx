@@ -19,7 +19,7 @@ const ReportPeriodicalCashFlows = ({ date, period, reportFlows }) => {
       <h1 className="text-slate-900 text-4xl text-center">Cashflow History</h1>
       <h1 className="text-slate-700 text-2xl text-center mt-2">in this time period</h1>
         {showCashFlows &&
-          reportFlows.map((transaction, index) => (
+          reportFlows.map((cashFlow, index) => (
             <motion.div
               key={index}
               className="w-full"
@@ -30,11 +30,11 @@ const ReportPeriodicalCashFlows = ({ date, period, reportFlows }) => {
               {true && (
                 <CashFlowDocCard
                   className="w-full"
-                  id={"12345678"}
-                  walletName={transaction.wallet.title}
-                  amount={transaction.amount}
-                  date={transaction.date}
-                  type={transaction.type}
+                  id={cashFlow.id}
+                  walletName={cashFlow.wallet.name}
+                  amount={cashFlow.amount}
+                  date={cashFlow.date}
+                  type={cashFlow.type}
                 />
               )}
             </motion.div>

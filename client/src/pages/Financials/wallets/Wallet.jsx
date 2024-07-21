@@ -5,11 +5,14 @@ import WalletDetails from '../../../sections/wallets/wallet/WalletDetails';
 import WalletFunctions from '../../../sections/wallets/wallet/WalletFunctions';
 import WalletGraph from '../../../sections/wallets/wallet/WalletGraph';
 import WalletSettings from '../../../sections/wallets/wallet/WalletSettings';
+import { RECENT_CASHFLOWS } from '../../../constants';
+import WalletCashFlows from '../../../sections/wallets/wallet/WalletCashFlows';
 
 const Wallet = () => {
   const [loading, setLoading] = useState(true);
 
   const {id} = useParams();
+  let walletFlows = RECENT_CASHFLOWS;
 
   useEffect(() => {
     setTimeout(() => {
@@ -28,6 +31,7 @@ const Wallet = () => {
             <WalletDetails id={id}/>
             <WalletFunctions />
             <WalletGraph />
+            <WalletCashFlows reportFlows={walletFlows}/>
             <WalletSettings />
           </div>
         )}

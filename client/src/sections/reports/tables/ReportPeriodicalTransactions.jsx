@@ -32,8 +32,8 @@ const ReportPeriodicalTransactions = ({ date, period, reportTS }) => {
               {true && (
                 <TransactionDocCard
                   className="w-full"
-                  id={"12345678"}
-                  walletName={transaction.wallet.title}
+                  id={transaction.id}
+                  walletName={transaction.wallet.name}
                   amount={transaction.amount}
                   date={transaction.date}
                   type={transaction.type}
