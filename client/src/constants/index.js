@@ -258,7 +258,7 @@ export const RECENT_CASHFLOWS = [
 
 export const RECENT_TRANSACTIONS = [];
 
-export const ANNULA_TAX_RATES = [
+export const ANNUAL_TAX_RATES = [
   {
     name: "Corporate",
     rate: 10
@@ -275,6 +275,47 @@ export const ANNULA_TAX_RATES = [
     name: "Student",
     rate: 5
   }
+];
+
+export const BANKS = [
+  {
+    name: "Gringotts",
+  },
+  {
+    name: "World Bank",
+  },
+  {
+    name: "Wall St.",
+  },
+  {
+    name: "Iron Bank",
+  },
+  {
+    name: "Capitol",
+  },
+]
+
+export const BANK_ACCOUNTS = [
+  {
+    BankName : "Gringotts",
+    AccID : "34273648",
+    Balance: 23987.90
+  },
+  {
+    BankName : "Iron Bank",
+    AccID : "87263547",
+    Balance: 7890.90
+  },
+  {
+    BankName : "World Bank",
+    AccID : "82737463",
+    Balance: 9837.45
+  },
+  {
+    BankName : "Gringotts",
+    AccID : "87263547",
+    Balance: 14587.85
+  },
 ]
 
 export const CURRENCIES = [

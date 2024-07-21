@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { USER_WALLETS } from '../../constants';
-import WalletCard from '../../components/Cards/Wallet.Card';
+import { BANK_ACCOUNTS } from '../../constants';
+import BankAccountCard from '../../components/Cards/BankAccountCard';
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -16,7 +16,7 @@ const BankAccountList = () => {
         variants={gridSquareVariants}
         className="flex flex-wrap justify-center lg:justify-start"
       >
-        {USER_WALLETS.map((project, index) => (
+        {BANK_ACCOUNTS.map((bank, index) => (
           <motion.div
             key={index}
             className="w-full lg:w-1/2 items-center justify-center"
@@ -24,7 +24,7 @@ const BankAccountList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <WalletCard Title={project.title} Balance={project.balance} Image={project.image} GithubLink={project.githubLink} Descroption={project.description} TechStack={project.technologies} />
+            <BankAccountCard  BankName={bank.BankName} AccID={bank.AccID} Balance={bank.Balance}/>
           </motion.div>
         ))}
       </motion.div>

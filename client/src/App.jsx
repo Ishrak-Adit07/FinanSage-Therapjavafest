@@ -63,7 +63,7 @@ const App = () => {
             <Route path="/budget/create" element={<CreateBudget />} />
 
             <Route path="user/accounts/bank" element={<BankAccounts />} />
-            <Route path="/user/account/bank/details/:bankID" element={<BankAccount />} />
+            <Route path="/user/account/bank/details/:id" element={<BankAccount />} />
             <Route path="/user/account/bank/create" element={<CreateAccount />} />
 
             <Route path="user/account/finanSage" element={<FinanSageAccount />} />

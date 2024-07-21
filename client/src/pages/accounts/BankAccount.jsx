@@ -7,7 +7,7 @@ import BankCashFlow from '../../sections/finances/BankCashFlow';
 const BankAccount = () => {
   const [loading, setLoading] = useState(true);
 
-  const {title} = useParams();
+  const {id} = useParams();
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,7 +23,7 @@ const BankAccount = () => {
         )}
         {!loading && (
           <div>
-            <BankAccountDetails title={title}/>
+            <BankAccountDetails id={id}/>
             <BankCashFlow />
           </div>
         )}

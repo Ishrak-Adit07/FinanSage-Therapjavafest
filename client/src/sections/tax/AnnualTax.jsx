@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ANNULA_TAX_RATES,
+  ANNUAL_TAX_RATES,
   USER_WALLETS,
   WALLET_INCOME_TYPES,
 } from "../../constants";
@@ -84,7 +84,7 @@ const AnnualTax = () => {
                 <option value="" disabled selected hidden>
                   Select rate
                 </option>
-                {ANNULA_TAX_RATES.map((category, index) => (
+                {ANNUAL_TAX_RATES.map((category, index) => (
                   <option key={index} value={category.rate}>
                     {category.name}:{category.rate}
                   </option>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
+import { BANKS } from "../../constants";
 
 const CreateAccountForm = () => {
   const navigate = useNavigate();
@@ -12,11 +13,11 @@ const CreateAccountForm = () => {
     e.preventDefault();
 
     try {
-      //const registerResponseData = await registerUser(formData.email, formData.password, formData.confirmPassword);
+      //const responseData = await registerUser(formData.email, formData.password, formData.confirmPassword);
 
-      const registerResponseData = true;
+      const responseData = true;
 
-      if (registerResponseData) {
+      if (responseData) {
         navigate("/user/accounts/bank");
 
         setError(null);
@@ -25,8 +26,6 @@ const CreateAccountForm = () => {
       setError(e.message);
     }
   };
-
-  const banks = ["Bank A", "Bank B", "Bank C"];
 
   const [bank, setBank] = useState("");
   const [bankAccount, setBankAccount] = useState("");
@@ -46,9 +45,9 @@ const CreateAccountForm = () => {
           <option value="" disabled>
             Select a Bank
           </option>
-          {banks.map((bankName, index) => (
-            <option key={index} value={bankName}>
-              {bankName}
+          {BANKS.map((bank, index) => (
+            <option key={index} value={bank.name}>
+              {bank.name}
             </option>
           ))}
         </select>
