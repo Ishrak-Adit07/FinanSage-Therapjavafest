@@ -56,8 +56,8 @@ const AnnualTax = () => {
                   Select wallets
                 </option>
                 {USER_WALLETS.map((wallet, index) => (
-                  <option key={index} value={wallet.title}>
-                    {wallet.title}
+                  <option key={index} value={wallet.name}>
+                    {wallet.name}
                   </option>
                 ))}
               </select>

@@ -7,6 +7,9 @@ import CashGraph from "../../sections/finances/CashGraph";
 import RecentTransactions from "../../sections/finances/RecentTransactions";
 import RecentCashFlows from "../../sections/finances/RecentCashFlows";
 import Footer from "../../sections/Footer";
+import AddCashFlow from "../../sections/finances/AddCashFlow";
+import BankCashFlow from "../../sections/finances/BankCashFlow";
+import BestUsage from "../../sections/user/BestUsage";
 
 const Dashboard = () => {
   const { user, setUser } = useContext(UserContext);
@@ -40,8 +43,11 @@ const Dashboard = () => {
           <div className="w-full">
             <CashGraph />
             <RecentCashFlows />
+            <AddCashFlow />
             <RecentTransactions />
-            {false && <Contact />}
+            <BankCashFlow />
+            <BestUsage />
+            {true && <Contact />}
             <Footer />
           </div>
         )}

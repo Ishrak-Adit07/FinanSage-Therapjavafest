@@ -33,9 +33,7 @@ const Home = () => {
           {!loading &&
             <div>
               <Hero scrollToContact={scrollToContact}/>
-              <Hero scrollToContact={scrollToContact}/>
-              <Hero scrollToContact={scrollToContact}/>
-              <Hero scrollToContact={scrollToContact}/>
+              
               <Contact scrollToContact={scrollToContact}/>
               <Footer />
             </div>

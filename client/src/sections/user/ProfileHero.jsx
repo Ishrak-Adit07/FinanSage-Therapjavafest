@@ -97,45 +97,43 @@ const ProfileHero = () => {
             <p className="my-2 max-w-xl py-6 font-light text-slate-700 tracking-tighter text-center lg:text-left">
               {HERO_CONTENT}
             </p>
-            <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe
-                text={"FinanSage Account"}
-                onClickAction={goToFinanSageAccount}
-              />
-              <Subscribe
-                text={"See Reports"}
-                onClickAction={handleSeeReports}
-              />
-
-              <Subscribe
-                text={"Transactions"}
-                onClickAction={goToTransactions}
-              />
+            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
+              <button className="chbtn" onClick={goToFinanSageAccount}>
+                FinanSage Account
+              </button>
+              <button className="chbtn" onClick={handleSeeReports}>
+                See Reports
+              </button>
+              <button className="chbtn" onClick={goToTransactions}>
+                All Transactions
+              </button>
+            </div>
+            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
+              <button className="chbtn" onClick={handleSeeWallets}>
+                See my wallets
+              </button>
+              <button className="chbtn" onClick={handleSeeBudgets}>
+                See my budgets
+              </button>
+              <button className="chbtn" onClick={handleSeeAccounts}>
+                See my accounts
+              </button>
+            </div>
+            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
+              <button className="chbtn" onClick={handleSeeTaxes}>
+                Taxes
+              </button>
+              <button className="chbtn" onClick={handleSeeResources}>
+                Resources
+              </button>
+              <button className="chbtn" onClick={handleSeeNews}>
+                News
+              </button>
             </div>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe
-                text={"See my wallets"}
-                onClickAction={handleSeeWallets}
-              />
-              <Subscribe
-                text={"See my budgets"}
-                onClickAction={handleSeeBudgets}
-              />
-              <Subscribe
-                text={"See my accounts"}
-                onClickAction={handleSeeAccounts}
-              />
-            </div>
-            <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe text={"Taxes"} onClickAction={handleSeeTaxes} />
-              <Subscribe
-                text={"Resources"}
-                onClickAction={handleSeeResources}
-              />
-              <Subscribe text={"News"} onClickAction={handleSeeNews} />
-            </div>
-            <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <Subscribe text={"Log out"} onClickAction={handleLogOut} />
+              <button className="chbtn" onClick={handleLogOut}>
+                Logout
+              </button>
             </div>
           </div>
         </motion.div>
