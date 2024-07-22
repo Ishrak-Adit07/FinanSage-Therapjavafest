@@ -1,28 +1,28 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import GradualText from "../TextAnimations/GradualText";
 import { UserContext } from "../../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
+import { EnumContext } from "../../contexts/EnumContext";
+import { PropContext } from "../../contexts/PropContext";
+import { dummyLoginResponse } from "../../constants/responses";
 
 const TestLoginForm = () => {
   //UserContext
   const { setUser } = useContext(UserContext);
+  const { setProps } = useContext(PropContext);
+  const { setEnums } = useContext(EnumContext);
 
-  //UseNavigate
   const navigate = useNavigate();
-
-  // Error state
-  const [error, setError] = useState(null);
 
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    console.log("Trying to log in");
-
     try {
       //const loginResponseData = await loginUser(email, password);
 
@@ -30,8 +30,23 @@ const TestLoginForm = () => {
 
       if (loginResponseData) {
         setUser({
-          name: "Gale Hawthorne",
+          name: dummyLoginResponse.name,
+          firstName: dummyLoginResponse.firstName,
+          lastName: dummyLoginResponse.lastName,
+          username: dummyLoginResponse.username,
           email: mail,
+        });
+
+        setProps({
+          wallets: dummyLoginResponse.wallets,
+          budgets: dummyLoginResponse.budgets,
+          accounts: dummyLoginResponse.accounts,
+        });
+
+        setEnums({
+          currencies: dummyLoginResponse.currencies,
+          taxRates: dummyLoginResponse.taxRates,
+          banks: dummyLoginResponse.banks,
         });
 
         navigate("/user/dashboard");
@@ -41,10 +56,6 @@ const TestLoginForm = () => {
       setError(err.message);
     }
   };
-
-  //   const goToRegister = () => {
-  //     navigate("/register");
-  //   };
 
   return (
     <div className="flex items-center justify-center px-4 py-8">

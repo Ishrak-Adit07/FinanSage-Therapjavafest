@@ -4,53 +4,64 @@ import GradualText from "../TextAnimations/GradualText";
 import { UserContext } from "../../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
+import { dummyLoginResponse } from "../../constants/responses";
+import { PropContext } from "../../contexts/PropContext";
+import { EnumContext } from "../../contexts/EnumContext";
 
 const TestRegisterForm = () => {
-  //UserContext
-  const { setUser } = useContext(UserContext);
 
-  //UseNavigate
   const navigate = useNavigate();
-
-  // Error state
-  const [error, setError] = useState(null);
+  
+  const { setUser } = useContext(UserContext);
+  const { setProps } = useContext(PropContext);
+  const { setEnums } = useContext(EnumContext);
 
   //Form data states
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
+    username: "",
     password: "",
     confirmPassword: "",
   });
+  const [error, setError] = useState(null);
 
-  //Handle Register
   const handleRegister = async (e) => {
     e.preventDefault();
-
     try {
-      //const registerResponseData = await registerUser(formData.email, formData.password, formData.confirmPassword);
+      //const responseData = await registerUser(email, password, confirmPassword);
 
-      const registerResponseData = true;
+      const responseData = true;
 
-      if (registerResponseData) {
+      if (responseData) {
         setUser({
-          name: "Gale Hawthorne",
+          name: dummyLoginResponse.name,
+          firstName: dummyLoginResponse.firstName,
+          lastName: dummyLoginResponse.lastName,
+          username: dummyLoginResponse.username,
           email: formData.email,
         });
 
-        navigate("/user/dashboard");
+        setProps({
+          wallets: dummyLoginResponse.wallets,
+          budgets: dummyLoginResponse.budgets,
+          accounts: dummyLoginResponse.accounts,
+        });
 
+        setEnums({
+          currencies: dummyLoginResponse.currencies,
+          taxRates: dummyLoginResponse.taxRates,
+          banks: dummyLoginResponse.banks,
+        });
+
+        navigate("/user/dashboard");
         setError(null);
       }
-    } catch (e) {
-      setError(e.message);
+    } catch (err) {
+      setError(err.message);
     }
   };
-
-  //   const goToRegister = () => {
-  //     navigate("/register");
-  //   };
 
   return (
     <div className="flex items-center justify-center px-4 py-8">
@@ -104,6 +115,27 @@ const TestRegisterForm = () => {
                 htmlFor="lastName"
               >
                 Last Name
+              </label>
+            )}
+          </div>
+          <div className="relative mb-8">
+            <motion.input
+              whileFocus={{ scale: 1.05 }}
+              type="text"
+              id="username"
+              value={formData.username}
+              onChange={(e) =>
+                setFormData({ ...formData, username: e.target.value })
+              }
+              className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
+              placeholder=""
+            />
+            {!formData.username && (
+              <label
+                className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
+                htmlFor="username"
+              >
+                Username
               </label>
             )}
           </div>
