@@ -467,3 +467,82 @@ export const REPORT_PERIODS = [
   "Weekly",
   "Monthly",
 ]
+
+export const FCFEED_QAS = [
+  {
+    username : "dumbledore",
+    question : "Harry did you put your name in the Goblet of Fire???",
+    answers : [
+      {
+        username: "harrypotter07",
+        answer: "Sir, no sir."
+      },
+      {
+        username: "minerva",
+        answer: "Potter's a boy, not a piece of meat!"
+      },
+      {
+        username: "snape",
+        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster."
+      },
+      {
+        username: "dumbledore",
+        answer: "Well, there is nothing I can do."
+      },
+    ]
+  },
+  {
+    username : "minerva",
+    question : "Did you lie to Prof. Umbridge again, Potter?",
+    answers : [
+      {
+        username: "harrypotter07",
+        answer: "No, professor."
+      },
+      {
+        username: "minerva",
+        answer: "Take a biscuit, Potter."
+      },
+    ]
+  },
+  {
+    username : "ishrak.adit07",
+    question : "Harry did you put your name in the Goblet of Fire???",
+    answers : [
+      {
+        username: "harrypotter07",
+        answer: "Sir, no sir."
+      },
+    ]
+  },
+  {
+    username : "granger.hermione11",
+    question : "Harry did you put your name in the Goblet of Fire???",
+    answers : [
+      {
+        username: "harrypotter07",
+        answer: "Sir, no sir."
+      },
+      {
+        username: "minerva",
+        answer: "Potter's a boy, not a piece of meat!"
+      },
+      {
+        username: "snape",
+        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster."
+      },
+      {
+        username: "dumbledore",
+        answer: "Well, there is nothing I can do."
+      },
+      {
+        username: "snape",
+        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster."
+      },
+      {
+        username: "dumbledore",
+        answer: "Well, there is nothing I can do."
+      },
+    ]
+  },
+]
