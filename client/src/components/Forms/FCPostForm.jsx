@@ -8,6 +8,7 @@ const FCPostForm = () => {
 
   const sharePost = () => {
     console.log(post);
+    setPost("");
     navigate("/user/financom");
   };
 

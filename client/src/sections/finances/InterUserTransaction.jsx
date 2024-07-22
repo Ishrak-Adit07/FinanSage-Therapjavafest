@@ -68,7 +68,7 @@ const InterUserTransactions = () => {
 
               <input
                 type="text"
-                placeholder="Receiver ID"
+                placeholder="Receiver Handle"
                 className="input"
                 autoFocus
                 value={toUser}
