@@ -30,7 +30,7 @@ const BankAccountCreate = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
           <div className='flex justify-center items-center w-full'>
-            <Subscribe text={"Create new account"} onClickAction={handleCreateBankAccountButton}/>
+            <Subscribe text={"Connect to a new account"} onClickAction={handleCreateBankAccountButton}/>
           </div>
         </motion.div >
       </motion.div>

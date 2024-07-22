@@ -38,6 +38,10 @@ import News from './pages/news/News';
 import Budgets from './pages/Financials/budgets/Budgets';
 import Budget from './pages/Financials/budgets/Budget';
 import CreateBudget from './pages/Financials/budgets/CreateBudget';
+import FSBankTransactions from './pages/accounts/FSBankTransactions';
+import SendMoney from './pages/Financials/fsFunctions/SendMoney';
+import MakePayment from './pages/Financials/fsFunctions/MakePayment';
+import PayBill from './pages/Financials/fsFunctions/PayBill';
 
 const App = () => {
   return (
@@ -69,6 +73,11 @@ const App = () => {
             <Route path="user/account/finanSage" element={<FinanSageAccount />} />
 
             <Route path="user/transactions" element={<UserTransactions />} />
+            <Route path="user/transactions/fs/bank" element={<FSBankTransactions />} />
+            <Route path="user/transactions/send/money" element={<SendMoney />} />
+            <Route path="user/transactions/make/pay" element={<MakePayment />} />
+            <Route path="user/transactions/bill/pay" element={<PayBill />} />
+
             <Route path="user/cashFlow/edit/:typeIncome/:id" element={<EditCashFlow />} />
 
             <Route path="user/report/all" element={<AllReports />} />

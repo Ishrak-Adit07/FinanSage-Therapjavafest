@@ -1,13 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import FSAccountDetails from '../../sections/accounts/FSAccountDetails';
 import FSAccountTransactions from '../../sections/accounts/FSAccountTransactions';
 import { RECENT_TRANSACTIONS } from '../../constants';
 import Bank2FSShift from '../../sections/accounts/Bank2FSShift';
 import FS2BankShift from '../../sections/accounts/FS2BankShift';
-import FSAccountNavigations from '../../sections/accounts/FSAccountNavigations';
 
-const FinanSageAccount = () => {
+const FSBankTransactions = () => {
   const [loading, setLoading] = useState(true);
 
   let fsTS = RECENT_TRANSACTIONS;
@@ -19,7 +17,7 @@ const FinanSageAccount = () => {
   }, []);
 
   return (
-    <section className='w-full'>
+    <section className='card w-full'>
       <div>
         {loading && (
           <i className="fa-solid fa-spinner animate-spin text-3xl text-center-block"></i>
@@ -27,8 +25,9 @@ const FinanSageAccount = () => {
         {!loading && (
           <div>
             <h1 className='text-3xl text-slate-500 text-center text-bold'>FinanSage User Account</h1>
-            <FSAccountDetails />
-            <FSAccountNavigations />
+            <FSAccountTransactions fsTS={fsTS}/>
+            <FS2BankShift />
+            <Bank2FSShift />
           </div>
         )}
       </div>
@@ -36,4 +35,4 @@ const FinanSageAccount = () => {
   );
 };
 
-export default FinanSageAccount;
+export default FSBankTransactions;

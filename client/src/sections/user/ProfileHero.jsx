@@ -21,9 +21,6 @@ const ProfileHero = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
 
-  const handldeDownload = () => {
-    console.log("Downloading CV");
-  };
 
   const goToFinanSageAccount = () => {
     navigate("/user/account/finanSage");
@@ -99,7 +96,7 @@ const ProfileHero = () => {
             </p>
             <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
               <button className="chbtn" onClick={goToFinanSageAccount}>
-                FinanSage Account
+                FS Account
               </button>
               <button className="chbtn" onClick={handleSeeReports}>
                 See Reports

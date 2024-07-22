@@ -29,13 +29,13 @@ const EditCashFlowAmount = ({id}) => {
         <input
           type="number"
           placeholder="New Amount"
-          className="input w-3/4"
+          className="xinput w-3/4"
           autoFocus
           value={newAmount}
           onChange={(e) => setNewAmount(e.target.value)}
         />
 
-        <button className="smbtn mx-2" onClick={editCashFlowAmount}>
+        <button className="chbtn" onClick={editCashFlowAmount}>
           Edit Amount
         </button>
       </div>

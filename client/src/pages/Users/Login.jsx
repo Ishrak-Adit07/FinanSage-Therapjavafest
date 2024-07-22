@@ -2,15 +2,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import LoginForm from '../../components/Forms/LoginForm';
+import TestLoginForm from '../../components/Forms/TestLoginForm';
 
 const Login = () => {
 
   return (
     <section className="card">
 
-        <h1 className="title">Login to your account</h1>
-
-        <LoginForm />
+        <TestLoginForm />
 
     </section>
   );

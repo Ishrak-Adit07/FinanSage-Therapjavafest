@@ -69,7 +69,7 @@ const Bank2FSShift = () => {
                 onChange={(e) => setBank(e.target.value)}
               >
                 <option value="" disabled>
-                  Select Bank
+                  Select Bank Account
                 </option>
                 {BANK_ACCOUNTS.map((account, index) => (
                   <option key={index} value={account.id}>

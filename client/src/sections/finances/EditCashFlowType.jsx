@@ -29,7 +29,7 @@ const EditCashFlowType = ({ typeIncome, id }) => {
       <div className="flex flex-wrap align-center my-10">
         {typeIncome && (
           <select
-            className="input w-3/4"
+            className="xinput w-3/4"
             value={newType}
             onChange={(e) => setNewType(e.target.value)}
           >
@@ -46,7 +46,7 @@ const EditCashFlowType = ({ typeIncome, id }) => {
 
         {!typeIncome && (
           <select
-            className="input w-3/4"
+            className="xinput w-3/4"
             value={newType}
             onChange={(e) => setNewType(e.target.value)}
           >
@@ -61,7 +61,7 @@ const EditCashFlowType = ({ typeIncome, id }) => {
           </select>
         )}
 
-        <button className="smbtn mx-2" onClick={editCashFlowType}>
+        <button className="chbtn" onClick={editCashFlowType}>
           Edit Type
         </button>
       </div>

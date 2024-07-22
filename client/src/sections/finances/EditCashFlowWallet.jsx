@@ -29,21 +29,21 @@ const EditCashFlowWallet = ({id}) => {
     <div>
       <div className="flex flex-wrap align-center my-10">
         <select
-          className="input w-3/4"
+          className="xinput w-3/4 text-slate-700"
           value={newWalletName}
           onChange={(e) => setNewWalletName(e.target.value)}
         >
           <option value="" disabled>
-            Select Wallet
+            Select New Wallet
           </option>
           {USER_WALLETS.map((wallet, index) => (
-            <option key={index} value={wallet.title}>
-              {wallet.title}
+            <option key={index} value={wallet.name}>
+              {wallet.name}
             </option>
           ))}
         </select>
 
-        <button className="smbtn mx-2" onClick={editCashFlowWallet}>
+        <button className="chbtn" onClick={editCashFlowWallet}>
           Edit Wallet
         </button>
       </div>
