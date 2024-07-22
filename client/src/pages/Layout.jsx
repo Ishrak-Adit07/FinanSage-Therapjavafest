@@ -57,7 +57,7 @@ const Layout = () => {
 
         <Navbar scrollToAboutMe={scrollToAboutMe} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}/>
 
-        <main className="p-4 items-center pt-16">
+        <main className="pt-16 items-center w-full h-full">
 
             <Outlet />
         

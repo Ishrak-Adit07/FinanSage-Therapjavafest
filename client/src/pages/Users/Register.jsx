@@ -6,7 +6,7 @@ import TestRegisterForm from '../../components/Forms/TestRegisterFrom';
 const Register = () => {
 
   return (
-    <section className="card">
+    <section className="mt-40">
 
         <TestRegisterForm />
 

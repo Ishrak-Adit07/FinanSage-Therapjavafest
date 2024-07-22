@@ -1,18 +1,14 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import LoginForm from '../../components/Forms/LoginForm';
-import TestLoginForm from '../../components/Forms/TestLoginForm';
+import React from "react";
+import TestLoginForm from "../../components/Forms/TestLoginForm";
 
 const Login = () => {
-
   return (
-    <section className="card">
-
-        <TestLoginForm />
-
+    <section className="mt-40">
+      <TestLoginForm />
     </section>
   );
-}
+};
 
 export default Login;
