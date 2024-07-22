@@ -13,6 +13,11 @@ const FCFeed = () => {
       </h1>
 
       <FCPostForm />
+
+      <div className="text-center">
+      <button className="chbtn text-center">Your Posts</button>
+      </div>
+
       <FCqaFeed />
     </div>
   );

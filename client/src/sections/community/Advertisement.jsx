@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Advertisement = () => {
   return (
     <div>
+      <h1 className="m-4 text-left text-2xl text-red-400">Sponsored</h1>
       {ADVERTISEMENTS.map((ad, index) => (
         <motion.div
           key={index}

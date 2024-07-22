@@ -6,7 +6,7 @@ import FCqaCard from '../../components/Cards/FCqaCard';
 
 const FCqaFeed = () => {
   return (
-    <div>
+    <div className='border-t border-blue-400 my-10'>
       {FCFEED_QAS.map((qa, index) => (
         <motion.div
           key={index}
