@@ -53,6 +53,6 @@ body,
   }
 
   .leftBarBtn {
-    @apply bg-transparent text-lg hover:bg-blue-200 hover:text-slate-700 w-full tracking-wide text-left p-2 rounded-lg
+    @apply bg-transparent text-lg hover:bg-blue-200 hover:text-slate-700 w-full tracking-wide text-left p-2 py-4 rounded-lg
   }
 }

@@ -546,3 +546,16 @@ export const FCFEED_QAS = [
     ]
   },
 ]
+
+let ADVERTISEMENTS = [
+  {
+    name : "Weasley's Wizard Wheezes",
+    catchPhrase: "Mischief Managed"
+  },
+  {
+    name : "Weasley's Wizard Wheezes",
+    catchPhrase: "Mischief Managed"
+  },
+];
+
+export { ADVERTISEMENTS }
