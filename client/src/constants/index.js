@@ -455,4 +455,10 @@ export const PERSON_SPECIFIC_FEATURES = [
       "Reports on bank and inter-user transactions"
     ]
   },
+];
+
+export const REPORT_PERIODS = [
+  "Daily",
+  "Weekly",
+  "Monthly",
 ]

@@ -21,7 +21,6 @@ import CreateAccount from './pages/accounts/CreateAccount';
 import FinanSageAccount from './pages/accounts/FinanSageAccount';
 import BankAccount from './pages/accounts/BankAccount';
 import EditCashFlow from './pages/Financials/cashFlow/EditCashFlow';
-import CashFlowReports from './pages/Financials/reports/CashFlowReports';
 import ReportToday from './pages/Financials/reports/ReportToday';
 import ReportDaily from './pages/Financials/reports/ReportDaily';
 import ReportWeekly from './pages/Financials/reports/ReportWeekly';
@@ -30,7 +29,6 @@ import ReportWallet from './pages/Financials/reports/ReportWallet';
 import ReportBankTransactions from './pages/Financials/reports/ReportBankTransactions';
 import ReportUserTransactions from './pages/Financials/reports/ReportUserTransactions';
 import AllReports from './pages/Financials/reports/AllReports';
-import TransactionReports from './pages/Financials/reports/TransactionReports';
 import IncomeTax from './pages/Financials/tax/IncomeTax';
 import Resources from './pages/resources/Resources';
 import CurrencyConversionPage from './pages/resources/CurrencyConversionPage';
@@ -42,6 +40,8 @@ import FSBankTransactions from './pages/accounts/FSBankTransactions';
 import SendMoney from './pages/Financials/fsFunctions/SendMoney';
 import MakePayment from './pages/Financials/fsFunctions/MakePayment';
 import PayBill from './pages/Financials/fsFunctions/PayBill';
+import CashFlowReportCriteria from './pages/Financials/reports/CashFlowReportCriteria';
+import TransactionReportCriteria from './pages/Financials/reports/TransactionReportCriteria';
 
 const App = () => {
   return (
@@ -82,8 +82,8 @@ const App = () => {
 
             <Route path="user/report/all" element={<AllReports />} />
 
-            <Route path="user/report/cashFlow" element={<CashFlowReports />} />
-            <Route path="user/report/transaction" element={<TransactionReports />} />
+            <Route path="user/report/cashFlow" element={<CashFlowReportCriteria />} />
+            <Route path="user/report/transaction" element={<TransactionReportCriteria />} />
 
             <Route path="user/report/cashFlow/today" element={<ReportToday />} />
             <Route path="user/report/cashFlow/day" element={<ReportDaily />} />
