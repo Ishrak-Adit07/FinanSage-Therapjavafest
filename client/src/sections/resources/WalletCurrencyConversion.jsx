@@ -58,8 +58,8 @@ const WalletCurrencyConversion = () => {
                 Select Wallet
               </option>
               {USER_WALLETS.map((wallet, index) => (
-                <option key={index} value={wallet.title}>
-                  {wallet.title}
+                <option key={index} value={wallet.id}>
+                  {wallet.name}
                 </option>
               ))}
             </select>
@@ -111,8 +111,9 @@ const WalletCurrencyConversion = () => {
       </motion.div>
 
       <div className="flex items-center justify-center gap-5 mt-6 w-full">
-        <Subscribe text={"Convert"} onClickAction={convertCurrency} />
-        <Subscribe text={"Back"} onClickAction={goBackToProfile} />
+        <button className="chbtn" onClick={convertCurrency}>
+          Convert
+        </button>
       </div>
     </div>
   );

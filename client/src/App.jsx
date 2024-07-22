@@ -42,6 +42,7 @@ import MakePayment from './pages/Financials/fsFunctions/MakePayment';
 import PayBill from './pages/Financials/fsFunctions/PayBill';
 import CashFlowReportCriteria from './pages/Financials/reports/CashFlowReportCriteria';
 import TransactionReportCriteria from './pages/Financials/reports/TransactionReportCriteria';
+import Financom from './pages/community/Financom';
 
 const App = () => {
   return (
@@ -98,8 +99,12 @@ const App = () => {
 
             <Route path="user/resources" element={<Resources />} />
             <Route path="user/resources/currency/conversion" element={<CurrencyConversionPage />} />
+            <Route path="user/resources/articles" element={<CurrencyConversionPage />} />
+            <Route path="user/resources/business" element={<CurrencyConversionPage />} />
 
             <Route path="user/news" element={<News />} />
+
+            <Route path="user/financom" element={<Financom />} />
 
           </Route>
 

@@ -24,6 +24,7 @@ const NewsPortal = () => {
               className=""
               id={"1234"}
               title={news.title}
+              paper={news.paper}
               preview={news.preview}
               link={news.link}
             />

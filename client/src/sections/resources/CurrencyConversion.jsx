@@ -111,8 +111,7 @@ const CurrencyConversion = () => {
       </motion.div>
 
       <div className="flex items-center justify-center gap-5 mt-6 w-full">
-        <Subscribe text={"Convert"} onClickAction={convertCurrency} />
-        <Subscribe text={"Back"} onClickAction={goBackToProfile} />
+        <button className="chbtn" onClick={convertCurrency}>Convert</button>
       </div>
     </div>
   );

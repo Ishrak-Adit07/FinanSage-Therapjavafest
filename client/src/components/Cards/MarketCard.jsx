@@ -6,10 +6,10 @@ const MarketCard = ({ id, name, change }) => {
 
   return (
     <div>
-      <div className="p-4 bg-slate-500 rounded-lg shadow-md m-2">
+      <div className="bg-slate-500 p-4 shadow-md tracking-wide ">
         <div>
-          <p className="text-2xl text-slate-200 text-bold text-center">{name}</p>
-          {change>0 && <p className="text-green-500 text-center">+{change}%</p>}
+          <p className="text-xl text-slate-200 text-bold text-center">{name}</p>
+          {change>0 && <p className="text-green-400 text-center">+{change}%</p>}
           {change<0 && <p className="text-red-500 text-center">{change}%</p>}
         </div>
       </div>

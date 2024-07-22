@@ -21,7 +21,6 @@ const ProfileHero = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
 
-
   const goToFinanSageAccount = () => {
     navigate("/user/account/finanSage");
   };
@@ -56,6 +55,10 @@ const ProfileHero = () => {
 
   const goToTransactions = () => {
     navigate("/user/transactions");
+  };
+
+  const goToFinanCom = () => {
+    navigate("/user/financom");
   };
 
   const handleLogOut = () => {
@@ -125,6 +128,12 @@ const ProfileHero = () => {
               </button>
               <button className="chbtn" onClick={handleSeeNews}>
                 News
+              </button>
+            </div>
+
+            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
+              <button className="chbtn" onClick={goToFinanCom}>
+                FinanCom
               </button>
             </div>
             <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">

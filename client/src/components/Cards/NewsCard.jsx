@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
-const NewsCard = ({ id, title, preview, link }) => {
+const NewsCard = ({ id, title, paper, preview, link }) => {
   return (
     <div>
       <div className="card rounded-lg shadow-md m-2">
@@ -10,7 +10,13 @@ const NewsCard = ({ id, title, preview, link }) => {
           <p className="text-2xl text-slate-700 text-bold text-center">
             {title}
           </p>
-          <p className="text-slate-700 text-semibold text-center">{preview}</p>
+
+          <p className="text-slate-700 text-semibold text-center">
+            <span className="text-bold text-slate-400 text-bold text-center">
+              {paper}. {" "}
+            </span>
+            {preview}
+          </p>
           <h1 className="text-center">
             <a
               href={link}
