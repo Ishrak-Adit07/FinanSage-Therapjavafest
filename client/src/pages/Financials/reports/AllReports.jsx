@@ -16,11 +16,11 @@ const AllReports = () => {
     }
   return (
     <div>
-      <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-        <Subscribe text={"CashFlow Reports"} onClickAction={goToCashflowReports} />
+      <div className="flex items-center justify-center gap-5 mt-6 w-full">
+        <button className='btn' onClick={goToCashflowReports}>Cashflow Reports</button>
       </div>
-      <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-        <Subscribe text={"Transaction Reports"} onClickAction={goToTransactionReports} />
+      <div className="flex items-center justify-center gap-5 mt-6 w-full">
+        <button className='btn' onClick={goToTransactionReports}>Transaction Reports</button>
       </div>
     </div>
   );

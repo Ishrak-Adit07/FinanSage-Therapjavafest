@@ -7,6 +7,9 @@ const Login = () => {
   return (
     <section className="mt-40">
       <TestLoginForm />
+      <h1 className="text-indigo-500 text-bold text-center">
+        Copyright@FinanSage.Official
+      </h1>
     </section>
   );
 };

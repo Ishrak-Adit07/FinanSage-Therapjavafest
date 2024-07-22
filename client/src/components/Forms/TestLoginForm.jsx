@@ -34,7 +34,7 @@ const TestLoginForm = () => {
           email: mail,
         });
 
-        navigate("/");
+        navigate("/user/dashboard");
         setError(null);
       }
     } catch (err) {
