@@ -6,10 +6,11 @@ export const UserContext = createContext();
 const UserProvider = ({children}) =>{
     
     const [user, setUser] = useState({
+        firstName: localStorage.getItem('firstName'),
+        lastName: localStorage.getItem('lastName'),
         name: localStorage.getItem('name'),
         email: localStorage.getItem('email'),
-        wallets: [],
-        budgets: [],
+        username: localStorage.getItems('username'),
     });
 
     return <UserContext.Provider value={{user, setUser}}>

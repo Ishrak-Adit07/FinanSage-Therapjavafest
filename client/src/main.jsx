@@ -4,15 +4,16 @@ import App from './App.jsx'
 import './assets/app.css'
 
 import UserProvider from './contexts/UserContext.jsx'
-import BudgetProvider from './contexts/BudgetContext.jsx'
-import WalletProvider from './contexts/WalletContext.jsx'
+import EnumProvider from './contexts/EnumContext.jsx'
+import PropProvider from './contexts/PropContext.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
-      <BudgetProvider>
+      <EnumProvider>
 
-        <WalletProvider>
+        <PropProvider>
 
           <UserProvider>
 
@@ -20,9 +21,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
           </UserProvider>
 
-        </WalletProvider>
+        </PropProvider>
 
-      </BudgetProvider>
+      </EnumProvider>
 
   </React.StrictMode>
 )
