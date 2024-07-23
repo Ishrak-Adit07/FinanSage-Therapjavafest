@@ -22,13 +22,7 @@ const PayBillTransaction = () => {
     console.log(user.userID);
     console.log(serviceID, option, customerNo, amount);
 
-    setServiceID("");
-    setOption("");
-    setCustomerNo("");
-    setAmount("");
-
-    setShowOptions(false);
-    setShowCustomer(false);
+    console.log("Bill has been paid");
   };
 
   const findByID = (id) => {
@@ -38,7 +32,9 @@ const PayBillTransaction = () => {
   const selectService = () => {
     if (serviceID) {
       setService(findByID(serviceID));
+      setOption("");
       setShowOptions(true);
+      setShowCustomer(false);
     }
   };
 

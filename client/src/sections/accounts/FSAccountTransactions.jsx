@@ -39,9 +39,16 @@ const FSAccountTransactions = ({ fsTS }) => {
             </motion.div>
           ))}
         {!showTransacions && (
-          <h1 className="text-2xl my-10 text-center">
-            There are no transactions in this account
-          </h1>
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          >
+            <h1 className="text-2xl my-10 text-center">
+              There are no transactions in this account
+            </h1>
+          </motion.div>
         )}
       </div>
     </section>

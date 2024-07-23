@@ -28,19 +28,19 @@ const FS2BankShift = () => {
 
   // Form data states
 
-  const [bank, setBank] = useState();
+  const [bank, setBank] = useState("");
   const [amount, setAmount] = useState();
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
-      <h1 className="text-slate-700 text-bold text-4xl">
-        Shift Money From FS Account to Bank
-      </h1>
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-10">
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
           className="flex flex-wrap items-center justify-center w-full"
         >
+          <h1 className="text-slate-700 text-bold text-4xl">
+            Shift Money From FS Account to Bank
+          </h1>
           <motion.div
             className="w-full lg:w-1/2 py-4 lg:p-10"
             initial={{ opacity: 0, y: -100 }}
@@ -51,7 +51,6 @@ const FS2BankShift = () => {
               onSubmit={handleCashflow}
               className="justify-center items-center text-slate-700"
             >
-
               <select
                 className="input mt-2"
                 value={bank}

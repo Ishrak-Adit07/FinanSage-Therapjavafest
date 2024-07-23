@@ -33,15 +33,15 @@ const Bank2FSShift = () => {
   const [amount, setAmount] = useState();
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
-      <h1 className="text-slate-700 text-bold text-4xl">
-        Shift Money from Bank to FS Account
-      </h1>
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-10">
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
           className="flex flex-wrap items-center justify-center w-full"
         >
+          <h1 className="text-slate-700 text-bold text-4xl">
+            Shift Money from Bank to FS Account
+          </h1>
           <motion.div
             className="w-full lg:w-1/2 py-4 lg:p-10"
             initial={{ opacity: 0, y: -100 }}
