@@ -1,35 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Subscribe from "../../components/Buttons/Subscribe";
-import { useNavigate } from "react-router-dom";
 import ArticlePreview from "../../sections/resources/ArticlePreview";
+import BusinessPreview from "../../sections/resources/BusinessPreview";
+import CurrencyPreview from "../../sections/resources/CurrencyPreview";
 
 const Resources = () => {
-  const navigate = useNavigate();
-
-  const goToArticles = () => {
-    navigate("/user/resources/articles");
-  };
-
-  const goToBusiness = () => {
-    navigate("/user/resources/business");
-  };
-
-  const goToCurrencyConversion = () => {
-    navigate("/user/resources/currency/conversion");
-  };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center w-full">
       <ArticlePreview />
-      <Subscribe
-        text={"Business"}
-        onClickAction={goToBusiness}
-      />
-      <Subscribe
-        text={"Currency Conversion"}
-        onClickAction={goToCurrencyConversion}
-      />
+      <BusinessPreview />
+      <CurrencyPreview />
     </div>
   );
 };

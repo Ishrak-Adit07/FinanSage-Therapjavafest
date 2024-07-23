@@ -32,7 +32,7 @@ const Hero = ({ scrollToContact }) => {
   };
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4">
+    <div className="layoutSection text-slate-200 border-b border-neutral-900 pl-20 pr-60 pb-60 pt-20">
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center lg:justify-start"
@@ -44,7 +44,7 @@ const Hero = ({ scrollToContact }) => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-12 lg:text-6xl xl:text-8xl">
+            <h1 className="text-4xl font-thin text-slate-700 tracking-tight lg:text-6xl xl:text-8xl">
               {PROJECT_NAME}
             </h1>
             <div className="bg-gradient-to-r from-red-400 via-purple-500 to-pink-400 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl xl:text-4xl">
