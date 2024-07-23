@@ -41,7 +41,6 @@ const TestRegisterForm = () => {
           lastName: dummyLoginResponse.lastName,
           username: dummyLoginResponse.username,
           userID: dummyLoginResponse.userID,
-          frinds: dummyLoginResponse.frinds,
           email: formData.email,
         });
 
@@ -49,6 +48,7 @@ const TestRegisterForm = () => {
           wallets: dummyLoginResponse.wallets,
           budgets: dummyLoginResponse.budgets,
           accounts: dummyLoginResponse.accounts,
+          frinds: dummyLoginResponse.frinds,
         });
 
         setEnums({
@@ -137,7 +137,7 @@ const TestRegisterForm = () => {
                 className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
                 htmlFor="username"
               >
-                Username
+                username
               </label>
             )}
           </div>

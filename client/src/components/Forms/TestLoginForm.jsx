@@ -35,7 +35,6 @@ const TestLoginForm = () => {
           lastName: dummyLoginResponse.lastName,
           username: dummyLoginResponse.username,
           userID: dummyLoginResponse.userID,
-          frinds: dummyLoginResponse.frinds,
           email: mail,
         });
 
@@ -43,6 +42,7 @@ const TestLoginForm = () => {
           wallets: dummyLoginResponse.wallets,
           budgets: dummyLoginResponse.budgets,
           accounts: dummyLoginResponse.accounts,
+          frinds: dummyLoginResponse.frinds,
         });
 
         setEnums({
