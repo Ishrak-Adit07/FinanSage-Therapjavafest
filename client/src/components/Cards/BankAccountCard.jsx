@@ -25,7 +25,7 @@ const BankAccountCard = ({ id, BankName, AccID, Balance }) => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               initial={{ height: "auto" }}
-              animate={{ height: isHovered ? "150px" : "50px" }}
+              animate={{ height: isHovered ? "90px" : "50px" }}
               transition={{ duration: 0.5 }}
             >
               <div className="h-full w-full">
