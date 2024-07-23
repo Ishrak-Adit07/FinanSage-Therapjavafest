@@ -693,5 +693,56 @@ export const REGISTERED_MERCHANTS = [
     username: "rustic_eatery",
     userID: "93726463",
   },
+];
+
+export const PAY_BILL_SERVICES = [
+  {
+    serviceID: "1",
+    service: "Gas",
+    optionName: "Area",
+    options: [
+      "Jalalabad", "Sundarban", "Poshchimanchol", "Titash"
+    ]
+  },
+  {
+    serviceID: "2",
+    service: "Water",
+    optionName: "Area",
+    options: [
+      "Dhaka WASA", "Chittagong WASA", "Rajshahi WASA"
+    ]
+  },
+  {
+    serviceID: "3",
+    service: "Internet & Phone",
+    optionName: "Company",
+    options: [
+      "BTCL", "Link3", "Carnival", "AmberIT", "Dot Network"
+    ]
+  },
+  {
+    serviceID: "4",
+    service: "Education",
+    optionName: "Institution",
+    options: [
+      "DU", "BUET", "ISC", "VNSC", "IIT", "BRAC"
+    ]
+  },
+  {
+    serviceID: "5",
+    service: "TV",
+    optionName: "Company",
+    options: [
+      "Akash", "JCC", "DISH"
+    ]
+  },
+  {
+    serviceID: "6",
+    service: "City Service",
+    optionName: "Corporation",
+    options: [
+      "Dhaka South City Corporation", "Dhaka South City Corporation", "Rangpur South City Corporation", "Sylhet City Corporation"
+    ]
+  },
 ]
 

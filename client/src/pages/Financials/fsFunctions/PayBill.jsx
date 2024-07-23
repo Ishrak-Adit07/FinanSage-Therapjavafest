@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import InterUserTransactions from '../../../sections/finances/InterUserTransaction';
+import PayBillTransaction from '../../../sections/finances/PayBillTransaction';
 
 const PayBill = () => {
   return (
     <div>
-      <InterUserTransactions />
+      <PayBillTransaction />
     </div>
   );
 }
