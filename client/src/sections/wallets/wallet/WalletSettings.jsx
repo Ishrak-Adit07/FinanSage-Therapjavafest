@@ -3,17 +3,19 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Subscribe from "../../../components/Buttons/Subscribe";
-import { useState } from "react";
-import { CURRENCIES } from "../../../constants";
+import { useContext, useState } from "react";
+import { EnumContext } from "../../../contexts/EnumContext";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
 };
 
-const WalletSettings = ({walletID}) => {
+const WalletSettings = ({ walletID }) => {
   const navigate = useNavigate();
+
+  const { enums } = useContext(EnumContext);
+
   const [showSettings, setShowSettings] = useState(false);
   const handleShowSettings = () => {
     setShowSettings(!showSettings);
@@ -32,15 +34,15 @@ const WalletSettings = ({walletID}) => {
   };
 
   const handleEditCurrency = () => {
-    console.log( newCurrency);
+    console.log(newCurrency);
     setNewCurrency("");
   };
 
-//   const handleEditWallet = () => {
-//     console.log( newWalletName, newCurrency);
-//     setNewWalletName("");
-//     setNewCurrency("");
-//   };
+  //   const handleEditWallet = () => {
+  //     console.log( newWalletName, newCurrency);
+  //     setNewWalletName("");
+  //     setNewCurrency("");
+  //   };
 
   const handleDeleteWallet = () => {
     if (confirm("Are you sure you want to delete this wallet?")) {
@@ -64,7 +66,7 @@ const WalletSettings = ({walletID}) => {
         >
           <div className="flex flex-col items-center">
             <div className="flex flex-wrap items-center justify-center w-full">
-              <Subscribe text={"Settings"} onClickAction={handleShowSettings} />
+              <button className="chbtn" onClick={handleShowSettings}>Settings</button>
             </div>
             {showSettings && (
               <div className="flex flex-col items-center justify-center gap-5 mt-6 w-full">
@@ -79,10 +81,9 @@ const WalletSettings = ({walletID}) => {
                       setNewWalletName(e.target.value);
                     }}
                   />
-                  <Subscribe
-                    text={"Edit Name"}
-                    onClickAction={handleEditWalletName}
-                  />
+                  <button className="chbtn" onClick={handleEditWalletName}>
+                    Edit Name
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap w-full items-center justify-center">
@@ -96,18 +97,20 @@ const WalletSettings = ({walletID}) => {
                     <option value="" disabled>
                       Select New Currency
                     </option>
-                    {CURRENCIES.map((currency, index) => (
+                    {enums.currencies.map((currency, index) => (
                       <option key={index} value={currency}>
                         {currency}
                       </option>
                     ))}
                   </select>
-                  <Subscribe
-                    text={"Edit Currency"}
-                    onClickAction={handleEditCurrency}
-                  />
+
+                  <button className="chbtn" onClick={handleEditCurrency}>
+                    Edit Currency
+                  </button>
                 </div>
-                <Subscribe text={"Delete Wallet"} onClickAction={handleDeleteWallet} />
+                <button className="chbtn" onClick={handleDeleteWallet}>
+                  Delete Wallet
+                </button>
               </div>
             )}
           </div>
