@@ -2,18 +2,19 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
-import { CURRENCIES } from "../../constants";
 import { PropContext } from "../../contexts/PropContext";
+import { EnumContext } from "../../contexts/EnumContext";
 
 const CreateWalletForm = () => {
   const navigate = useNavigate();
 
-  // const [setProps] = useContext(PropContext);
+  const { setProps } = useContext(PropContext);
+  const { enums } = useContext(EnumContext);
 
   const [formData, setFormData] = useState({
     walletName: "",
     currency: "",
-    initialBalance: null,
+    initialBalance: "",
   });
   const [error, setError] = useState(null);
 
@@ -67,7 +68,7 @@ const CreateWalletForm = () => {
           <option value="" disabled>
             Select Currency
           </option>
-          {CURRENCIES.map((currency, index) => (
+          {enums.currencies.map((currency, index) => (
             <option key={index} value={currency}>
               {currency}
             </option>

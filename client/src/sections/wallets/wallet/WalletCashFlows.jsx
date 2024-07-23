@@ -15,7 +15,7 @@ const WalletCashFlows = ({ reportFlows, walletID }) => {
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
-      <div>
+      <div className="w-1/4">
       <h1 className="text-slate-900 text-4xl text-center">Cashflow History</h1>
       <h1 className="text-slate-700 text-2xl text-center mt-2">for this wallet</h1>
         {showCashFlows &&

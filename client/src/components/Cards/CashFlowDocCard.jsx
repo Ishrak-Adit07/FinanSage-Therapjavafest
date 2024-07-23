@@ -3,7 +3,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const CashFlowDocCard = ({ id, walletName, walletID, type, amount, date }) => {
+const CashFlowDocCard = ({ id, walletName, type, amount, date }) => {
   const navigate = useNavigate();
 
   const handleCashFlowEdit = () => {
@@ -18,12 +18,14 @@ const CashFlowDocCard = ({ id, walletName, walletID, type, amount, date }) => {
 
   return (
     <div>
-      <div className="straightCard w-full flex flex-col justify-between">
+      <div className="straightCard w-full flex flex-wrap justify-between">
         <div>
-          {walletName};{type};{amount};{date}
+          <p className="text-bold text-indigo-400">Wallet: {walletName}</p>
+          <p>{type} : {amount}</p>
+          <p>{date}</p>
         </div>
 
-        <div className="justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center gap-5">
           <button
             className="fa-solid fa-house-chimney text-green-400"
             title="Edit"

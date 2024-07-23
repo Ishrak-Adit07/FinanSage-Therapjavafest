@@ -14,10 +14,10 @@ const WalletDetails = ({id}) => {
   const resultByID = findByID(id);
 
   return (
-    <div>
-      {false && <h1 className='text-4xl text-bold text-slate-700 text-center my-10'>Wallet Details</h1>}
-      <h1 className='text-4xl text-bold text-slate-700 text-center my-2'>{resultByID.name}</h1>
-      <h1 className='text-2xl text-bold text-slate-700 text-center my-2'>Balance: {resultByID.balance} {resultByID.currency}</h1>
+    <div className='mt-10 py-10 bg-gradient-to-r from-slate-200 to-indigo-400 w-1/2 rounded-lg shadow-lg'>
+      {false && <h1 className='text-6xl text-bold text-slate-700 text-center my-10'>Wallet Details</h1>}
+      <h1 className='text-6xl text-bold text-slate-700 text-center mb-6'>{resultByID.name}</h1>
+      <h1 className='text-4xl text-bold text-slate-700 text-center my-2'>Balance: {resultByID.balance} {resultByID.currency}</h1>
     </div>
   );
 }

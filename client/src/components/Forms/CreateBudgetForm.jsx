@@ -1,19 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { EnumContext } from "../../contexts/EnumContext";
+import { PropContext } from "../../contexts/PropContext";
 import Alert from "../../messages/Alert";
-import { CURRENCIES } from "../../constants";
 
 const CreateBudgetForm = () => {
   const navigate = useNavigate();
-  const [error, setError] = useState(null);
 
-  //Form data states
+  const { setProps } = useContext(PropContext);
+  const { enums } = useContext(EnumContext);
+
   const [formData, setFormData] = useState({
     budgetName: "",
     currency: "",
-    budget: null,
+    budget: "",
   });
+  const [error, setError] = useState(null);
 
   //Handle Register
   const handleCreateBudget = async (e) => {
@@ -60,7 +63,7 @@ const CreateBudgetForm = () => {
           <option value="" disabled>
             Select Currency
           </option>
-          {CURRENCIES.map((currency, index) => (
+          {enums.currencies.map((currency, index) => (
             <option key={index} value={currency}>
               {currency}
             </option>

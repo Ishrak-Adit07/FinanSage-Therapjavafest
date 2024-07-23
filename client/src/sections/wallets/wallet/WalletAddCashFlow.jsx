@@ -10,7 +10,7 @@ const gridSquareVariants = {
   show: { opacity: 1 },
 };
 
-const WalletAddCashFlow = ({walletID}) => {
+const WalletAddCashFlow = ({ walletID }) => {
   const [showExpense, setShowExpense] = useState(false);
 
   const handleTransactionToggle = () => {
@@ -27,7 +27,7 @@ const WalletAddCashFlow = ({walletID}) => {
 
     // const responseData = await AddCashFlow(walletID, flowType, amount);
     // if(responseData){
-      
+
     // }
     // else{
 
@@ -39,7 +39,7 @@ const WalletAddCashFlow = ({walletID}) => {
   const [error, setError] = useState(null);
 
   return (
-    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center justify-center my-10">
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center justify-center my-20 mb-40 bg-gradient-to-r from-indigo-400 to-slate-200 rounded-lg shadow-lg">
       <h1 className="text-slate-700 text-bold text-4xl my-10">
         Add CashFlow to Wallet
       </h1>
@@ -54,18 +54,14 @@ const WalletAddCashFlow = ({walletID}) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <button onClick={handleTransactionToggle} className="chbtn w-1/2">
-            Income / Expense
-            </button>
-
             {showExpense && (
-              <div className="text-slate-900 pb-4 items-center py-4 lg:items-start">
+              <div className="text-slate-900 items-center lg:items-start">
                 <motion.div
                   variants={gridSquareVariants}
                   className="flex flex-wrap justify-center lg:justify-start"
                 >
                   <select
-                    className="w-full lg:w-1/2 items-center justify-center bg-indigo-200 text-slate-700 border border-slate-300 rounded-md p-2"
+                    className="w-full lg:w-1/2 input"
                     value={flowType}
                     onChange={(e) => setFlowType(e.target.value)}
                   >
@@ -83,13 +79,13 @@ const WalletAddCashFlow = ({walletID}) => {
             )}
 
             {!showExpense && (
-              <div className="text-slate-900 pb-4 items-center py-4 lg:items-start">
+              <div className="text-slate-900 items-center lg:items-start">
                 <motion.div
                   variants={gridSquareVariants}
                   className="flex flex-wrap justify-center lg:justify-start"
                 >
                   <select
-                    className="w-full lg:w-1/2 items-center justify-center bg-indigo-200 text-slate-700 border border-slate-300 rounded-md p-2"
+                    className="w-full lg:w-1/2 input"
                     value={flowType}
                     onChange={(e) => setFlowType(e.target.value)}
                   >
@@ -105,6 +101,10 @@ const WalletAddCashFlow = ({walletID}) => {
                 </motion.div>
               </div>
             )}
+
+            <button onClick={handleTransactionToggle} className="btn w-1/2">
+              Income / Expense
+            </button>
           </motion.div>
 
           <motion.div

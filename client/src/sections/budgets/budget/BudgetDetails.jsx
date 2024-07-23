@@ -12,7 +12,7 @@ const BudgetDetails = ({id}) => {
   const resultByID = findByID(id);
 
   return (
-    <div>
+    <div className='pt-20'>
       {false && <h1 className='text-4xl text-bold text-slate-700 text-center my-10'>Wallet Details</h1>}
       <h1 className='text-4xl text-bold text-slate-700 text-center my-2'>{resultByID.name}</h1>
       <h1 className='text-2xl text-bold text-slate-700 text-center my-2'>Budget: {resultByID.budget} {resultByID.currency}</h1>
