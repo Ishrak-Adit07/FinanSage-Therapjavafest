@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Subscribe from "../../../components/Buttons/Subscribe";
-import { useState } from "react";
-import { CURRENCIES } from "../../../constants";
+import { useContext, useState } from "react";
+import { EnumContext } from "../../../contexts/EnumContext";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -18,13 +18,12 @@ const BudgetSettings = () => {
     setShowSettings(!showSettings);
   };
 
+  const { enums } = useContext(EnumContext);
+
   const [newBudgetName, setNewBudgetName] = useState("");
   const [newCurrency, setNewCurrency] = useState("");
   const [newBudget, setNewBudget] = useState();
 
-  //   const handleBackToWallets = () => {
-  //     navigate("/user/wallets");
-  //   };
 
   const handleEditBudgetName = () => {
     console.log(newBudgetName);
@@ -57,7 +56,11 @@ const BudgetSettings = () => {
   return (
     <div className="layoutSection text-slate-700 border-neutral-900 pb-4 flex flex-col mt-10">
       <div className="flex flex-wrap items-center justify-center w-full">
-              <Subscribe text={"Settings"} onClickAction={handleShowSettings} />
+        <div className="flex flex-wrap items-center justify-center w-full">
+          <button className="chbtn" onClick={handleShowSettings}>
+            Settings
+          </button>
+        </div>
       </div>
       <motion.div
         variants={gridSquareVariants}
@@ -114,7 +117,7 @@ const BudgetSettings = () => {
                     <option value="" disabled>
                       Select New Currency
                     </option>
-                    {CURRENCIES.map((currency, index) => (
+                    {enums.currencies.map((currency, index) => (
                       <option key={index} value={currency}>
                         {currency}
                       </option>

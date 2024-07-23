@@ -115,7 +115,7 @@ const WalletAddCashFlow = ({ walletID }) => {
           >
             <form
               onSubmit={handleCashflow}
-              className="justify-center items-center  text-slate-700"
+              className="justify-center items-center text-slate-700"
             >
               <input
                 type="number"

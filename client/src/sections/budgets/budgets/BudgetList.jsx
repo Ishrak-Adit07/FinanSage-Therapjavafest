@@ -24,7 +24,7 @@ const BudgetList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
           >
-            <BudgetCard name={budget.name} currency={budget.currency} balance={budget.balance} budget={budget.budget} cashFlowIDs={budget.cashFlowIDs} />
+            <BudgetCard name={budget.name} id={budget.id} currency={budget.currency} balance={budget.balance} budget={budget.budget} cashFlowIDs={budget.cashFlowIDs} />
           </motion.div>
         ))}
       </motion.div>

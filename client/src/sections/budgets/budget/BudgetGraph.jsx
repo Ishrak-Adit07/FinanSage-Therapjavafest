@@ -11,11 +11,12 @@ const gridSquareVariants = {
 const BudgetGraph = () => {
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4">
+    <div className="layoutSection text-slate-200 p-40">
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center"
       >
+        <h1 className="text-4xl text-slate-500 text-center text-bold my-10">Budget CashFlow Overview</h1>
         <motion.div
           className="w-full"
           initial={{ opacity: 0, y: 100 }}
@@ -28,7 +29,7 @@ const BudgetGraph = () => {
             </h1>}
 
             <StraightAnglePieChart headerText={"Budget Cashflow Overview"}/>
-          </div>
+          </div> 
         </motion.div>
       </motion.div>
     </div>

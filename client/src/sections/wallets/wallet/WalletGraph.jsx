@@ -9,14 +9,15 @@ const gridSquareVariants = {
 };
 
 const WalletGraph = () => {
-
   return (
     <div className="layoutSection text-slate-200 p-40">
-      <h1 className="text-4xl text-slate-500 text-center text-bold my-10">Wallet CashFlow Overview</h1>
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center"
       >
+        <h1 className="text-4xl text-slate-500 text-center text-bold my-10">
+          Wallet CashFlow Overview
+        </h1>
         <motion.div
           className="w-full"
           initial={{ opacity: 0, y: 100 }}
@@ -24,11 +25,13 @@ const WalletGraph = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center w-full">
-            {false && <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
-              Wallet Cash Graph
-            </h1>}
+            {false && (
+              <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
+                Wallet Cash Graph
+              </h1>
+            )}
 
-            <StraightAnglePieChart headerText={"Wallet Cashflow Overview"}/>
+            <StraightAnglePieChart headerText={"Wallet Cashflow Overview"} />
           </div>
         </motion.div>
       </motion.div>

@@ -54,39 +54,94 @@ export const USER_WALLETS = [
 
 export const USER_BUDGETS = [
   {
+    id: "1",
     name: "Owltweet",
     currency: "Dirham",
     budget: 1000,
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 275.75,
+    linkedWallets: [
+      {
+        name: "Owltweet",
+        id: "1",
+      },
+      {
+        name: "Games",
+        id: "2",
+      },
+    ]
   },
   {
+    id: "2",
     name: "Games",
     currency: "Yen",
     budget: 2000,
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 200.50,
+    linkedWallets: [
+      {
+        name: "Owltweet",
+        id: "1",
+      },
+      {
+        name: "Games",
+        id: "2",
+      },
+    ],
   },
   {
+    id: "3",
     name: "Tour",
     currency: "Taka",
     budget: 500,
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 44.75,
+    linkedWallets: [
+      {
+        name: "Owltweet",
+        id: "1",
+      },
+      {
+        name: "Games",
+        id: "2",
+      },
+    ],
   },
   {
+    id: "4",
     name: "Market",
     currency: "Taka",
     budget: 2000,
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 276.75,
+    linkedWallets: [
+      {
+        name: "Office",
+        id: "5",
+      },
+      {
+        name: "Games",
+        id: "2",
+      },
+    ],
   },
   {
+    id: "5",
     name: "Office",
     currency: "Dollar",
     budget: 1500,
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 478.25,
+    linkedWallets: [
+      {
+        name: "Market",
+        id: "4",
+      },
+      {
+        name: "Games",
+        id: "2",
+      },
+    ],
   },
 ];
 

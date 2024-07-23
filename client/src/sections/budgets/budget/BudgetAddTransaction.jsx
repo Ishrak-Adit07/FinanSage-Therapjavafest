@@ -10,7 +10,6 @@ const gridSquareVariants = {
 };
 
 const BudgetAddTransaction = () => {
-
   const handleCashflow = (e) => {
     e.preventDefault();
     console.log(flowType, amount);
@@ -26,49 +25,16 @@ const BudgetAddTransaction = () => {
   const [amount, setAmount] = useState();
 
   return (
-    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-10">
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center justify-center my-20 mb-40 rounded-lg shadow-lg">
       <h1 className="text-slate-700 text-bold text-4xl my-4">
         Cut From Budget
       </h1>
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
-          className="flex flex-wrap items-center justify-center lg:justify-start w-full"
+          className="flex flex-wrap items-center justify-center w-full"
         >
-          <motion.div
-            className="w-full lg:w-1/2"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          >
-            <button className="chbtn">
-              Change
-            </button>
-
-            {(
-              <div className="text-slate-900 pb-4 items-center py-4 my-4 lg:items-start">
-                <motion.div
-                  variants={gridSquareVariants}
-                  className="flex flex-wrap justify-center lg:justify-start"
-                >
-                  <select
-                    className="w-full lg:w-1/2 items-center justify-center bg-indigo-200 text-slate-700 border border-slate-300 rounded-md p-2"
-                    value={flowType}
-                    onChange={(e) => setFlowType(e.target.value)}
-                  >
-                    <option value="" disabled selected hidden>
-                      Select an expense type
-                    </option>
-                    {WALLET_EXPENSE_TYPES.map((income, index) => (
-                      <option key={index} value={income.name}>
-                        {income.name}
-                      </option>
-                    ))}
-                  </select>
-                </motion.div>
-              </div>
-            )}
-          </motion.div>
+          
 
           <motion.div
             className="w-full lg:w-1/2 py-4 lg:p-10"
@@ -78,8 +44,32 @@ const BudgetAddTransaction = () => {
           >
             <form
               onSubmit={handleCashflow}
-              className="justify-center items-center  text-slate-700"
+              className="justify-center items-center text-slate-700"
             >
+              {
+                <div className="text-slate-900 items-center lg:items-start">
+                  <motion.div
+                    variants={gridSquareVariants}
+                    className="flex flex-wrap justify-center lg:justify-start"
+                  >
+                    <select
+                      className="w-full input"
+                      value={flowType}
+                      onChange={(e) => setFlowType(e.target.value)}
+                    >
+                      <option value="" disabled selected hidden>
+                        Select an expense type
+                      </option>
+                      {WALLET_EXPENSE_TYPES.map((income, index) => (
+                        <option key={index} value={income.name}>
+                          {income.name}
+                        </option>
+                      ))}
+                    </select>
+                  </motion.div>
+                </div>
+              }
+
               <input
                 type="number"
                 placeholder="Amount"
