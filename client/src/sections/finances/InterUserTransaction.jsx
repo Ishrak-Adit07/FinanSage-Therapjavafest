@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
+import { PropContext } from "../../contexts/PropContext";
 import { FRIENDS } from "../../constants";
 
 const gridSquareVariants = {
@@ -10,6 +12,9 @@ const gridSquareVariants = {
 };
 
 const InterUserTransactions = () => {
+
+  const { props } = useContext(PropContext);
+
   const handleFriendTransaction = (e) => {
     e.preventDefault();
     console.log(fromUser, toFriend, amount);
@@ -52,6 +57,7 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
+            <h1 className="text-slate-500 text-xl text-left mb-6">Send money to a friend</h1>
             <form
               onSubmit={handleFriendTransaction}
               className="justify-center items-center  text-slate-700"
@@ -62,10 +68,10 @@ const InterUserTransactions = () => {
                 onChange={(e) => setToFriend(e.target.value)}
               >
                 <option value="" disabled>
-                  Select Friend Hanlde
+                  Select Friend Handle
                 </option>
-                {FRIENDS.map((frined, index) => (
-                  <option key={index} value={frined.username}>
+                {props.friends.map((frined, index) => (
+                  <option key={index} value={frined.userID}>
                     {frined.username}
                   </option>
                 ))}
@@ -93,6 +99,7 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
+            <h1 className="text-slate-500 text-xl text-left mb-6">Send money to any user</h1>
             <form
               onSubmit={handleUserTransaction}
               className="justify-center items-center  text-slate-700"

@@ -9,8 +9,9 @@ const PropProvider = ({children}) =>{
         wallets: [],
         budgets: [],
         accounts: [],
+        fsAccount: {},
         posts: [],
-        frineds: [],
+        friends: [],
     });
 
     return <PropContext.Provider value={{props, setProps}}>

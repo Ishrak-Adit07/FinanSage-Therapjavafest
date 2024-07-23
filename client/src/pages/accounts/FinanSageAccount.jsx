@@ -26,7 +26,7 @@ const FinanSageAccount = () => {
         )}
         {!loading && (
           <div>
-            <h1 className='text-3xl text-slate-500 text-center text-bold'>FinanSage User Account</h1>
+            <h1 className='text-4xl text-slate-500 text-center text-bold my-10'>FinanSage User Account</h1>
             <FSAccountDetails />
             <FSAccountNavigations />
           </div>

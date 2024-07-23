@@ -621,7 +621,7 @@ export const FCFEED_QAS = [
   },
 ]
 
-let ADVERTISEMENTS = [
+export const ADVERTISEMENTS = [
   {
     name : "Weasley's Wizard Wheezes",
     catchPhrase: "Mischief Managed"
@@ -632,25 +632,29 @@ let ADVERTISEMENTS = [
   },
 ];
 
-let FRIENDS = [
+export const FRIENDS = [
   {
     username: "granger.h11",
+    userID: "43722728",
   },
   {
     username: "katniss",
+    userID: "29837437",
   },
   {
     username: "lovegood.luna",
+    userID: "46382638",
   },
   {
     username: "ishrak07",
+    userID: "98364758",
   },
   {
     username: "langdon",
+    userID: "98364537",
   },
   {
     username: "rossatron",
+    userID: "93726463",
   },
 ]
-
-export { ADVERTISEMENTS, FRIENDS }

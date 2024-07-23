@@ -6,13 +6,18 @@ let dummyLoginResponse = {
     lastName: "Merminger",
     username: "leisel",
     userID: "87892543",
-    frinds: FRIENDS,
+    friends: FRIENDS,
     wallets: USER_WALLETS,
     budgets: USER_BUDGETS,
     accounts: BANK_ACCOUNTS,
     currencies: CURRENCIES,
     taxRates: ANNUAL_TAX_RATES,
     banks: BANKS,
+    fsAccount: {
+        username:"leisel",
+        accID: "87892543",
+        balance: 3487.95
+    }
 }
 
 export { dummyLoginResponse }

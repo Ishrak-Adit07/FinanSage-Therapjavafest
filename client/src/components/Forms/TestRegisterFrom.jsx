@@ -48,7 +48,8 @@ const TestRegisterForm = () => {
           wallets: dummyLoginResponse.wallets,
           budgets: dummyLoginResponse.budgets,
           accounts: dummyLoginResponse.accounts,
-          frinds: dummyLoginResponse.frinds,
+          friends: dummyLoginResponse.friends,
+          fsAccount: dummyLoginResponse.fsAccount,
         });
 
         setEnums({
