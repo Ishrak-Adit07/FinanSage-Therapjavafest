@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
+import { FRIENDS } from "../../constants";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -9,7 +10,6 @@ const gridSquareVariants = {
 };
 
 const InterUserTransactions = () => {
-
   const handleFriendTransaction = (e) => {
     e.preventDefault();
     console.log(fromUser, toFriend, amount);
@@ -56,15 +56,20 @@ const InterUserTransactions = () => {
               onSubmit={handleFriendTransaction}
               className="justify-center items-center  text-slate-700"
             >
-
-              <input
-                type="text"
-                placeholder="Friend Handle"
+              <select
                 className="input"
-                autoFocus
                 value={toFriend}
                 onChange={(e) => setToFriend(e.target.value)}
-              />
+              >
+                <option value="" disabled>
+                  Select Friend Hanlde
+                </option>
+                {FRIENDS.map((frined, index) => (
+                  <option key={index} value={frined.username}>
+                    {frined.username}
+                  </option>
+                ))}
+              </select>
 
               <input
                 type="number"
@@ -92,7 +97,6 @@ const InterUserTransactions = () => {
               onSubmit={handleUserTransaction}
               className="justify-center items-center  text-slate-700"
             >
-
               <input
                 type="text"
                 placeholder="Receiver Handle"

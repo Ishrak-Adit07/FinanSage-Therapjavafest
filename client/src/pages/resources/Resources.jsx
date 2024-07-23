@@ -2,6 +2,7 @@
 import React from "react";
 import Subscribe from "../../components/Buttons/Subscribe";
 import { useNavigate } from "react-router-dom";
+import ArticlePreview from "../../sections/resources/ArticlePreview";
 
 const Resources = () => {
   const navigate = useNavigate();
@@ -20,10 +21,7 @@ const Resources = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <Subscribe
-        text={"Articles"}
-        onClickAction={goToArticles}
-      />
+      <ArticlePreview />
       <Subscribe
         text={"Business"}
         onClickAction={goToBusiness}

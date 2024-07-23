@@ -41,6 +41,7 @@ const TestRegisterForm = () => {
           lastName: dummyLoginResponse.lastName,
           username: dummyLoginResponse.username,
           userID: dummyLoginResponse.userID,
+          frinds: dummyLoginResponse.frinds,
           email: formData.email,
         });
 

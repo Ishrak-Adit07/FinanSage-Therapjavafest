@@ -573,4 +573,25 @@ let ADVERTISEMENTS = [
   },
 ];
 
-export { ADVERTISEMENTS }
+let FRIENDS = [
+  {
+    username: "granger.h11",
+  },
+  {
+    username: "katniss",
+  },
+  {
+    username: "lovegood.luna",
+  },
+  {
+    username: "ishrak07",
+  },
+  {
+    username: "langdon",
+  },
+  {
+    username: "rossatron",
+  },
+]
+
+export { ADVERTISEMENTS, FRIENDS }

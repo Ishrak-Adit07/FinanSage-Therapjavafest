@@ -40,19 +40,8 @@ const Bank2FSShift = () => {
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
-          className="flex flex-wrap items-center justify-center lg:justify-start w-full"
+          className="flex flex-wrap items-center justify-center w-full"
         >
-          <motion.div
-            className="w-full lg:w-1/2"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          >
-            <button onClick={handleTransactionToggle} className="chbtn">
-              Change
-            </button>
-          </motion.div>
-
           <motion.div
             className="w-full lg:w-1/2 py-4 lg:p-10"
             initial={{ opacity: 0, y: -100 }}

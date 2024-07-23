@@ -12,6 +12,7 @@ const UserProvider = ({children}) =>{
         email: localStorage.getItem('email'),
         username: "",
         userID: "",
+        frineds: [],
     });
 
     return <UserContext.Provider value={{user, setUser}}>
