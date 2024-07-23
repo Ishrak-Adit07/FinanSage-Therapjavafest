@@ -3,9 +3,8 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { CURRENCIES } from "../../constants";
-import Subscribe from "../../components/Buttons/Subscribe";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { EnumContext } from "../../contexts/EnumContext";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -14,6 +13,8 @@ const gridSquareVariants = {
 
 const CurrencyConversion = () => {
   const navigate = useNavigate();
+
+  const { enums } = useContext(EnumContext);
 
   const convertCurrency = () => {
     console.log(fromCurrency, toCurrency, amount);
@@ -57,7 +58,7 @@ const CurrencyConversion = () => {
               <option value="" disabled>
                 Select Currency
               </option>
-              {CURRENCIES.map((currency, index) => (
+              {enums.currencies.map((currency, index) => (
                 <option key={index} value={currency}>
                   {currency}
                 </option>
@@ -90,7 +91,7 @@ const CurrencyConversion = () => {
               <option value="" disabled>
                 Select Currency
               </option>
-              {CURRENCIES.map((currency, index) => (
+              {enums.currencies.map((currency, index) => (
                 <option key={index} value={currency}>
                   {currency}
                 </option>

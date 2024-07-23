@@ -13,7 +13,7 @@ const gridSquareVariants = {
 const CurrencyPreview = () => {
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 p-60 w-full">
-      <Link to="/user/resources/currency/converter" title="Currencies">
+      <Link to="/user/resources/currencies" title="Currencies">
         <motion.div
           variants={gridSquareVariants}
           className="flex flex-wrap items-center justify-center lg:justify-start"
@@ -41,7 +41,7 @@ const CurrencyPreview = () => {
               <div className="flex items-center justify-center gap-5 mt-4 w-full lg:justify-start">
                 <p className="text-slate-500 text-center">
                   <Link
-                    to="/user/resources/currency/converter"
+                    to="/user/resources/currencies"
                     title="Currencies"
                   >
                     <span className="underline">Learn more</span>

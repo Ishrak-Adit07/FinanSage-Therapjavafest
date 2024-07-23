@@ -31,7 +31,6 @@ import ReportUserTransactions from './pages/Financials/reports/ReportUserTransac
 import AllReports from './pages/Financials/reports/AllReports';
 import IncomeTax from './pages/Financials/tax/IncomeTax';
 import Resources from './pages/resources/Resources';
-import CurrencyConversionPage from './pages/resources/CurrencyConversionPage';
 import News from './pages/news/News';
 import Budgets from './pages/Financials/budgets/Budgets';
 import Budget from './pages/Financials/budgets/Budget';
@@ -43,6 +42,9 @@ import PayBill from './pages/Financials/fsFunctions/PayBill';
 import CashFlowReportCriteria from './pages/Financials/reports/CashFlowReportCriteria';
 import TransactionReportCriteria from './pages/Financials/reports/TransactionReportCriteria';
 import Financom from './pages/community/Financom';
+import ArticlesPage from './pages/resources/ArticlesPage';
+import CurrenciesPage from './pages/resources/CurrenciesPage';
+import BusinessPage from './pages/resources/BusinessPage';
 
 const App = () => {
   return (
@@ -98,9 +100,9 @@ const App = () => {
             <Route path="user/tax/income/calculate" element={<IncomeTax />} />
 
             <Route path="user/resources" element={<Resources />} />
-            <Route path="user/resources/currency/conversion" element={<CurrencyConversionPage />} />
-            <Route path="user/resources/articles" element={<CurrencyConversionPage />} />
-            <Route path="user/resources/business" element={<CurrencyConversionPage />} />
+            <Route path="user/resources/currencies" element={<CurrenciesPage />} />
+            <Route path="user/resources/articles" element={<ArticlesPage />} />
+            <Route path="user/resources/business" element={<BusinessPage />} />
 
             <Route path="user/news" element={<News />} />
 
