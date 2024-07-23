@@ -42,8 +42,8 @@ const InterUserTransactions = () => {
   const [error, setError] = useState(null);
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
-      <h1 className="text-slate-700 text-bold text-4xl">
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-10 py-40">
+      <h1 className="text-slate-900 text-bold text-5xl mb-10">
         Inter User Transactions
       </h1>
       <div className="lg:w-4/5 w-full">
