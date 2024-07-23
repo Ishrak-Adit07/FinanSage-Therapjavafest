@@ -30,7 +30,7 @@ const WalletCreate = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
           <div className='flex justify-center items-center w-full'>
-            <Subscribe text={"Create new wallet"} onClickAction={handleCreateWalletButton}/>
+            <button className='chbtn' onClick={handleCreateWalletButton}>Create New Wallet</button>
           </div>
         </motion.div >
       </motion.div>

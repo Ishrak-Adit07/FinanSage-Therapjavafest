@@ -30,11 +30,11 @@ const Wallet = () => {
         {!loading && (
           <div>
             <WalletDetails id={id}/>
-            <WalletAddCashFlow />
+            <WalletAddCashFlow walletID={id}/>
             <WalletFunctions />
-            <WalletGraph />
-            <WalletCashFlows reportFlows={walletFlows}/>
-            <WalletSettings />
+            <WalletGraph walletID={id}/>
+            <WalletCashFlows reportFlows={walletFlows} walletID={id}/>
+            <WalletSettings walletID={id}/>
           </div>
         )}
       </div>

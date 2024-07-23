@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import CashFlowDocCard from "../../../components/Cards/CashFlowDocCard";
 
-const WalletCashFlows = ({ reportFlows }) => {
+const WalletCashFlows = ({ reportFlows, walletID }) => {
   const [showCashFlows, setShowCashFlows] = useState(true);
 
   useEffect(() => {

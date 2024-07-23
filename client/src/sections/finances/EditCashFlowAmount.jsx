@@ -4,7 +4,7 @@ import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-const EditCashFlowAmount = ({id}) => {
+const EditCashFlowAmount = ({ id }) => {
   //UserContext
   const { setUser } = useContext(UserContext);
 

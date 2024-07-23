@@ -6,34 +6,49 @@ export const HERO_CONTENT = "This is FinanSage, your personal finance manager";
 
 export const USER_WALLETS = [
   {
+    id: "1",
     name: "Owltweet",
     currency: "Dirham",
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 275.75,
+    totalIncome: 1000,
+    totalExpense: 500,
   },
   {
+    id: "2",
     name: "Games",
     currency: "Yen",
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 200.50,
+    totalIncome: 1000,
+    totalExpense: 500,
   },
   {
+    id: "3",
     name: "Tour",
     currency: "Taka",
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 44.75,
+    totalIncome: 1000,
+    totalExpense: 500,
   },
   {
+    id: "4",
     name: "Market",
     currency: "Taka",
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 276.75,
+    totalIncome: 1000,
+    totalExpense: 500,
   },
   {
+    id: "5",
     name: "Office",
     currency: "Dollar",
     cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
     balance: 478.25,
+    totalIncome: 1000,
+    totalExpense: 500,
   },
 ];
 

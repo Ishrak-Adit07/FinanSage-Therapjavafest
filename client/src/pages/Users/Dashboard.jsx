@@ -10,6 +10,7 @@ import Footer from "../../sections/Footer";
 import AddCashFlow from "../../sections/finances/AddCashFlow";
 import BankCashFlow from "../../sections/finances/BankCashFlow";
 import BestUsage from "../../sections/user/BestUsage";
+import InterUserTransactions from "../../sections/finances/InterUserTransaction";
 
 const Dashboard = () => {
   const { user, setUser } = useContext(UserContext);
@@ -21,18 +22,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     setTimeout(async () => {
-      setUser({
-        name: "Gale Hawthorne",
-        email: "gale@dist12.com",
-      });
-
       setLoading(false);
     }, 1000);
   }, []);
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center">
-      <h1 className="title text-4xl my-10">Carpe Diem, Gale!</h1>
+      <h1 className="title text-4xl my-10">Carpe Diem, {user.firstName}!</h1>
 
       <div>
         {loading && (
@@ -45,7 +41,7 @@ const Dashboard = () => {
             <RecentCashFlows />
             <AddCashFlow />
             <RecentTransactions />
-            <BankCashFlow />
+            <InterUserTransactions />
             <BestUsage />
             {true && <Contact />}
             <Footer />

@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { USER_WALLETS } from '../../../constants';
-
-const findByID = (id) => {
-  return USER_WALLETS.find(wallet => wallet.name === id);
-};
+import React, { useContext } from 'react';
+import { PropContext } from '../../../contexts/PropContext';
 
 const WalletDetails = ({id}) => {
+
+  const {props} = useContext(PropContext);
+
+  const findByID = (id) => {
+    return props.wallets.find(wallet => wallet.id === id);
+  };
 
   const resultByID = findByID(id);
 

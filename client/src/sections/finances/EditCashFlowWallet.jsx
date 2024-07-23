@@ -1,27 +1,21 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from "react";
-import { UserContext } from "../../contexts/UserContext";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { USER_WALLETS } from "../../constants";
 
-const EditCashFlowWallet = ({id}) => {
-  //UserContext
-  const { setUser } = useContext(UserContext);
-
+const EditCashFlowWallet = ({ id }) => {
   //UseNavigate
   const navigate = useNavigate();
 
-  // Error state
-  const [error, setError] = useState(null);
-
-  // Form data states
   const [newWalletName, setNewWalletName] = useState("");
+  const [error, setError] = useState(null);
 
   const editCashFlowWallet = (e) => {
     e.preventDefault();
     console.log(newWalletName);
     setNewWalletName("");
+
     navigate("/user/dashboard");
   };
 

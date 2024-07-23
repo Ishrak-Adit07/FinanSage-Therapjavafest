@@ -5,6 +5,7 @@ let dummyLoginResponse = {
     firstName: "Leisel",
     lastName: "Merminger",
     username: "leisel",
+    userID: "87892543",
     wallets: USER_WALLETS,
     budgets: USER_BUDGETS,
     accounts: BANK_ACCOUNTS,

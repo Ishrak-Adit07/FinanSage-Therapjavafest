@@ -3,7 +3,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const CashFlowDocCard = ({ id, walletName, type, amount, date }) => {
+const CashFlowDocCard = ({ id, walletName, walletID, type, amount, date }) => {
   const navigate = useNavigate();
 
   const handleCashFlowEdit = () => {

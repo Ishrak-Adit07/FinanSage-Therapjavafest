@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
@@ -11,7 +12,7 @@ const gridSquareVariants = {
   show: { opacity: 1 },
 };
 
-const WalletSettings = () => {
+const WalletSettings = ({walletID}) => {
   const navigate = useNavigate();
   const [showSettings, setShowSettings] = useState(false);
   const handleShowSettings = () => {

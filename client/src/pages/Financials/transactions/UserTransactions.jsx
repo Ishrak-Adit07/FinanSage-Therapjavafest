@@ -1,18 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-import AddCashFlow from '../../../sections/finances/AddCashFlow';
-import InterWalletCashFlow from '../../../sections/finances/InterWalletCashFlow';
-import BankCashFlow from '../../../sections/finances/BankCashFlow';
+import React from 'react';
 import InterUserTransactions from '../../../sections/finances/InterUserTransaction';
+import FS2BankShift from '../../../sections/accounts/FS2BankShift';
+import Bank2FSShift from '../../../sections/accounts/Bank2FSShift';
 
 const UserTransactions = () => {
 
   return (
     <div className=''>
-      <AddCashFlow />
-      <InterWalletCashFlow />
+      <FS2BankShift />
+      <Bank2FSShift />
       <InterUserTransactions />
-      <BankCashFlow />
     </div>
   );
 }

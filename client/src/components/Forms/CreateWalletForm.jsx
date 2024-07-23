@@ -1,21 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
 import { CURRENCIES } from "../../constants";
+import { PropContext } from "../../contexts/PropContext";
 
 const CreateWalletForm = () => {
   const navigate = useNavigate();
-  const [error, setError] = useState(null);
 
-  //Form data states
+  // const [setProps] = useContext(PropContext);
+
   const [formData, setFormData] = useState({
     walletName: "",
     currency: "",
     initialBalance: null,
   });
+  const [error, setError] = useState(null);
 
-  //Handle Register
   const handleCreateWallet = async (e) => {
     e.preventDefault();
 
@@ -26,6 +27,11 @@ const CreateWalletForm = () => {
 
       if (responseData) {
         console.log(formData);
+
+        // setProps({
+        //   walets: responseData.wallets
+        // });
+
         setError(null);
         navigate("/user/wallets");
       }

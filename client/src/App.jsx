@@ -79,7 +79,7 @@ const App = () => {
             <Route path="user/transactions/make/pay" element={<MakePayment />} />
             <Route path="user/transactions/bill/pay" element={<PayBill />} />
 
-            <Route path="user/cashFlow/edit/:typeIncome/:id" element={<EditCashFlow />} />
+            <Route path="user/cashFlow/edit/:type/:id" element={<EditCashFlow />} />
 
             <Route path="user/report/all" element={<AllReports />} />
 

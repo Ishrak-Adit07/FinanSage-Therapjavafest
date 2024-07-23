@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const WalletCard = ({ name, currency, cashFlowIDs, balance }) => {
+const WalletCard = ({ id, name, currency, cashFlowIDs, balance }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -25,7 +25,7 @@ const WalletCard = ({ name, currency, cashFlowIDs, balance }) => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               initial={{ height: "auto" }}
-              animate={{ height: isHovered ? "150px" : "50px" }}
+              animate={{ height: isHovered ? "90px" : "50px" }}
               transition={{ duration: 0.5 }}
             >
               <div className="h-full w-full">
@@ -45,16 +45,13 @@ const WalletCard = ({ name, currency, cashFlowIDs, balance }) => {
                       <div className="flex justify-start mb-2">
                         <Link
                           title="See wallet details"
-                          to={`/wallet/details/${name}`}
+                          to={`/wallet/details/${id}`}
                           className="text-white hover:underline"
                         >
                           View details
                         </Link>
                       </div>
                       <h2 className="text-sm font-thin mb-2">Currency: {currency}</h2>
-                      <h2 className="text-sm font-thin">
-                        CashFlow IDs: {cashFlowIDs.join(", ")}
-                      </h2>
                     </div>
                   )}
                 </motion.div>

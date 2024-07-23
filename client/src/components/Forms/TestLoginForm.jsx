@@ -34,6 +34,7 @@ const TestLoginForm = () => {
           firstName: dummyLoginResponse.firstName,
           lastName: dummyLoginResponse.lastName,
           username: dummyLoginResponse.username,
+          userID: dummyLoginResponse.userID,
           email: mail,
         });
 

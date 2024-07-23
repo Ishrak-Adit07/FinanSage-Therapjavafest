@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ToggleButton from "../../../components/Buttons/ToggleButton";
 import { WALLET_EXPENSE_TYPES, WALLET_INCOME_TYPES } from "../../../constants";
 import Alert from "../../../messages/Alert";
 
@@ -10,7 +10,7 @@ const gridSquareVariants = {
   show: { opacity: 1 },
 };
 
-const WalletAddCashFlow = () => {
+const WalletAddCashFlow = ({walletID}) => {
   const [showExpense, setShowExpense] = useState(false);
 
   const handleTransactionToggle = () => {
@@ -21,20 +21,26 @@ const WalletAddCashFlow = () => {
   const handleCashflow = (e) => {
     e.preventDefault();
     console.log(flowType, amount);
-    setAmount();
+    console.log(walletID);
+    setAmount("");
     setFlowType("");
+
+    // const responseData = await AddCashFlow(walletID, flowType, amount);
+    // if(responseData){
+      
+    // }
+    // else{
+
+    // }
   };
 
-  // Error state
-  const [error, setError] = useState(null);
-
-  // Form data states
   const [flowType, setFlowType] = useState();
   const [amount, setAmount] = useState();
+  const [error, setError] = useState(null);
 
   return (
-    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-10">
-      <h1 className="text-slate-700 text-bold text-4xl my-4">
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center justify-center my-10">
+      <h1 className="text-slate-700 text-bold text-4xl my-10">
         Add CashFlow to Wallet
       </h1>
       <div className="lg:w-4/5 w-full">
@@ -43,18 +49,17 @@ const WalletAddCashFlow = () => {
           className="flex flex-wrap items-center justify-center lg:justify-start w-full"
         >
           <motion.div
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-1/2 my-4"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <ToggleButton />
-            <button onClick={handleTransactionToggle} className="text-red-500">
-              Change
+            <button onClick={handleTransactionToggle} className="chbtn w-1/2">
+            Income / Expense
             </button>
 
             {showExpense && (
-              <div className="text-slate-900 pb-4 items-center py-4 my-4 lg:items-start">
+              <div className="text-slate-900 pb-4 items-center py-4 lg:items-start">
                 <motion.div
                   variants={gridSquareVariants}
                   className="flex flex-wrap justify-center lg:justify-start"
@@ -78,7 +83,7 @@ const WalletAddCashFlow = () => {
             )}
 
             {!showExpense && (
-              <div className="text-slate-900 pb-4 items-center py-4 my-4 lg:items-start">
+              <div className="text-slate-900 pb-4 items-center py-4 lg:items-start">
                 <motion.div
                   variants={gridSquareVariants}
                   className="flex flex-wrap justify-center lg:justify-start"
