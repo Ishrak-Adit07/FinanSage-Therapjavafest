@@ -29,7 +29,6 @@ import ReportWallet from './pages/Financials/reports/ReportWallet';
 import ReportBankTransactions from './pages/Financials/reports/ReportBankTransactions';
 import ReportUserTransactions from './pages/Financials/reports/ReportUserTransactions';
 import AllReports from './pages/Financials/reports/AllReports';
-import IncomeTax from './pages/Financials/tax/IncomeTax';
 import Resources from './pages/resources/Resources';
 import News from './pages/news/News';
 import Budgets from './pages/Financials/budgets/Budgets';
@@ -45,6 +44,7 @@ import Financom from './pages/community/Financom';
 import ArticlesPage from './pages/resources/ArticlesPage';
 import CurrenciesPage from './pages/resources/CurrenciesPage';
 import BusinessPage from './pages/resources/BusinessPage';
+import TaxPage from './pages/Financials/tax/TaxPage';
 
 const App = () => {
   return (
@@ -97,7 +97,7 @@ const App = () => {
             <Route path="user/report/transactions/bank" element={<ReportBankTransactions />} />
             <Route path="user/report/transactions/user" element={<ReportUserTransactions />} />
 
-            <Route path="user/tax/income/calculate" element={<IncomeTax />} />
+            <Route path="user/tax/" element={<TaxPage />} />
 
             <Route path="user/resources" element={<Resources />} />
             <Route path="user/resources/currencies" element={<CurrenciesPage />} />

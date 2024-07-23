@@ -23,6 +23,7 @@ const Budgets = () => {
 
         {!loading && (
           <div>
+            <h1 className="text-4xl text-center text-slate-500 text-bold">All User Wallets</h1>
             <CashGraph />
             <BudgetCreate />
             <BudgetList />

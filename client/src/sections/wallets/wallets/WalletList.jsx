@@ -15,7 +15,7 @@ const WalletList = () => {
   const {props} = useContext(PropContext);
 
   return (
-    <div className="text-slate-200 border-b border-neutral-900 pb-4 items-center py-4 my-4 lg:items-start">
+    <div className="text-slate-200 my-20 items-center my-4 lg:items-start">
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap justify-center lg:justify-start"
@@ -23,7 +23,7 @@ const WalletList = () => {
         {props.wallets.map((wallet, index) => (
           <motion.div
             key={index}
-            className="w-full lg:w-1/2 items-center justify-center"
+            className="w-full lg:w-1/2 flex flex-wrap items-center justify-center"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}

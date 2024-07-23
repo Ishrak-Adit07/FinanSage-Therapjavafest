@@ -42,7 +42,7 @@ const ProfileHero = () => {
   };
 
   const handleSeeTaxes = () => {
-    navigate("/user/tax/income/calculate");
+    navigate("/user/tax");
   };
 
   const handleSeeResources = () => {
