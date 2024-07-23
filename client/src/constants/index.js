@@ -658,3 +658,40 @@ export const FRIENDS = [
     userID: "93726463",
   },
 ]
+
+export const REGISTERED_MERCHANTS = [
+  {
+    username: "three_broomsticks",
+    userID: "29837437",
+  },
+  {
+    username: "arong",
+    userID: "43722728",
+  },
+  {
+    username: "apex",
+    userID: "46382638",
+  },
+  {
+    username: "weasleys_wizard_wheezes",
+    userID: "98364758",
+  },
+  {
+    username: "ycd",
+    userID: "93726463",
+  },
+
+  {
+    username: "infinity",
+    userID: "98364537",
+  },
+  {
+    username: "ollivanders",
+    userID: "93726463",
+  },
+  {
+    username: "rustic_eatery",
+    userID: "93726463",
+  },
+]
+

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
 import { PropContext } from "../../contexts/PropContext";
 import { FRIENDS } from "../../constants";
+import { UserContext } from "../../contexts/UserContext";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -12,30 +13,32 @@ const gridSquareVariants = {
 };
 
 const InterUserTransactions = () => {
-
+  const { user } = useContext(UserContext);
   const { props } = useContext(PropContext);
 
   const handleFriendTransaction = (e) => {
     e.preventDefault();
-    console.log(fromUser, toFriend, amount);
+    console.log(user.userID);
+    console.log(toFriend, amount);
     setAmount("");
-    setFromUser("");
     setToFriend("");
     setToUser("");
+
+    setError("");
   };
 
   const handleUserTransaction = (e) => {
     e.preventDefault();
-    console.log(fromUser, toUser, amount);
+    console.log(toUser, amount);
     setAmount("");
-    setFromUser("");
     setToFriend("");
     setToUser("");
+
+    setError("");
   };
 
   // Form data states
 
-  const [fromUser, setFromUser] = useState("");
   const [toFriend, setToFriend] = useState("");
   const [toUser, setToUser] = useState("");
   const [amount, setAmount] = useState();
@@ -57,7 +60,9 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <h1 className="text-slate-500 text-xl text-left mb-6">Send money to a friend</h1>
+            <h1 className="text-slate-500 text-xl text-left mb-6">
+              Send money to a friend
+            </h1>
             <form
               onSubmit={handleFriendTransaction}
               className="justify-center items-center  text-slate-700"
@@ -99,7 +104,9 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
-            <h1 className="text-slate-500 text-xl text-left mb-6">Send money to any user</h1>
+            <h1 className="text-slate-500 text-xl text-left mb-6">
+              Send money to any user
+            </h1>
             <form
               onSubmit={handleUserTransaction}
               className="justify-center items-center  text-slate-700"
