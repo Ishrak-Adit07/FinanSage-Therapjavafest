@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ToggleButton from "../../components/Buttons/ToggleButton";
-import { USER_WALLETS } from "../../constants";
 import Alert from "../../messages/Alert";
 
 const gridSquareVariants = {
@@ -11,28 +9,32 @@ const gridSquareVariants = {
 };
 
 const InterUserTransactions = () => {
-  const [showExpense, setShowExpense] = useState(false);
 
-  const handleTransactionToggle = () => {
-    setShowExpense(!showExpense);
-  };
-
-  const handleCashflow = (e) => {
+  const handleFriendTransaction = (e) => {
     e.preventDefault();
-    console.log(fromUser, toUser, amount);
-    setAmount();
+    console.log(fromUser, toFriend, amount);
+    setAmount("");
     setFromUser("");
+    setToFriend("");
     setToUser("");
   };
 
-  // Error state
-  const [error, setError] = useState(null);
+  const handleUserTransaction = (e) => {
+    e.preventDefault();
+    console.log(fromUser, toUser, amount);
+    setAmount("");
+    setFromUser("");
+    setToFriend("");
+    setToUser("");
+  };
 
   // Form data states
 
-  const [fromUser, setFromUser] = useState();
-  const [toUser, setToUser] = useState();
+  const [fromUser, setFromUser] = useState("");
+  const [toFriend, setToFriend] = useState("");
+  const [toUser, setToUser] = useState("");
   const [amount, setAmount] = useState();
+  const [error, setError] = useState(null);
 
   return (
     <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
@@ -50,9 +52,34 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <button onClick={handleTransactionToggle} className="chbtn">
-              Change
-            </button>
+            <form
+              onSubmit={handleFriendTransaction}
+              className="justify-center items-center  text-slate-700"
+            >
+
+              <input
+                type="text"
+                placeholder="Friend Handle"
+                className="input"
+                autoFocus
+                value={toFriend}
+                onChange={(e) => setToFriend(e.target.value)}
+              />
+
+              <input
+                type="number"
+                placeholder="Amount"
+                className="input"
+                autoFocus
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+              />
+
+              <button type="submit" className="btn">
+                Send
+              </button>
+              {error && <Alert msg={error} />}
+            </form>
           </motion.div>
 
           <motion.div
@@ -62,7 +89,7 @@ const InterUserTransactions = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
             <form
-              onSubmit={handleCashflow}
+              onSubmit={handleUserTransaction}
               className="justify-center items-center  text-slate-700"
             >
 
