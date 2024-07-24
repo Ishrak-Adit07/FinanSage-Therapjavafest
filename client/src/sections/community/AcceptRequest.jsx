@@ -2,7 +2,7 @@ import { motion } from 'react-router-dom';
 import { ADVERTISEMENTS } from '../../constants';
 import Advertisement from './Advertisement';
 
-const FCAcceptRequest = () => {
+const AcceptRequest = () => {
   return (
     <div>
       <h1 className="m-4 text-left text-2xl text-red-400">Connection Requests</h1>
@@ -27,4 +27,4 @@ const FCAcceptRequest = () => {
   );
 };
 
-export default FCAcceptRequest;
+export default AcceptRequest;
