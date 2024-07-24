@@ -472,33 +472,87 @@ export const MARKET_PORTAL_NEWS = [
 
 export const FINANSAGE_FEATURES = [
   {
-    name: "Wallets",
-    bgLink: "",
+    name: "Seamless Management",
+    imageLink: "",
     features: [
-      "Create virtual wallet",
-      "Add and track incomes and expenses daylong",
-      "Get instant reports any time",
-      "Use separate wallets for relevant works"
+      "Smart management tools with easiest user experience"
     ]
   },
   {
-    name: "Budgets",
-    bgLink: "",
+    name: "Constant Supervision",
+    imageLink: "",
     features: [
-      "Create budget plan",
-      "Add and track expenses for relevant cause",
-      "Get instant reports any time",
-      "Use separate budgets for relevant works"
+      "Instant Reports, graphical analysis, detailed History of recorded financial activities in FinanVision",
     ]
   },
   {
-    name: "Instant Reports",
-    bgLink: "",
+    name: "Advisory Community",
+    imageLink: "",
     features: [
-      "Get instant graphical and numerical analysis for all wallets",
-      "Reports on daily, weekly or monthly bases",
-      "Reports on budget tracking",
-      "Reports on bank and inter-user transactions"
+      "Share knowledge and skills among your own community in FinanCom",
+    ]
+  },
+  {
+    name: "Transfer Money",
+    imageLink: "",
+    features: [
+      "Send or receive money online to/from other FinanSage users.",
+    ]
+  },
+  {
+    name: "Bank Transactions",
+    imageLink: "",
+    features: [
+      "Connect to bank accounts and make credits or withdraws",
+    ]
+  },
+  {
+    name: "Make Payments",
+    imageLink: "",
+    features: [
+      "Make payments via FinanSage account to sellers",
+    ]
+  },
+  {
+    name: "Pay Bills",
+    imageLink: "",
+    features: [
+      "Pay service bills/fees like gas, water, electricity or education.",
+    ]
+  },
+  {
+    name: "Bank Transactions",
+    imageLink: "",
+    features: [
+      "Connect to bank accounts and make debits or credits",
+    ]
+  },
+  {
+    name: "Financial Toos",
+    imageLink: "",
+    features: [
+      "Annual tax or monthly interest calculators",
+    ]
+  },
+  {
+    name: "Currency tools",
+    imageLink: "",
+    features: [
+      "Multi-currency support and conversion tools",
+    ]
+  },
+  {
+    name: "Resources",
+    imageLink: "",
+    features: [
+      "We find the top articles and knowledge opportunities for you.",
+    ]
+  }, 
+  {
+    name: "News Portal",
+    imageLink: "",
+    features: [
+      "We find the top market news and financial opportunities for you.",
     ]
   },
 ]

@@ -31,7 +31,7 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
 
   return (
     <div>
-      <header className="bg-indigo-500 text-white fixed w-full top-0 z-10">
+      <header className="bg-gradient-to-r from-blue-400 to-purple-400 text-white fixed w-full top-0 z-10 rounded-md shadow-md">
         <nav className="flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
             <Link title="Home" to="/" className="fa-solid fa-house-chimney nav-link"></Link>
@@ -60,8 +60,8 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              <Link title="Log in" to="/login" className="fa-solid fa-right-to-bracket nav-link"></Link>
-              <Link title="Register" to="/register" className="fa-solid fa-registered nav-link"></Link>
+              <Link title="Log in" to="/login" className='px-4'>Log in</Link>
+              <Link title="Register" to="/register" className='px-4'>Register</Link>
             </div>
           )}
         </nav>
