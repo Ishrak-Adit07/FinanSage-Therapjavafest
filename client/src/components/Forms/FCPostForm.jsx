@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../contexts/UserContext";
 
 const FCPostForm = () => {
   const navigate = useNavigate();
+  const { user } = useContext(UserContext);
 
   const sharePost = () => {
     console.log(post);
@@ -12,7 +14,6 @@ const FCPostForm = () => {
     navigate("/user/financom");
   };
 
-  const userName = "Luna";
   const [post, setPost] = useState("");
 
   return (
@@ -38,7 +39,7 @@ const FCPostForm = () => {
                 className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
                 htmlFor="post"
               >
-                {`What's on your mind, ${userName}?`}
+                {`What's on your mind, ${user.username}?`}
               </label>
             }
           </div>
