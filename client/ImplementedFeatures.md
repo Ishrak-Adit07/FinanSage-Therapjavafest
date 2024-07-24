@@ -1,35 +1,26 @@
 # Front End Implemented Features
 
-## Required to know
+## Required Read
 
 ## Cashflow
-
-```json
-{
-  "Purpose": "Non-existent money. Incomes and Expenses added to wallets/budgets. Can be edited or deleted."
-}
-```
+- **Non-existent money.**
+- **Incomes and Expenses added to wallets/budgets.**
+- **Can be edited or deleted.**
 
 ## Transaction
+- **Existent virtual money.**
+- **Added to FinanSage Account through recharge or transaction**
+- **Can be transferred to other user accounts, connected bank accounts, can be used to make payments, pay bills or fees.**
+- **Once done, cannot be undone, edited or deleted.**
 
-```json
-{
-  "Purpose": "Existent virtual money. Added to FinanSage Account through recharge. Can be transferred to other user accounts, connected bank accounts, can be used to make payments, pay bills or fees. Once done, cannot be undone, edited or deleted."
-}
-```
-
-## Route Protection
-
-### Guest Routes
-
+## Routes Protection
+- **Guest Routes**
 ```json
 {
   "Purpose": "Anyone can access home, login or registration page."
 }
 ```
-
-### Authenticated Routes
-
+- **Authenticated Routes**
 ```json
 {
   "Purpose": "No one can access other pages without logging in by directly hitting the api endpoints."
@@ -44,7 +35,11 @@
 
 ### Registration
 
+- **Register with email, user handle, password and other relevant information**
+
 ### Login
+
+- **Login with email and password**
 
 ### Dashboard
 
