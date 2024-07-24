@@ -746,3 +746,22 @@ export const PAY_BILL_SERVICES = [
   },
 ]
 
+export const CONNECTION_REQUESTS = [
+  {
+    name: "Mahmood",
+    username: "mahamoodle"
+  },
+  {
+    name: "Corn. Fudge",
+    username: "cfudge"
+  },
+  {
+    name: "Peeta Mellark",
+    username: "peeta_mellark"
+  },
+  {
+    name: "Tamim Iqbal",
+    username: "tiqbal"
+  },
+]
+
