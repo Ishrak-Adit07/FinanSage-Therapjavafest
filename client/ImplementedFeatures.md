@@ -69,6 +69,11 @@
 }
 ```
 
+- **Short overview of user**
+- **Shortcuts to all features**
+- **Set or change FinanSage account password(for user authentication) and/or pin(for money transactios)**
+
+
 ## Wallets
 
 ```json
@@ -172,66 +177,168 @@
 
 - **Disconnect bank cccount from FinanSage account when not required anymore**
 
+
 ## FinanSage Account
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "Used for real time money transfer with bank and other users, make payments or pay bills(similar to bkash/nogod), used with username/handle, not by real name(similar to github)"
 }
 ```
+
+### Instant Overview
+
+- **Check balance**
+- **History of all transactions with other users and banks**
+
+### Send Money
+
+- **Send money to a connedted user(friend) with proper authentication**
+- **Send money to a any user by providing correct user handle and with proper authentication**
+
+### Make payment
+
+- **Make payment to a registered merchant with proper authentication**
+- **Make payment to any merchant with by providing user handle and with proper authentication**
+
+### Pay Bill
+
+- **Pay bill of services by selecting relevant service and providing customer number and with proper authentication**
+
+### Bank Transaction
+
+- **Credit money from FinanSage account to a connected bank account with proper authentication**
+- **Transfer money from a connected bank account to FinanSage account with proper authentication**
+
 
 ## Cashflow Reports
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "See reports any time on all cashflows of one or more wallet(s) on daily, weekly or monthly basis"
 }
 ```
+
+### Customize Cashflows' Report Criteria
+- **Customize report period(daily, weekly or monthly), wallets to consider, and start date for the report**
+
+### Report Overview
+- **Graphical overview of the report details**
+
+### Report Details
+- **Graphical comparison of total incomoes and expenses within this time period in selected wallets**
+- **History of all cashflows of selected wallets within selected time period from selected start date**
+
 
 ## Transaction Reports
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "See reports any time on all transaction of one or more bank account(s) or with other users on daily, weekly or monthly basis"
 }
 ```
+
+### Customize Transactions' Report Criteria
+- **Choose whether to see reports on bank transactions, or inter user transactions**
+- **Customize report period(daily, weekly or monthly) and start date for the report**
+- **In case of bank transactions, choose one or more bank account(s)**
+- **In case of inter user transactions, get report on transactions with all users, or provide any specific user**
+
+### Report Overview
+- **Graphical overview of the report details**
+
+### Report Details
+- **Graphical comparison of total sent and received money within this time period in selected account(s) or with selected user(s)**
+- **History of all transaction of selected account(s) or user(s) within selected time period from selected start date**
 
 ## FinanCom
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "Community of connected users(FinanSage friends) for financial advisory"
 }
 ```
+
+### Make Friends
+- **Send connection requests to other users to make them FinanSage Friends**
+- **Accept connection requests from other users to make them FinanSage Friends**
+
+### Share Thoughts/Issues
+- **Share what you think will help others**
+- **Share your issue(s) for help/advisory from friends**
+
+### FinanCom Feed
+- **Live FinanCom Feed to see all shared posts from friends**
+- **Read other's thoughts/suggestions from the comment thread**
+- **Share your own suggestions**
+
+### Sponsored Advertisement
+- **Advertisement for relevant services that might come to your aid**
+
+### Upcoming Events
+- **Reminder section for notable upcoming events**
 
 ## Notifications
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "Reminder for user on certain noteworthy events"
 }
 ```
+
+### FinanCom Friends
+- **Notification on getting a connection request, appears on right bar of FinanCom page**
+
+### Budget
+- **Notification on reaching a certain point of a budget, appears on top of that budget page**
 
 ## Calculator Tools
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "Calculating taxes or interests"
 }
 ```
+### Annual Tax Calculator
+- **Create relevant wallets to provide annual income informations**
+- **Customize which wallets and income types to consider**
+- **Select appropriate tax category**
+- **Know your annual income tax amount**
+
+### Monthly Interest Calculator
+- **Select bank account under consideration**
+- **Know current account balance and interest of current month according to account policy**
 
 ## Resources
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "Gather beneficial knowledge and exercise healthy practices to improve financial management skills"
 }
 ```
+### Currency Conversion Toools
+- **Know the worth of any amount of money in different currencies**
+- **Directly provide a wallet to know it's balance's worth in other currencies**
+
+### Read Articles
+- **Read top articles on financial habits**
+
+### Know Industries
+- **Know about top-tier and growing industries and their financial managements**
 
 ## News
 
 ```json
 {
-  "Purpose": "Used for connection to existing bank accounts, and real money transfer from and to FinanSage account"
+  "Purpose": "Get latest market and economic news"
 }
 ```
+
+### Market News
+- **See top market prices of the day**
+- **Link to relevant websites to get more news**
+
+### Regular News
+- **Latest news on relevant topics**
+- **Link to relevant websites to get more news**
+
