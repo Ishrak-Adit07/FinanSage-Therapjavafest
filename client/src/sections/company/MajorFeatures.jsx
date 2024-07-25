@@ -9,17 +9,17 @@ const handleFeatureClick = () =>{
   console.log(console.log("Feature clicked"));
 }
 
-const Features = () => {
+const MajorFeatures = () => {
   return (
     <div className="my-20">
       <h1 className="text-4xl text-center text-slate-500 my-20">
-        More FinanSage Services
+        FinanSage Features
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-10">
+      <div className="flex flex-wrap items-center justify-center">
         {FINANSAGE_FEATURES.map((feature, index) => (
           <motion.div
             key={index}
-            className="w-1/5"
+            className="w-1/4"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
@@ -30,7 +30,7 @@ const Features = () => {
                 name={feature.name}
                 bgLink={feature.bgLink}
                 features={feature.features}
-                onClickAction={handleFeatureClick}
+                on
               />
             )}
           </motion.div>
@@ -40,4 +40,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default MajorFeatures;

@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div>
-        <div className='bg-indigo-500 justify-center items-center text-slate-200 rounded-md'>
+        <div className='bg-gradient-to-r from-blue-400 to-purple-400 justify-center items-center text-slate-200 rounded-md shadow-lg'>
             <h1 className='text-center text-bold p-2'>Copyright@FinanSage.Official</h1>
         </div>
     </div>

@@ -33,7 +33,7 @@ const Hero = ({ scrollToContact }) => {
     <div className="layoutSection text-slate-200 pl-20 pr-60 pt-40 pb-60">
       <motion.div
         variants={gridSquareVariants}
-        className="flex flex-wrap items-center justify-center lg:justify-start"
+        className="flex flex-wrap items-center lg:justify-start"
       >
         <motion.div
           className="w-full lg:w-1/2"
@@ -60,53 +60,57 @@ const Hero = ({ scrollToContact }) => {
             <div className="bg-gradient-to-r from-blue-600 via-purple-400 to-blue-400 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl xl:text-4xl lg:ml-2">
               <GradualText text={catchPhrase} />
             </div>
-            <div className="flex items-center justify-center gap-5 mt-10 w-full lg:justify-start">
-            </div>
+            <div className="flex items-center justify-center gap-5 mt-10 w-full lg:justify-start"></div>
           </div>
         </motion.div>
 
         <motion.div
-          className="w-full lg:w-1/2 py-4 lg:p-10 flex flex-col items-center justify-center"
+          className="w-full lg:w-1/2 py-4 flex flex-col items-center justify-start text-right gap-20"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
-          {false && <div className="flex justify-center max-w-xl">
-            {/* <a href="https://www.facebook.com/ishrak.adit"> */}
-            {false && <img
-              src={HeroImage}
-              alt="Ishrak Adit"
-              className="w-full h-auto object-cover rounded-lg shadow-lg mt-20"
-            />}
-            {/* </a> */}
-          </div>}
+          {false && (
+            <div className="flex justify-center max-w-xl">
+              {/* <a href="https://www.facebook.com/ishrak.adit"> */}
+              {false && (
+                <img
+                  src={HeroImage}
+                  alt="Ishrak Adit"
+                  className="w-full h-auto object-cover rounded-lg shadow-lg"
+                />
+              )}
+              {/* </a> */}
+            </div>
+          )}
 
-          <div className="bg-gradient-to-r from-blue-400 to-purple-400 text-slate-200 text-left p-4 rounded-lg shadow-md w-full">
-            <div>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            </div>
-            <div>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            </div>
-            <div>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
-            <p>Harry did you put your name in the goblet of fire?</p>
+          <div className="bg-blue-200 rounded-xl shadow-md flex flex-col pb-4 pr-4 ml-10">
+            <div className="bg-gradient-to-r from-blue-400 to-purple-400 text-slate-200 p-4 rounded-lg shadow-md w-full">
+              <div>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+              </div>
             </div>
           </div>
+
+          <div className="bg-blue-200 rounded-xl shadow-md flex flex-col pb-4 pr-4 ml-20">
+            <div className="bg-gradient-to-r from-blue-400 to-purple-400 text-slate-200 p-4 rounded-lg shadow-md w-full">
+              <div>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Harry did you put your name in the goblet of fire?</p>
+              </div>
+            </div>
+          </div>
+
+  
         </motion.div>
       </motion.div>
     </div>
