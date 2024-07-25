@@ -21,6 +21,7 @@ const FS2BankShift = () => {
     console.log(bank, amount);
     setAmount("");
     setBank("");
+    setPin("");
   };
 
   // Error state
@@ -30,6 +31,7 @@ const FS2BankShift = () => {
 
   const [bank, setBank] = useState("");
   const [amount, setAmount] = useState();
+  const [pin, setPin] = useState("");
 
   return (
     <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-10">
@@ -73,6 +75,15 @@ const FS2BankShift = () => {
                 autoFocus
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
+              />
+
+              <input
+                type="password"
+                placeholder="Pin"
+                className="input"
+                autoFocus
+                value={pin}
+                onChange={(e) => setPin(e.target.value)}
               />
 
               <button type="submit" className="btn">

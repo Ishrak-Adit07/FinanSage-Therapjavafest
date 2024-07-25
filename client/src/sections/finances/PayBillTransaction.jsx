@@ -21,6 +21,7 @@ const PayBillTransaction = () => {
     e.preventDefault();
     console.log(user.userID);
     console.log(serviceID, option, customerNo, amount);
+    setPin("");
 
     console.log("Bill has been paid");
   };
@@ -49,6 +50,7 @@ const PayBillTransaction = () => {
   const [option, setOption] = useState("");
   const [customerNo, setCustomerNo] = useState("");
   const [amount, setAmount] = useState();
+  const [pin, setPin] = useState("");
 
   const [error, setError] = useState(null);
 
@@ -130,17 +132,39 @@ const PayBillTransaction = () => {
                   onChange={(e) => setCustomerNo(e.target.value)}
                 />
 
-                <h1 className="text-slate-500 text-xl text-left my-6">
-                  Enter Amount
-                </h1>
-                <input
-                  type="number"
-                  placeholder="Amount"
-                  className="input"
-                  autoFocus
-                  value={amount}
-                  onChange={(e) => setAmount(e.target.value)}
-                />
+                <div className="flex flex-wrap items-center justify-between w-full">
+                  <div className="2/5">
+                    <h1 className="text-slate-500 text-xl text-left my-6">
+                      Enter Amount
+                    </h1>
+                    <input
+                      type="number"
+                      placeholder="Amount"
+                      className="input"
+                      autoFocus
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="1/5">
+                  
+                  </div>
+
+                  <div className="2/5">
+                    <h1 className="text-slate-500 text-xl text-left my-6">
+                      Enter Pin
+                    </h1>
+                    <input
+                      type="password"
+                      placeholder="Pin"
+                      className="input"
+                      autoFocus
+                      value={pin}
+                      onChange={(e) => setPin(e.target.value)}
+                    />
+                  </div>
+                </div>
 
                 <button className="btn" onClick={handlePayBill}>
                   Pay Bill

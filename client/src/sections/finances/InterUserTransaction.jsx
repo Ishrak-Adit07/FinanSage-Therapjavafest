@@ -23,6 +23,7 @@ const InterUserTransactions = () => {
     setAmount("");
     setToFriend("");
     setToUser("");
+    setPin("");
 
     setError("");
   };
@@ -33,6 +34,7 @@ const InterUserTransactions = () => {
     setAmount("");
     setToFriend("");
     setToUser("");
+    setPin("");
 
     setError("");
   };
@@ -42,6 +44,7 @@ const InterUserTransactions = () => {
   const [toFriend, setToFriend] = useState("");
   const [toUser, setToUser] = useState("");
   const [amount, setAmount] = useState();
+  const [pin, setPin] = useState("");
   const [error, setError] = useState(null);
 
   return (
@@ -91,6 +94,15 @@ const InterUserTransactions = () => {
                 onChange={(e) => setAmount(e.target.value)}
               />
 
+              <input
+                type="password"
+                placeholder="Pin"
+                className="input"
+                autoFocus
+                value={pin}
+                onChange={(e) => setPin(e.target.value)}
+              />
+
               <button type="submit" className="btn">
                 Send
               </button>
@@ -127,6 +139,15 @@ const InterUserTransactions = () => {
                 autoFocus
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
+              />
+
+              <input
+                type="password"
+                placeholder="Pin"
+                className="input"
+                autoFocus
+                value={pin}
+                onChange={(e) => setPin(e.target.value)}
               />
 
               <button type="submit" className="btn">
