@@ -2,23 +2,23 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
 import { HERO_CONTENT } from "../../constants";
 import Subscribe from "../../components/Buttons/Subscribe";
 import HeroImage from "../../assets/images/Profile.jpg";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import { Link, useNavigate } from "react-router-dom";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
 };
 
-const userName = "Ishrak Adit";
 const userStatus = "Regular";
 
 const ProfileHero = () => {
   const navigate = useNavigate();
+
   const { user, setUser } = useContext(UserContext);
 
   const goToFinanSageAccount = () => {
@@ -88,8 +88,8 @@ const ProfileHero = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-6xl xl:text-8xl">
-              {userName}
+            <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
+              {user.name}
             </h1>
             <h3 className="text-2xl font-thin text-slate-700 tracking-tight lg:text-3xl xl:text-4xl">
               User status: {userStatus}
@@ -97,50 +97,6 @@ const ProfileHero = () => {
             <p className="my-2 max-w-xl py-6 font-light text-slate-700 tracking-tighter text-center lg:text-left">
               {HERO_CONTENT}
             </p>
-            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
-              <button className="chbtn" onClick={goToFinanSageAccount}>
-                FS Account
-              </button>
-              <button className="chbtn" onClick={handleSeeReports}>
-                See Reports
-              </button>
-              <button className="chbtn" onClick={goToTransactions}>
-                All Transactions
-              </button>
-            </div>
-            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
-              <button className="chbtn" onClick={handleSeeWallets}>
-                See my wallets
-              </button>
-              <button className="chbtn" onClick={handleSeeBudgets}>
-                See my budgets
-              </button>
-              <button className="chbtn" onClick={handleSeeAccounts}>
-                See my accounts
-              </button>
-            </div>
-            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
-              <button className="chbtn" onClick={handleSeeTaxes}>
-                Taxes
-              </button>
-              <button className="chbtn" onClick={handleSeeResources}>
-                Resources
-              </button>
-              <button className="chbtn" onClick={handleSeeNews}>
-                News
-              </button>
-            </div>
-
-            <div className="flex items-center justify-center gap-10 mt-6 w-full lg:justify-start">
-              <button className="chbtn" onClick={goToFinanCom}>
-                FinanCom
-              </button>
-            </div>
-            <div className="flex items-center justify-center gap-5 mt-6 w-full lg:justify-start">
-              <button className="chbtn" onClick={handleLogOut}>
-                Logout
-              </button>
-            </div>
           </div>
         </motion.div>
 

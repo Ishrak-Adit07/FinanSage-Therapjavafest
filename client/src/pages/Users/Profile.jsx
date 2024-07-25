@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import ProfileHero from '../../sections/user/ProfileHero';
+import ProfileSettings from '../../sections/user/ProfileSettings';
+import ProfileShrotcuts from '../../sections/user/ProfileShrotcuts';
+import Contact from '../../sections/company/Contact';
 
 const Profile = () => {
 
@@ -27,6 +30,9 @@ const Profile = () => {
           {!loading &&
             <div>
                 <ProfileHero />
+                <ProfileSettings />
+                <ProfileShrotcuts />
+                <Contact />
             </div>
           }
         </div>
