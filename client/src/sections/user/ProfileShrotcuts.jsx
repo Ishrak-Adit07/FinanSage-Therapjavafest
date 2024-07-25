@@ -70,7 +70,10 @@ const ProfileShrotcuts = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full my-40">
-      <h1 className="text-4xl bg-gradient-to-r from-blue-400 to-blue-600 text-slate-200 rounded-lg shadow-md text-center py-4 px-20 my-20">Fast Routes</h1>
+      <h1 className="text-4xl bg-gradient-to-r from-blue-400 to-blue-600 text-slate-200 rounded-lg shadow-md text-center py-4 px-10 mt-20 mb-5 w-1/4">Fast Routes</h1>
+      <h1 className="text-xl bg-gradient-to-r from-blue-500 via-slate-200 to-blue-500 text-slate-700 rounded-lg shadow-md text-center py-4 px-10 mb-20">
+        Access all features of FinanSage faster!
+      </h1>
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center w-full"

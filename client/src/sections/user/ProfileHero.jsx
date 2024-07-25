@@ -21,8 +21,8 @@ const ProfileHero = () => {
 
   const { user, setUser } = useContext(UserContext);
 
-  const goToFinanSageAccount = () => {
-    navigate("/user/account/finanSage");
+  const goToProfileSettins = () => {
+    navigate("/user/profile/settings");
   };
 
   const handleSeeWallets = () => {
@@ -88,15 +88,26 @@ const ProfileHero = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
-              {user.name}
-            </h1>
+            {true && (
+              <p className="flex flex-wrap items-center justify-center mb-10">
+                <h1 className="text-4xl font-thin text-blue-400 tracking-tight lg:text-4xl xl:text-6xl">
+                  <span>{user.firstName}</span>
+                  <span> </span>
+                </h1>
+                <h1 className="text-4xl font-thin text-blue-700 tracking-tight lg:text-4xl xl:text-6xl">
+                  <span>{user.lastName}</span>
+                </h1>
+              </p>
+            )}
+
             <h3 className="text-2xl font-thin text-slate-700 tracking-tight lg:text-3xl xl:text-4xl">
               User status: {userStatus}
             </h3>
-            <p className="my-2 max-w-xl py-6 font-light text-slate-700 tracking-tighter text-center lg:text-left">
-              {HERO_CONTENT}
-            </p>
+            <button className="w-full" onClick={goToProfileSettins}>
+              <h1 className="text-xl bg-gradient-to-r from-blue-400 to-blue-600 text-slate-200 rounded-lg shadow-md text-center py-2 px-4 my-10 w-1/3">
+                Profile Settings
+              </h1>
+            </button>
           </div>
         </motion.div>
 

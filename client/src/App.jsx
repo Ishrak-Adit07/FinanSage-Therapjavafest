@@ -46,6 +46,7 @@ import CurrenciesPage from "./pages/resources/CurrenciesPage";
 import BusinessPage from "./pages/resources/BusinessPage";
 import TaxPage from "./pages/Financials/tax/TaxPage";
 import RegisterAccount from "./pages/Users/RegisterAccount";
+import ProfileSettings from "./pages/Users/ProfileSettings";
 
 const App = () => {
   return (
@@ -60,6 +61,7 @@ const App = () => {
 
             <Route path="user/dashboard" element={<Dashboard />} />
             <Route path="user/profile" element={<Profile />} />
+            <Route path="user/profile/settings" element={<ProfileSettings />} />
 
             <Route path="user/wallets" element={<Wallets />} />
             <Route path="/wallet/details/:id" element={<Wallet />} />
