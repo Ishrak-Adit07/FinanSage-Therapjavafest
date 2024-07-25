@@ -5,6 +5,7 @@ import Contact from '../sections/company/Contact';
 import Footer from '../sections/Footer';
 import Features from '../sections/company/Features';
 import PersonSpecificeFeatures from '../sections/company/PersonSpecificFeatures';
+import MajorFeatures from '../sections/company/MajorFeatures';
 
 const Home = () => {
 
@@ -35,10 +36,10 @@ const Home = () => {
           {!loading &&
             <div>
               <Hero scrollToContact={scrollToContact}/>
+              <MajorFeatures />
               <Features />
               <PersonSpecificeFeatures />
               <Contact scrollToContact={scrollToContact}/>
-              <Footer />
             </div>
           }
         </div>

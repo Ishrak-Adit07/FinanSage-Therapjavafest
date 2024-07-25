@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-import { FINANSAGE_FEATURES } from "../../constants";
+import { FINANSAGE_FEATURES, MAJOR_FEATURES } from "../../constants";
 import FeatureCard from "../../components/Cards/FeatureCard";
 import MajorFeatureCard from "../../components/Cards/MajorFeatureCard";
 
@@ -11,12 +11,12 @@ const handleFeatureClick = () =>{
 
 const MajorFeatures = () => {
   return (
-    <div className="my-20">
+    <div className="my-40">
       <h1 className="text-4xl text-center text-slate-500 my-20">
-        FinanSage Features
+        FinanSage SuperApp
       </h1>
       <div className="flex flex-wrap items-center justify-center">
-        {FINANSAGE_FEATURES.map((feature, index) => (
+        {MAJOR_FEATURES.map((feature, index) => (
           <motion.div
             key={index}
             className="w-1/4"

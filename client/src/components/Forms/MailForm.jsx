@@ -18,7 +18,7 @@ const MailForm = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-lg max-w-md w-full"
+        className="bg-transparent p-6 sm:p-8 rounded- max-w-md w-full"
       >
         <h1 className="text-3xl font-semibold text-red-400 text-slate-300 mb-6 text-left">
           {false && <GradualText text={"Send a Mail!"} />}
@@ -32,7 +32,7 @@ const MailForm = () => {
               id="email"
               value={mail}
               onChange={(e) => setMail(e.target.value)}
-              className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
+              className="w-full py-2 px-2 bg-transparent text-white border-b border-slate-300 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=""
             />
             {!mail && (
@@ -51,7 +51,7 @@ const MailForm = () => {
               id="subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
+              className="w-full py-2 px-2 bg-transparent text-white border-b border-border-slate-300 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=" "
             />
             {!subject && (
@@ -69,7 +69,7 @@ const MailForm = () => {
               id="body"
               value={body}
               onChange={(e) => setBody(e.target.value)}
-              className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer h-12 resize-none autofill:bg-transparent hide-scrollbar"
+              className="w-full py-2 px-2 bg-transparent text-white border-b border-border-slate-300 focus:outline-none focus:border-red-400 peer h-12 resize-none autofill:bg-transparent hide-scrollbar"
               placeholder=" "
               style={{ height: "auto" }}
             />
@@ -86,7 +86,7 @@ const MailForm = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="w-full p-3 bg-red-400 text-gray-900 rounded-lg font-semibold hover:bg-red-500 focus:outline-none"
+            className="w-full p-3 bg-slate-300 text-gray-900 rounded-lg font-semibold hover:bg-slate-300 focus:outline-none"
           >
             Send
           </motion.button>

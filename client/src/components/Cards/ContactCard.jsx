@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const ContactCard = () => {
   return (
     <div className="flex items-center justify-center px-4 py-8">
-      <motion.div className="contact-card bg-gray-900 rounded-lg shadow-md p-6 sm:p-8 w-full max-w-md">
+      <motion.div className="contact-card bg-transparent rounded- p-6 sm:p-8 w-full max-w-md">
         <h2 className="text-2xl text-left font-semibold mb-6">Get in touch!</h2>
         <ul className="text-lg">
           <li className="flex items-center mb-4">

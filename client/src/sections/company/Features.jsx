@@ -25,7 +25,7 @@ const Features = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
             {true && (
-              <MajorFeatureCard
+              <FeatureCard
                 className="w-full"
                 name={feature.name}
                 bgLink={feature.bgLink}

@@ -9,7 +9,15 @@ export const USER_WALLETS = [
     id: "1",
     name: "Owltweet",
     currency: "Dirham",
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 275.75,
     totalIncome: 1000,
     totalExpense: 500,
@@ -18,8 +26,16 @@ export const USER_WALLETS = [
     id: "2",
     name: "Games",
     currency: "Yen",
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
-    balance: 200.50,
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
+    balance: 200.5,
     totalIncome: 1000,
     totalExpense: 500,
   },
@@ -27,7 +43,15 @@ export const USER_WALLETS = [
     id: "3",
     name: "Tour",
     currency: "Taka",
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 44.75,
     totalIncome: 1000,
     totalExpense: 500,
@@ -36,7 +60,15 @@ export const USER_WALLETS = [
     id: "4",
     name: "Market",
     currency: "Taka",
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 276.75,
     totalIncome: 1000,
     totalExpense: 500,
@@ -45,7 +77,15 @@ export const USER_WALLETS = [
     id: "5",
     name: "Office",
     currency: "Dollar",
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 478.25,
     totalIncome: 1000,
     totalExpense: 500,
@@ -58,7 +98,15 @@ export const USER_BUDGETS = [
     name: "Owltweet",
     currency: "Dirham",
     budget: 1000,
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 275.75,
     linkedWallets: [
       {
@@ -69,15 +117,23 @@ export const USER_BUDGETS = [
         name: "Games",
         id: "2",
       },
-    ]
+    ],
   },
   {
     id: "2",
     name: "Games",
     currency: "Yen",
     budget: 2000,
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
-    balance: 200.50,
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
+    balance: 200.5,
     linkedWallets: [
       {
         name: "Owltweet",
@@ -94,7 +150,15 @@ export const USER_BUDGETS = [
     name: "Tour",
     currency: "Taka",
     budget: 500,
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 44.75,
     linkedWallets: [
       {
@@ -112,7 +176,15 @@ export const USER_BUDGETS = [
     name: "Market",
     currency: "Taka",
     budget: 2000,
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 276.75,
     linkedWallets: [
       {
@@ -130,7 +202,15 @@ export const USER_BUDGETS = [
     name: "Office",
     currency: "Dollar",
     budget: 1500,
-    cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+    cashFlowIDs: [
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+      "123456",
+    ],
     balance: 478.25,
     linkedWallets: [
       {
@@ -253,11 +333,19 @@ export const WALLET_EXPENSE_TYPES = [
 
 export const RECENT_CASHFLOWS = [
   {
-    id : "12344334",
+    id: "12344334",
     wallet: {
       name: "Office",
       currency: "Dollar",
-      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      cashFlowIDs: [
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+      ],
       balance: 478.25,
     },
     type: "Income",
@@ -265,11 +353,19 @@ export const RECENT_CASHFLOWS = [
     date: "27-06-2024",
   },
   {
-    id : "34839283",
+    id: "34839283",
     wallet: {
       name: "Market",
       currency: "Taka",
-      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      cashFlowIDs: [
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+      ],
       balance: 276.75,
     },
     type: "Expense",
@@ -277,11 +373,19 @@ export const RECENT_CASHFLOWS = [
     date: "27-06-2024",
   },
   {
-    id : "28193402",
+    id: "28193402",
     wallet: {
       name: "Office",
       currency: "Dollar",
-      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      cashFlowIDs: [
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+      ],
       balance: 478.25,
     },
     type: "Income",
@@ -289,11 +393,19 @@ export const RECENT_CASHFLOWS = [
     date: "27-06-2024",
   },
   {
-    id : "12834564",
+    id: "12834564",
     wallet: {
       name: "Owltweet",
       currency: "Dirham",
-      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      cashFlowIDs: [
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+      ],
       balance: 275.75,
     },
     type: "Expense",
@@ -301,11 +413,19 @@ export const RECENT_CASHFLOWS = [
     date: "27-06-2024",
   },
   {
-    id : "98345032",
+    id: "98345032",
     wallet: {
       name: "Market",
       currency: "Taka",
-      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      cashFlowIDs: [
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+      ],
       balance: 276.75,
     },
     type: "Expense",
@@ -313,11 +433,19 @@ export const RECENT_CASHFLOWS = [
     date: "27-06-2024",
   },
   {
-    id : "98230832",
+    id: "98230832",
     wallet: {
       name: "Market",
       currency: "Taka",
-      cashFlowIDs: ["123456","123456","123456","123456","123456","123456","123456"],
+      cashFlowIDs: [
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+        "123456",
+      ],
       balance: 276.75,
     },
     type: "Income",
@@ -331,20 +459,20 @@ export const RECENT_TRANSACTIONS = [];
 export const ANNUAL_TAX_RATES = [
   {
     name: "Corporate",
-    rate: 10
+    rate: 10,
   },
   {
     name: "Business",
-    rate: 12
+    rate: 12,
   },
   {
     name: "Service",
-    rate: 8
+    rate: 8,
   },
   {
     name: "Student",
-    rate: 5
-  }
+    rate: 5,
+  },
 ];
 
 export const BANKS = [
@@ -363,38 +491,38 @@ export const BANKS = [
   {
     name: "Capitol",
   },
-]
+];
 
 export const BANK_ACCOUNTS = [
   {
     id: "1",
-    BankName : "Gringotts",
-    AccID : "34273648",
-    Balance: 23987.90,
+    BankName: "Gringotts",
+    AccID: "34273648",
+    Balance: 23987.9,
     InterestRate: 2.5,
   },
   {
     id: "2",
-    BankName : "Iron Bank",
-    AccID : "87263547",
-    Balance: 7890.90,
+    BankName: "Iron Bank",
+    AccID: "87263547",
+    Balance: 7890.9,
     InterestRate: 4,
   },
   {
     id: "3",
-    BankName : "World Bank",
-    AccID : "82737463",
+    BankName: "World Bank",
+    AccID: "82737463",
     Balance: 9837.45,
     InterestRate: 2.2,
   },
   {
     id: "4",
-    BankName : "Gringotts",
-    AccID : "87263547",
+    BankName: "Gringotts",
+    AccID: "87263547",
     Balance: 14587.85,
     InterestRate: 3,
   },
-]
+];
 
 export const CURRENCIES = [
   "Euro",
@@ -405,36 +533,36 @@ export const CURRENCIES = [
   "Taka",
   "Yen",
   "Canadian Dollar",
-]
+];
 
 export const MARKET_POS = [
   {
     name: "DOHS",
-    change: 4.87
+    change: 4.87,
   },
   {
     name: "MEG",
-    change: 1.27
+    change: 1.27,
   },
   {
     name: "ZXY",
-    change: 0.97
-  }
+    change: 0.97,
+  },
 ];
 
 export const MARKET_NEG = [
   {
     name: "ABC",
-    change: -1.54
+    change: -1.54,
   },
   {
     name: "NID",
-    change: -0.78
+    change: -0.78,
   },
   {
     name: "AIM",
-    change: -0.39
-  }
+    change: -0.39,
+  },
 ];
 
 export const MARKET_PORTAL_NEWS = [
@@ -442,120 +570,131 @@ export const MARKET_PORTAL_NEWS = [
     title: "Eventful Day at Wall St., Mixed Reactions",
     paper: "Daily Tribune",
     preview: "abcd abcd abcd abcd abcd abcd abcd abcd ...",
-    newsLink: "https://dailytribune.com/finance/news-1234"
+    newsLink: "https://dailytribune.com/finance/news-1234",
   },
   {
     title: "Eventful Day at Wall St., Mixed Reactions",
     paper: "Daily Tribune",
     preview: "abcd abcd abcd abcd abcd abcd abcd abcd ...",
-    newsLink: "https://dailytribune.com/finance/news-1234"
+    newsLink: "https://dailytribune.com/finance/news-1234",
   },
   {
     title: "Eventful Day at Wall St., Mixed Reactions",
     paper: "The Daily Star",
     preview: "abcd abcd abcd abcd abcd abcd abcd abcd  ...",
-    newsLink: "https://dailytribune.com/finance/news-1234"
+    newsLink: "https://dailytribune.com/finance/news-1234",
   },
   {
     title: "Eventful Day at Wall St., Mixed Reactions",
     paper: "Times",
     preview: "abcd abcd abcd abcd abcd abcd abcd abcd ...",
-    newsLink: "https://dailytribune.com/finance/news-1234"
+    newsLink: "https://dailytribune.com/finance/news-1234",
   },
   {
     title: "Eventful Day at Wall St., Mixed Reactions",
     paper: "Wall St. Journal",
     preview: "abcd abcd abcd abcd abcd abcd abcd abcd ...",
-    newsLink: "https://dailytribune.com/finance/news-1234"
-  }
+    newsLink: "https://dailytribune.com/finance/news-1234",
+  },
 ];
 
 export const FINANSAGE_FEATURES = [
   {
     name: "Seamless Management",
     imageLink: "",
-    features: [
-      "Smart management tools with easiest user experience"
-    ]
+    features: ["Smart management tools with easiest user experience"],
   },
   {
     name: "Constant Supervision",
     imageLink: "",
     features: [
       "Instant Reports, graphical analysis, detailed History of recorded financial activities in FinanVision",
-    ]
+    ],
   },
   {
     name: "Advisory Community",
     imageLink: "",
     features: [
       "Share knowledge and skills among your own community in FinanCom",
-    ]
+    ],
   },
   {
     name: "Transfer Money",
     imageLink: "",
-    features: [
-      "Send or receive money online to/from other FinanSage users.",
-    ]
+    features: ["Send or receive money online to/from other FinanSage users."],
   },
   {
     name: "Bank Transactions",
     imageLink: "",
-    features: [
-      "Connect to bank accounts and make credits or withdraws",
-    ]
+    features: ["Connect to bank accounts and make credits or withdraws"],
   },
   {
     name: "Make Payments",
     imageLink: "",
-    features: [
-      "Make payments via FinanSage account to sellers",
-    ]
+    features: ["Make payments via FinanSage account to sellers"],
   },
   {
     name: "Pay Bills",
     imageLink: "",
     features: [
       "Pay service bills/fees like gas, water, electricity or education.",
-    ]
+    ],
   },
   {
     name: "Bank Transactions",
     imageLink: "",
-    features: [
-      "Connect to bank accounts and make debits or credits",
-    ]
+    features: ["Connect to bank accounts and make debits or credits"],
   },
   {
     name: "Financial Toos",
     imageLink: "",
-    features: [
-      "Annual tax or monthly interest calculators",
-    ]
+    features: ["Annual tax or monthly interest calculators"],
   },
   {
     name: "Currency tools",
     imageLink: "",
-    features: [
-      "Multi-currency support and conversion tools",
-    ]
+    features: ["Multi-currency support and conversion tools"],
   },
   {
     name: "Resources",
     imageLink: "",
-    features: [
-      "We find the top articles and knowledge opportunities for you.",
-    ]
-  }, 
+    features: ["We find the top articles and knowledge opportunities for you."],
+  },
   {
     name: "News Portal",
     imageLink: "",
     features: [
       "We find the top market news and financial opportunities for you.",
-    ]
+    ],
   },
-]
+];
+
+export const MAJOR_FEATURES = [
+  {
+    name: "Seamless Management",
+    imageLink: "",
+    features: ["Smart management tools with easiest user experience"],
+  },
+  {
+    name: "Constant Supervision",
+    imageLink: "",
+    features: [
+      "Instant Reports, graphical analysis, detailed History",
+    ],
+  },
+  {
+    name: "Advisory Community",
+    imageLink: "",
+    features: [
+      "Share knowledge and skills among your own community in FinanCom",
+    ],
+  },
+  {
+    name: "Transfer Money",
+    imageLink: "",
+    features: ["Send or receive money online to/from other FinanSage users."],
+  },
+];
 
 export const PERSON_SPECIFIC_FEATURES = [
   {
@@ -565,8 +704,8 @@ export const PERSON_SPECIFIC_FEATURES = [
       "Create virtual wallet",
       "Add and track incomes and expenses daylong",
       "Get instant reports any time",
-      "Use separate wallets for relevant works"
-    ]
+      "Use separate wallets for relevant works",
+    ],
   },
   {
     name: "Business",
@@ -575,8 +714,8 @@ export const PERSON_SPECIFIC_FEATURES = [
       "Create budget plan",
       "Add and track expenses for relevant cause",
       "Get instant reports any time",
-      "Use separate budgets for relevant works"
-    ]
+      "Use separate budgets for relevant works",
+    ],
   },
   {
     name: "Student",
@@ -585,104 +724,100 @@ export const PERSON_SPECIFIC_FEATURES = [
       "Get instant graphical and numerical analysis for all wallets",
       "Reports on daily, weekly or monthly bases",
       "Reports on budget tracking",
-      "Reports on bank and inter-user transactions"
-    ]
+      "Reports on bank and inter-user transactions",
+    ],
   },
 ];
 
-export const REPORT_PERIODS = [
-  "Daily",
-  "Weekly",
-  "Monthly",
-]
+export const REPORT_PERIODS = ["Daily", "Weekly", "Monthly"];
 
 export const FCFEED_QAS = [
   {
-    username : "dumbledore",
-    question : "Harry did you put your name in the Goblet of Fire???",
-    answers : [
+    username: "dumbledore",
+    question: "Harry did you put your name in the Goblet of Fire???",
+    answers: [
       {
         username: "harrypotter07",
-        answer: "Sir, no sir."
+        answer: "Sir, no sir.",
       },
       {
         username: "minerva",
-        answer: "Potter's a boy, not a piece of meat!"
+        answer: "Potter's a boy, not a piece of meat!",
       },
       {
         username: "snape",
-        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster."
+        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster.",
       },
       {
         username: "dumbledore",
-        answer: "Well, there is nothing I can do."
+        answer: "Well, there is nothing I can do.",
       },
-    ]
+    ],
   },
   {
-    username : "minerva",
-    question : "Did you lie to Prof. Umbridge again, Potter?",
-    answers : [
+    username: "minerva",
+    question: "Did you lie to Prof. Umbridge again, Potter?",
+    answers: [
       {
         username: "harrypotter07",
-        answer: "No, professor."
+        answer: "No, professor.",
       },
       {
         username: "minerva",
-        answer: "Take a biscuit, Potter."
+        answer: "Take a biscuit, Potter.",
       },
-    ]
+    ],
   },
   {
-    username : "ishrak.adit07",
-    question : "Harry did you put your name in the Goblet of Fire???",
-    answers : [
+    username: "ishrak.adit07",
+    question: "Harry did you put your name in the Goblet of Fire???",
+    answers: [
       {
         username: "harrypotter07",
-        answer: "Sir, no sir."
+        answer: "Sir, no sir.",
       },
-    ]
+    ],
   },
   {
-    username : "granger.hermione11",
-    question : "Harry did you put your name in the Goblet of Fire???",
-    answers : [
+    username: "granger.hermione11",
+    question: "Harry did you put your name in the Goblet of Fire???",
+    answers: [
       {
         username: "harrypotter07",
-        answer: "Sir, no sir."
+        answer: "Sir, no sir.",
       },
       {
         username: "minerva",
-        answer: "Potter's a boy, not a piece of meat!"
+        answer: "Potter's a boy, not a piece of meat!",
       },
       {
         username: "snape",
-        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster."
+        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster.",
       },
       {
         username: "dumbledore",
-        answer: "Well, there is nothing I can do."
+        answer: "Well, there is nothing I can do.",
       },
       {
         username: "snape",
-        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster."
+        answer: "Ob-viuos-ly, Mr. Potter is lying, headmaster.",
       },
       {
         username: "dumbledore",
-        answer: "Well, there is nothing I can do."
+        answer: "Well, there is nothing I can do.",
       },
-    ]
+    ],
   },
-]
+];
 
 export const ADVERTISEMENTS = [
   {
-    name : "Weasley's Wizard Wheezes",
-    catchPhrase: "Mischief Managed"
+    name: "Weasley's Wizard Wheezes",
+    catchPhrase: "Mischief Managed",
   },
   {
-    name : "Weasley's Wizard Wheezes",
-    catchPhrase: "Mischief Managed"
+    name: "Weasley's Wizard Wheezes",
+    catchPhrase: "Mischief Managed",
   },
 ];
 
@@ -711,7 +846,7 @@ export const FRIENDS = [
     username: "rossatron",
     userID: "93726463",
   },
-]
+];
 
 export const REGISTERED_MERCHANTS = [
   {
@@ -754,68 +889,60 @@ export const PAY_BILL_SERVICES = [
     serviceID: "1",
     service: "Gas",
     optionName: "Area",
-    options: [
-      "Jalalabad", "Sundarban", "Poshchimanchol", "Titash"
-    ]
+    options: ["Jalalabad", "Sundarban", "Poshchimanchol", "Titash"],
   },
   {
     serviceID: "2",
     service: "Water",
     optionName: "Area",
-    options: [
-      "Dhaka WASA", "Chittagong WASA", "Rajshahi WASA"
-    ]
+    options: ["Dhaka WASA", "Chittagong WASA", "Rajshahi WASA"],
   },
   {
     serviceID: "3",
     service: "Internet & Phone",
     optionName: "Company",
-    options: [
-      "BTCL", "Link3", "Carnival", "AmberIT", "Dot Network"
-    ]
+    options: ["BTCL", "Link3", "Carnival", "AmberIT", "Dot Network"],
   },
   {
     serviceID: "4",
     service: "Education",
     optionName: "Institution",
-    options: [
-      "DU", "BUET", "ISC", "VNSC", "IIT", "BRAC"
-    ]
+    options: ["DU", "BUET", "ISC", "VNSC", "IIT", "BRAC"],
   },
   {
     serviceID: "5",
     service: "TV",
     optionName: "Company",
-    options: [
-      "Akash", "JCC", "DISH"
-    ]
+    options: ["Akash", "JCC", "DISH"],
   },
   {
     serviceID: "6",
     service: "City Service",
     optionName: "Corporation",
     options: [
-      "Dhaka South City Corporation", "Dhaka South City Corporation", "Rangpur South City Corporation", "Sylhet City Corporation"
-    ]
+      "Dhaka South City Corporation",
+      "Dhaka South City Corporation",
+      "Rangpur South City Corporation",
+      "Sylhet City Corporation",
+    ],
   },
-]
+];
 
 export const CONNECTION_REQUESTS = [
   {
     name: "Mahmood",
-    username: "mahamoodle"
+    username: "mahamoodle",
   },
   {
     name: "Corn. Fudge",
-    username: "cfudge"
+    username: "cfudge",
   },
   {
     name: "Peeta Mellark",
-    username: "peeta_mellark"
+    username: "peeta_mellark",
   },
   {
     name: "Tamim Iqbal",
-    username: "tiqbal"
+    username: "tiqbal",
   },
-]
-
+];
