@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import RegisterForm from "../../components/Forms/RegisterForm";
+import SecondRegisterForm from "../../components/Forms/SecondRegisterForm";
 
-const Register = () => {
+const RegisterAccount = () => {
   return (
     <section className="mt-20 pb-20">
-      <RegisterForm />
+      <SecondRegisterForm />
       <h1 className="text-indigo-500 text-bold text-center">
         Copyright@FinanSage.Official
       </h1>
@@ -13,4 +13,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterAccount;
