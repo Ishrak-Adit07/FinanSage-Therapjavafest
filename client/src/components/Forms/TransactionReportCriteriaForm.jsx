@@ -37,7 +37,7 @@ const TransactionReportCriteriaForm = () => {
   const [startDate, setStartDate] = useState("");
 
   return (
-    <div className="layoutSection text-slate-200 border-b border-neutral-900 pb-4 flex flex-col items-center my-10">
+    <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-40">
       <h1 className="text-slate-700 text-bold text-4xl mb-10">
         Select Report Criterias
       </h1>

@@ -14,15 +14,19 @@ const ReportPeriodicalCashFlows = ({ date, period, reportFlows }) => {
   }, [reportFlows]);
 
   return (
-    <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
-      <div>
-      <h1 className="text-slate-900 text-4xl text-center">Cashflow History</h1>
-      <h1 className="text-slate-700 text-2xl text-center mt-2">in this time period</h1>
+    <section className="w-full flex flex-col justify-center items-center my-10">
+      <div className="w-full flex flex-col items-center justify-center">
+        <h1 className="text-slate-900 text-4xl text-center">
+          Cashflow History
+        </h1>
+        <h1 className="text-slate-700 text-2xl text-center mt-2">
+          in this time period
+        </h1>
         {showCashFlows &&
           reportFlows.map((cashFlow, index) => (
             <motion.div
               key={index}
-              className="w-full"
+              className="w-full lg:w-1/2"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
