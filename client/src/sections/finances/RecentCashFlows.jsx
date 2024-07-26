@@ -18,7 +18,9 @@ const RecentCashFlows = () => {
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center my-40">
       <div className="w-full flex flex-col items-center justify-center">
-        <h1 className="text-4xl my-10 text-center">Recent Cash Flows</h1>
+        <h1 className="text-4xl my-10 text-center bg-gradient-to-r from-purple-400 to-blue-400 p-4 rounded-lg shadow-md text-slate-200">
+          Recent Cashflows
+        </h1>
         {showCashFlows &&
           RECENT_CASHFLOWS.map((cashFlow, index) => (
             <motion.div

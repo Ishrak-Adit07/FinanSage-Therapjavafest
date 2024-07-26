@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import StraightAnglePieChart from "../../../components/Charts/StraightAnglePieChart";
+import BrushBarChart from "../../../components/Charts/BrushBarChart";
+import BiaxialLineChart from "../../../components/Charts/BiAxialLineChart";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -15,23 +16,30 @@ const WalletGraph = () => {
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center"
       >
-        <h1 className="text-4xl text-slate-500 text-center text-bold my-10">
-          Wallet CashFlow Overview
-        </h1>
         <motion.div
           className="w-full"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="flex flex-col items-center w-full">
-            {false && (
-              <h1 className="pb-12 text-4xl font-thin text-slate-700 tracking-tight lg:mt-16 lg:text-4xl xl:text-6xl">
-                Wallet Cash Graph
-              </h1>
-            )}
+          <div className="flex flex-col items-center w-full my-20">
+            <BrushBarChart headerText={"Wallet Brush Bar"} />
+          </div>
+        </motion.div>
 
-            <StraightAnglePieChart headerText={"Wallet Cashflow Overview"} />
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        >
+          <div className="flex flex-wrap items-center justify-center my-20">
+            <div className="flex flex-col items-center w-1/2">
+              <BiaxialLineChart headerText={"Wallet Line Bar"} />
+            </div>
+            <div className="flex flex-col items-center w-1/2">
+              <BiaxialLineChart headerText={"Wallet Line Bar"} />
+            </div>
           </div>
         </motion.div>
       </motion.div>

@@ -53,7 +53,7 @@ const WalletSettings = ({ walletID }) => {
   };
 
   return (
-    <div className="layoutSection text-slate-700 border-b border-neutral-900 pb-4">
+    <div className="layoutSection text-slate-700 pb-4">
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center"

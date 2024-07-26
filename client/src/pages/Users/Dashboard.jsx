@@ -3,17 +3,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import Contact from "../../sections/company/Contact";
-import CashGraph from "../../sections/finances/CashGraph";
 import RecentTransactions from "../../sections/finances/RecentTransactions";
 import RecentCashFlows from "../../sections/finances/RecentCashFlows";
-import Footer from "../../sections/Footer";
-import AddCashFlow from "../../sections/finances/AddCashFlow";
-import BankCashFlow from "../../sections/finances/BankCashFlow";
-import BestUsage from "../../sections/user/BestUsage";
 import InterUserTransactions from "../../sections/finances/InterUserTransaction";
-import SimpleBarchart from "../../components/Charts/SimpleBarChart";
-import StrokedBarChart from "../../components/Charts/StrokedBarChart";
 import BrushBarChart from "../../components/Charts/BrushBarChart";
+import WalletAddCashFlow from "../../sections/wallets/wallet/WalletAddCashFlow";
+import Footer from "../../sections/Footer";
 
 const Dashboard = () => {
   const { user, setUser } = useContext(UserContext);
@@ -44,14 +39,14 @@ const Dashboard = () => {
           <div className="w-full">
             <div className="flex flex-wrap items-center justify-center mb-40 mt-10">
               <div className="w-1/2">
-                <BrushBarChart headerText={"Monthly Cashflows' Overview"}/>
+                <BrushBarChart headerText={"Monthly Cashflows' Overview"} />
               </div>
               <div className="w-1/2">
-                <BrushBarChart headerText={"Monthly Transactions' Overview"}/>
+                <BrushBarChart headerText={"Monthly Transactions' Overview"} />
               </div>
             </div>
             <RecentCashFlows />
-            <AddCashFlow />
+            <WalletAddCashFlow />
             <RecentTransactions />
             <InterUserTransactions />
             {true && <Contact />}
