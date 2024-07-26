@@ -31,7 +31,9 @@ const Dashboard = () => {
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center">
-      <h1 className="title text-4xl my-10 text-blue-400">Carpe Diem, <span className="text-blue-600">{user.firstName}</span>!</h1>
+      <h1 className="title text-4xl my-10 text-blue-400">
+        Carpe Diem, <span className="text-blue-600">{user.firstName}</span>!
+      </h1>
 
       <div>
         {loading && (
@@ -40,12 +42,18 @@ const Dashboard = () => {
 
         {!loading && (
           <div className="w-full">
-            <BrushBarChart />
+            <div className="flex flex-wrap items-center justify-center mb-40 mt-10">
+              <div className="w-1/2">
+                <BrushBarChart headerText={"Monthly Cashflows' Overview"}/>
+              </div>
+              <div className="w-1/2">
+                <BrushBarChart headerText={"Monthly Transactions' Overview"}/>
+              </div>
+            </div>
             <RecentCashFlows />
             <AddCashFlow />
             <RecentTransactions />
             <InterUserTransactions />
-            <BestUsage />
             {true && <Contact />}
             <Footer />
           </div>

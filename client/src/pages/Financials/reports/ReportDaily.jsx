@@ -15,28 +15,8 @@ const ReportDaily = () => {
   let reportFlows = RECENT_CASHFLOWS;
   let reportTS = RECENT_TRANSACTIONS;
 
-  const getDailyCashFlowReport = async () => {
-    console.log(date);
-  };
-
   return (
     <div className="justify-center items-center">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl text-slate-500 text-center my-10">
-          Select Date
-        </h1>
-        <input
-          type="text"
-          placeholder="Select Date"
-          className="input"
-          autoFocus
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
-
-        <Subscribe text={"Get Report"} onClickAction={getDailyCashFlowReport} />
-      </div>
-
       <BiaxialLineChart headerText={"Spending overview"} />
       <IEBar
         totalIncome={totalIncome}
@@ -44,8 +24,8 @@ const ReportDaily = () => {
         subHead={"in this time period"}
       />
       <div className="flex flex-wrap align-center justify-center items-center">
-        <ReportDailyCashFlows date={date} reportFlows={reportFlows}/>
-        <ReportDailyTransactions date={date} reportTS={reportTS}/>
+        <ReportDailyCashFlows date={date} reportFlows={reportFlows} />
+        <ReportDailyTransactions date={date} reportTS={reportTS} />
       </div>
     </div>
   );

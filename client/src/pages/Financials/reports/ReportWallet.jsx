@@ -13,31 +13,8 @@ const ReportWallet = () => {
 
   let reportFlows = RECENT_CASHFLOWS;
 
-  const getWalletCashFlowReport = async () => {
-    console.log(wallet);
-  };
-
   return (
     <div className="justify-center items-center">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl text-slate-500 text-center my-10">
-          Select Wallet
-        </h1>
-        <input
-          type="text"
-          placeholder="Select Wallet"
-          className="input"
-          autoFocus
-          value={wallet}
-          onChange={(e) => setWallet(e.target.value)}
-        />
-
-        <Subscribe
-          text={"Get Report"}
-          onClickAction={getWalletCashFlowReport}
-        />
-      </div>
-
       <BiaxialLineChart headerText={"Spending overview of Wallet"} />
       <IEBar
         totalIncome={totalIncome}

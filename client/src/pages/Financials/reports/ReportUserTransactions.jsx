@@ -13,27 +13,8 @@ const ReportUserTransactions = () => {
 
   let reportTS = RECENT_TRANSACTIONS;
 
-  const getUserTSReport = async () => {
-    console.log(user2);
-  };
-
   return (
     <div className="justify-center items-center">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl text-slate-500 text-center my-10">
-          Friend User ID
-        </h1>
-        <input
-          type="text"
-          placeholder="Friend User ID"
-          className="input"
-          autoFocus
-          value={user2}
-          onChange={(e) => setUser2(e.target.value)}
-        />
-
-        <Subscribe text={"Get Report"} onClickAction={getUserTSReport} />
-      </div>
       <BiaxialLineChart headerText={"Transactions' overview"} />
       <SRBar totalSend={totalSend} totalReceive={totalReceive} subHead={""} />
       <div className="flex flex-wrap align-center justify-center items-center">

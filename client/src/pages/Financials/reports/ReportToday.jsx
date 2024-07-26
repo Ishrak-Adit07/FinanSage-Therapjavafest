@@ -14,10 +14,6 @@ const ReportToday = () => {
   let reportFlows = RECENT_CASHFLOWS;
   let reportTS = RECENT_TRANSACTIONS;
 
-  const getMonthlyCashFlowReport = async () => {
-    console.log(date);
-  };
-
   return (
     <div className="justify-center items-center">
       <BiaxialLineChart headerText={"Today's spending overview"} />
