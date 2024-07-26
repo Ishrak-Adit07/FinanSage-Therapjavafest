@@ -18,9 +18,6 @@ To list the collection schemas.
 
 - **Clone/pull client folder**
 - **Run these commands-**
-- cd client
-- npm i
-- npm run dev
   ```
   cd client
   npm i
