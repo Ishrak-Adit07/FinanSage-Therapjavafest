@@ -11,6 +11,9 @@ import AddCashFlow from "../../sections/finances/AddCashFlow";
 import BankCashFlow from "../../sections/finances/BankCashFlow";
 import BestUsage from "../../sections/user/BestUsage";
 import InterUserTransactions from "../../sections/finances/InterUserTransaction";
+import SimpleBarchart from "../../components/Charts/SimpleBarChart";
+import StrokedBarChart from "../../components/Charts/StrokedBarChart";
+import BrushBarChart from "../../components/Charts/BrushBarChart";
 
 const Dashboard = () => {
   const { user, setUser } = useContext(UserContext);
@@ -28,7 +31,7 @@ const Dashboard = () => {
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center">
-      <h1 className="title text-4xl my-10">Carpe Diem, {user.firstName}!</h1>
+      <h1 className="title text-4xl my-10 text-blue-400">Carpe Diem, <span className="text-blue-600">{user.firstName}</span>!</h1>
 
       <div>
         {loading && (
@@ -37,7 +40,7 @@ const Dashboard = () => {
 
         {!loading && (
           <div className="w-full">
-            <CashGraph />
+            <BrushBarChart />
             <RecentCashFlows />
             <AddCashFlow />
             <RecentTransactions />
