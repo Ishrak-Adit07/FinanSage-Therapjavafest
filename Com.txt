@@ -1,0 +1,16 @@
+For communication
+
+APIs.md => Tried to list the apis' I needed. Requirements changed. I will update it again.
+
+WorkingAPIs.md => Please enlist an api here when you have made it completely.
+
+CollectionsSchemas.md => To list the collection schemas.
+
+How to run front end:
+1. Clone/pull client folder
+2. Run these commands-
+cd client
+npm i
+npm run dev
+
+Please write any suggestions here.
