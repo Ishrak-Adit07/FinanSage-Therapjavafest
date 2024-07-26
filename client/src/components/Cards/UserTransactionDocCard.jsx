@@ -13,7 +13,7 @@ const UserTransactionDocCard = ({
 }) => {
   const [showReceive, setShowReceive] = useState(true);
   const navigate = useNavigate();
-
+ 
   useEffect(() => {
     if (type === "Sent") setShowReceive(false);
   }, [type]);

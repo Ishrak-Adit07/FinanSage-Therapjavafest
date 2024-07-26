@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import TransactionDocCard from "../../../components/Cards/TransactionDocCard";
+import UserTransactionDocCard from "../../../components/Cards/UserTransactionDocCard";
 
 const ReportDailyTransactions = ({ date, reportTS }) => {
     const [loading, setLoading] = useState(true);
@@ -30,10 +30,11 @@ const ReportDailyTransactions = ({ date, reportTS }) => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             >
               {true && (
-                <TransactionDocCard
+                <UserTransactionDocCard
                   className="w-full"
                   id={transaction.id}
-                  walletName={transaction.wallet.name}
+                  accountName={transaction.bankName}
+                  accountID={transaction.accID}
                   amount={transaction.amount}
                   date={transaction.date}
                   type={transaction.type}

@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { RECENT_TRANSACTIONS } from "../../constants";
-import TransactionDocCard from "../../components/Cards/TransactionDocCard";
+import UserTransactionDocCard from "../../components/Cards/UserTransactionDocCard";
+import BankTransactionDocCard from "../../components/Cards/BankTransactionDocCard";
 
 const RecentTransactions = () => {
   const [loading, setLoading] = useState(true);
@@ -16,27 +17,28 @@ const RecentTransactions = () => {
   }, []);
 
   return (
-    <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
-      <div>
-        <h1 className="text-4xl my-10 text-center">Recent Transactions</h1>
+    <section className="layoutSection w-full flex flex-col justify-center items-center mt-40">
+      <div className="w-full flex flex-col items-center justify-center">
+        <h1 className="text-4xl my-10 text-center bg-gradient-to-r from-purple-400 to-blue-400 p-4 rounded-lg shadow-md text-slate-200">Recent Transactions</h1>
         {showTransacions &&
           RECENT_TRANSACTIONS.map((transaction, index) => (
             <motion.div
               key={index}
-              className="w-full"
+              className="w-3/5"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             >
               {true && (
-                <TransactionDocCard
-                  className="w-full"
-                  id={transaction.id}
-                  walletName={transaction.wallet.name}
-                  amount={transaction.amount}
-                  date={transaction.date}
-                  type={transaction.type}
-                />
+                <BankTransactionDocCard
+                className="w-full"
+                id={transaction.id}
+                accountName={transaction.bankName}
+                accountID={transaction.accID}
+                amount={transaction.amount}
+                date={transaction.date}
+                type={transaction.type}
+              />
               )}
             </motion.div>
           ))}

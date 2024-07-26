@@ -454,7 +454,71 @@ export const RECENT_CASHFLOWS = [
   },
 ];
 
-export const RECENT_TRANSACTIONS = [];
+export const RECENT_TRANSACTIONS = [
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Credit",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Withdraw",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Credit",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Credit",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Withdraw",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Credit",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "98230832",
+    bankID: "1",
+    bankName: "Gringotts",
+    accID: "87927172",
+    type: "Credit",
+    amount: 100,
+    date: "27-06-2024",
+  },
+];
 
 export const ANNUAL_TAX_RATES = [
   {
@@ -477,18 +541,23 @@ export const ANNUAL_TAX_RATES = [
 
 export const BANKS = [
   {
+    id: "1",
     name: "Gringotts",
   },
   {
+    id: "2",
     name: "World Bank",
   },
   {
+    id: "3",
     name: "Wall St.",
   },
   {
+    id: "4",
     name: "Iron Bank",
   },
   {
+    id: "5",
     name: "Capitol",
   },
 ];

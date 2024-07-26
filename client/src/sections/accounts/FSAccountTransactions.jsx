@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import TransactionDocCard from "../../components/Cards/TransactionDocCard";
+import BankAccountTransactions from "./BankAccountTransactions";
 
 const FSAccountTransactions = ({ fsTS }) => {
   const [showTransacions, setShowTransactions] = useState(true);
@@ -27,7 +27,7 @@ const FSAccountTransactions = ({ fsTS }) => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             >
               {true && (
-                <TransactionDocCard
+                <BankAccountTransactions
                   className="w-full"
                   id={transaction.id}
                   walletName={transaction.wallet.name}

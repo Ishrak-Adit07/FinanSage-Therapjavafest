@@ -16,14 +16,14 @@ const RecentCashFlows = () => {
   }, []);
 
   return (
-    <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
-      <div>
+    <section className="layoutSection w-full flex flex-col justify-center items-center my-40">
+      <div className="w-full flex flex-col items-center justify-center">
         <h1 className="text-4xl my-10 text-center">Recent Cash Flows</h1>
         {showCashFlows &&
           RECENT_CASHFLOWS.map((cashFlow, index) => (
             <motion.div
               key={index}
-              className="w-full"
+              className="w-3/5"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}

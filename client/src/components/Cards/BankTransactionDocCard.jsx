@@ -15,15 +15,15 @@ const BankTransactionDocCard = ({
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (type === "withdraw") setShowCredit(false);
+    if (type === "Withdraw") setShowCredit(false);
   }, [type]);
 
   return (
     <div>
       <div className="w-full flex flex-wrap justify-between rounded-md shadow-md p-6 m-2">
         <div className="flex flex-wrap items-center justify-center gap-10 w-full">
-          <p className="bg-slate-200 font-bold text-blue-400 text-center py-2 rounded-md shadow-md w-1/4">
-            {accountName} : {accountID}
+          <p className="bg-slate-200 font-semibold text-slate-700 text-center p-2 rounded-md shadow-md w-1/4">
+            {accountName} : <span className="text-blue-500">{accountID}</span>
           </p>
           {showCredit && (
             <p className="bg-gradient-to-r from-green-400 to-green-600 text-slate-200 text-center py-2 rounded-md shadow-md w-1/4">
@@ -43,6 +43,6 @@ const BankTransactionDocCard = ({
       </div>
     </div>
   );
-};
+}; 
 
 export default BankTransactionDocCard;
