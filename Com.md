@@ -13,10 +13,10 @@ To list the collection schemas.
 
 ### How to run front end
 - **Clone/pull client folder**
-**Run these commands-**
-cd client
-npm i
-npm run dev
+- **Run these commands-**
+- cd client
+- npm i
+- npm run dev
 
 Don't worry about styling/aesthetics, haven't worked on them yet. We'll fix them later.
 
