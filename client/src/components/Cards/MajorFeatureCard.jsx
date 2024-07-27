@@ -9,9 +9,9 @@ const MajorFeatureCard = ({ name, bgLink, features, onClickAction }) => {
         <button className="text-slate-200 text-center" onClick={onClickAction}>
           <div className="flex flex-col items-center justify-center gap-5">
             <p>
-              <i className="fa-solid fa-user text-3xl bg-slate-200 text-slate-700 px-10 py-20 rounded-lg"></i>
+              <i className="fa-solid fa-user text-3xl bg-purple-200 text-slate-700 px-10 py-20 rounded-lg"></i>
             </p>
-            <p className="text-2xl text-bold text-center my-2">{name}</p>
+            <p className="text-xl font-bold text-slate-200 p-2 rounded-lg text-center my-2">{name}</p>
             {true && (
               <p className="text-center p-6">
                 {features.join(", ")}

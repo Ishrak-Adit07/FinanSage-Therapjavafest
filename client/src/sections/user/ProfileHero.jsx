@@ -87,7 +87,7 @@ const ProfileHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center lg:items-start mx-20 mt-20">
             {true && (
               <p className="flex flex-wrap items-center justify-center mb-10">
                 <h1 className="text-4xl font-thin text-blue-400 tracking-tight lg:text-4xl xl:text-6xl">
@@ -100,8 +100,8 @@ const ProfileHero = () => {
               </p>
             )}
 
-            <h3 className="text-2xl font-thin text-slate-700 tracking-tight lg:text-3xl xl:text-4xl">
-              User status: {userStatus}
+            <h3 className="text-2xl font-thin text-blue-700 tracking-tight lg:text-3xl xl:text-4xl">
+              @{user.username}
             </h3>
             <button className="w-full" onClick={goToProfileSettins}>
               <h1 className="text-xl bg-gradient-to-r from-blue-400 to-blue-600 text-slate-200 rounded-lg shadow-md text-center py-2 px-4 my-10 w-1/3">
