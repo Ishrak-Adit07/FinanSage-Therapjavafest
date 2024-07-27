@@ -1,11 +1,16 @@
-import { motion } from 'react-router-dom';
-import { ADVERTISEMENTS } from '../../constants';
-import Advertisement from './Advertisement';
+import AdvertisementCard from "../../components/Cards/AdvertisementCard";
+import { ADVERTISEMENTS } from "../../constants";
+import { motion } from "framer-motion";
 
-const AcceptRequest = () => {
+const TestRight = () => {
   return (
     <div>
-      <h1 className="m-4 text-left text-2xl text-red-400">Connection Requests</h1>
+      <h1 className="m-4 text-left text-2xl text-red-400">
+        Connection Requests
+      </h1>
+      <h1 className="m-4 text-left text-2xl text-red-400">
+        Connection Requests
+      </h1>
       {ADVERTISEMENTS.map((ad, index) => (
         <motion.div
           key={index}
@@ -15,7 +20,7 @@ const AcceptRequest = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           {true && (
-            <Advertisement
+            <AdvertisementCard
               className="w-full"
               name={ad.name}
               catchPhrase={ad.catchPhrase}
@@ -27,4 +32,4 @@ const AcceptRequest = () => {
   );
 };
 
-export default AcceptRequest;
+export default TestRight;

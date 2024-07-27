@@ -9,7 +9,7 @@ const Financom = () => {
   return (
     <div>
       <div className="flex flex-wrap justify-center gap-2 mt-2">
-        <div className="w-1/5">
+        <div className="w-1/5 mt-10">
           <div className="w-1/5 fixed z-10">
             <FCSendRequest />
             <FCLeftBar />

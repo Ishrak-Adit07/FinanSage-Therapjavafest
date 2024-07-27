@@ -747,9 +747,7 @@ export const MAJOR_FEATURES = [
   {
     name: "Constant Supervision",
     imageLink: "",
-    features: [
-      "Instant Reports, graphical analysis, detailed History",
-    ],
+    features: ["Instant Reports, graphical analysis, detailed History"],
   },
   {
     name: "Advisory Community",
@@ -892,28 +890,28 @@ export const ADVERTISEMENTS = [
 
 export const FRIENDS = [
   {
+    name: "Hermione Granger",
     username: "granger.h11",
-    userID: "43722728",
   },
   {
+    name: "Katniss Everdeen",
     username: "katniss",
-    userID: "29837437",
   },
   {
+    name: "Luna Lovegood",
     username: "lovegood.luna",
-    userID: "46382638",
   },
   {
+    name: "Ishrak Adit",
     username: "ishrak07",
-    userID: "98364758",
   },
   {
+    name: "Robert Langdon",
     username: "langdon",
-    userID: "98364537",
   },
   {
+    name: "Ross Geller",
     username: "rossatron",
-    userID: "93726463",
   },
 ];
 

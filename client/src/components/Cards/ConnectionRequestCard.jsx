@@ -1,36 +1,45 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { PropContext } from "../../contexts/PropContext";
 
-const ConnectionRequestCard = ({ name, username }) => {
+const ConnectionRequestCard = ({ name, username, setShowRequestsFalse }) => {
   const [showRequest, setShowRequest] = useState(true);
 
-  const handleAcceptRequest = () => {
-    setShowRequest(false);
-  };
+  const { props, setProps } = useContext(PropContext);
+  const { friends } = props;
 
+  const handleAcceptRequest = () => {
+    setProps({
+      ...props,
+      friends: [...friends, { name, username }], // Create a new array with the new friend
+    });
+    setShowRequest(false);
+    setShowRequestsFalse(username);
+  };
   const handleDeleteRequest = () => {
     setShowRequest(false);
+    setShowRequestsFalse(username);
   };
 
   return (
     <div>
       {showRequest && (
-        <div className="p-4 m-4 bg-gradient-to-r from-purple-400 to-blue-400 rounded-lg shadow-md">
-          <h1 className="text-xl text-slate-200 text-center text-semibold">
+        <div className="p-4 m-4 rounded-lg shadow-md">
+          <h1 className="text-xl text-slate-700 text-left text-semibold">
             {name}
           </h1>
-          <p className="text-sm text-slate-700 text-center">{username}</p>
+          <p className="text-sm text-slate-500 text-left">@{username}</p>
 
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-start mt-2 gap-2">
             <button
-              className="btn w-1/3 bg-green-500"
+              className="w-1/3 text-sm bg-green-400 rounded-lg shadow-md"
               onClick={handleAcceptRequest}
             >
               Accept
             </button>
             <button
-              className="btn w-1/3 bg-red-500"
+              className="w-1/3 text-sm bg-red-400 rounded-lg shadow-md"
               onClick={handleDeleteRequest}
             >
               Delete
