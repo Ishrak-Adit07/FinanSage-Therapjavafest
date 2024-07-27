@@ -2,8 +2,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { HERO_CONTENT } from "../../constants";
-import Subscribe from "../../components/Buttons/Subscribe";
 import HeroImage from "../../assets/images/Profile.jpg";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
