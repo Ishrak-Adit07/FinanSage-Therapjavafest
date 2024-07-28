@@ -4,6 +4,7 @@ import { UserContext } from "../../contexts/UserContext";
 import EditUserData from "../../sections/user/EditUserData";
 import EditUserCredentials from "../../sections/user/EditUserCredentials";
 import EditUserImage from "../../sections/user/EditUserImage";
+import EditUserIdentfications from "../../sections/user/EditUserIdentifications";
 
 const ProfileSettings = () => {
   const { user, setUser } = useContext(UserContext);
@@ -15,6 +16,7 @@ const ProfileSettings = () => {
       </h1>
 
       <EditUserData />
+      <EditUserIdentfications />
       <EditUserImage />
       <EditUserCredentials />
     </div>

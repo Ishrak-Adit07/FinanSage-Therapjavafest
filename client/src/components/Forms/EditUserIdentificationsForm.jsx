@@ -6,14 +6,14 @@ import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
 
-const EditUserDataFrom = () => {
+const EditUserIdentificationsForm = () => {
   //UserContext
   const { user, setUser } = useContext(UserContext);
 
   const navigate = useNavigate();
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState(null);
 
   const handleEditUserData = async (e) => {
@@ -44,45 +44,54 @@ const EditUserDataFrom = () => {
       >
         <h1 className="text-3xl font-semibold text-red-400 text-slate-300 mb-6 mx-6 text-center">
           {false && <GradualText text={"Send a Mail!"} />}
-          Edit User Data
+          Edit User Identifications
         </h1>
+
+        <div className="relative my-4 w-full">
+            <p className="bg-slate-200 text-gray-900 p-2 rounded-lg text-center">email : {user.email}</p>
+          </div>
 
         <div className="w-full flex flex-col items-center justify-center">
           <div className="relative mb-8 w-full">
             <motion.input
               whileFocus={{ scale: 1.05 }}
               type="text"
-              id="firstName"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=""
             />
-            {!firstName && (
+            {!email && (
               <label
                 className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
-                htmlFor="firstName"
+                htmlFor="email"
               >
-                First Name
+                New email
               </label>
             )}
           </div>
+
+          <div className="relative my-4 w-full">
+            <p className="bg-slate-200 text-gray-900 p-2 rounded-lg text-center">username : {user.username}</p>
+          </div>
+
           <div className="relative mb-8 w-full">
             <motion.input
               whileFocus={{ scale: 1.05 }}
               type="text"
-              id="lastName"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=" "
             />
-            {!lastName && (
+            {!username && (
               <label
                 className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
-                htmlFor="lastName"
+                htmlFor="username"
               >
-                Last Name
+                New username
               </label>
             )}
           </div>
@@ -102,4 +111,4 @@ const EditUserDataFrom = () => {
   );
 };
 
-export default EditUserDataFrom;
+export default EditUserIdentificationsForm;
