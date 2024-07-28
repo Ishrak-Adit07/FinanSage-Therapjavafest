@@ -6,24 +6,41 @@ import { UserContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
 
-const EditUserProfilePicForm = () => {
-  //UserContext
+const EditUserImageForm = () => {
+  // UserContext
   const { user, setUser } = useContext(UserContext);
-
   const navigate = useNavigate();
 
-  const [profilePic, setProfilePic] = useState("");
+  const [image, setImage] = useState("");
   const [error, setError] = useState(null);
+
+  const onSelectFile = (e) => {
+    e.preventDefault();
+    const file = e.target.files?.[0];
+    console.log("Reached Here");
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      const imageURL = reader.result?.toString() || "";
+      console.log(imageURL);
+      setImage(imageURL); // Update the state with the selected image URL
+    });
+
+    reader.readAsDataURL(file);
+  };
 
   const handleEditUserProfilePic = async (e) => {
     e.preventDefault();
     try {
-      //const loginResponseData = await loginUser(email, password);
+      // Here you would upload the image to the server and update the user profile
+      // const responseData = await uploadUserProfilePic(image);
 
-      const responseData = true;
+      const responseData = true; // Mock response
 
       if (responseData) {
-        console.log(user);
+        // Update user context if necessary
+        // setUser({ ...user, profilePic: image });
 
         navigate("/user/profile/settings");
         setError(null);
@@ -50,21 +67,12 @@ const EditUserProfilePicForm = () => {
           <div className="relative mb-8 w-full">
             <motion.input
               whileFocus={{ scale: 1.05 }}
-              type="text"
-              id="profilePic"
-              value={profilePic}
-              onChange={(e) => setProfilePic(e.target.value)}
+              type="file"
+              id="image"
+              onChange={onSelectFile}
               className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=""
             />
-            {!profilePic && (
-              <label
-                className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
-                htmlFor="profilePic"
-              >
-                Profile Image
-              </label>
-            )}
           </div>
 
           <motion.button
@@ -83,4 +91,4 @@ const EditUserProfilePicForm = () => {
   );
 };
 
-export default EditUserProfilePicForm;
+export default EditUserImageForm;

@@ -4,14 +4,14 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { Link } from "react-router-dom";
 import HeroImage from "../../assets/images/Profile.jpg";
-import EditUserProfilePicForm from "../../components/Forms/EditUserProfilePicForm";
+import EditUserImageForm from "../../components/Forms/EditUserImageForm";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
 };
 
-const EditUserProfilePic = () => {
+const EditUserImage = () => {
   const { user } = useContext(UserContext);
   return (
     <div className="w-full flex flex-col items-center justify-center">
@@ -31,10 +31,10 @@ const EditUserProfilePic = () => {
       </motion.div>
 
       <div className="w-full">
-        <EditUserProfilePicForm />
+        <EditUserImageForm />
       </div>
     </div>
   );
 };
 
-export default EditUserProfilePic;
+export default EditUserImage;
