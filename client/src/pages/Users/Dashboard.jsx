@@ -9,6 +9,8 @@ import InterUserTransactions from "../../sections/finances/InterUserTransaction"
 import BrushBarChart from "../../components/Charts/BrushBarChart";
 import WalletAddCashFlow from "../../sections/wallets/wallet/WalletAddCashFlow";
 import Footer from "../../sections/Footer";
+import CustomizedDotLineChart from "../../components/Charts/CustomizedDotLineChart";
+import SimpleLineChart from "../../components/Charts/SimpleLineChart";
 
 const Dashboard = () => {
   const { user, setUser } = useContext(UserContext);
@@ -36,7 +38,7 @@ const Dashboard = () => {
         )}
 
         {!loading && (
-          <div className="w-full">
+          <div className="w-full flex flex-col items-center justify-center">
             <div className="flex flex-wrap items-center justify-center mb-40 mt-10">
               <div className="w-1/2">
                 <BrushBarChart headerText={"Monthly Cashflows' Overview"} />
@@ -44,6 +46,12 @@ const Dashboard = () => {
               <div className="w-1/2">
                 <BrushBarChart headerText={"Monthly Transactions' Overview"} />
               </div>
+            </div>
+
+            <div className="w-3/4">
+              <SimpleLineChart
+                headerText={"FinanSage Account Net Balnace Over the Week"}
+              />
             </div>
             <RecentCashFlows />
             <WalletAddCashFlow />

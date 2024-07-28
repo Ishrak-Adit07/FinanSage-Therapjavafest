@@ -39,7 +39,7 @@ const WalletAddCashFlow = ({ walletID }) => {
   const [error, setError] = useState(null);
 
   return (
-    <div className="text-slate-200 pb-4 flex flex-col items-center justify-center mt-40 mb-20 rounded-lg w-full">
+    <div className="text-slate-200 pb-4 flex flex-col items-center justify-center mt-20 rounded-lg w-full">
       <h1 className="text-4xl my-10 text-center bg-gradient-to-r from-purple-400 to-blue-400 p-4 rounded-lg shadow-md text-slate-">
         Add Cashflow to Wallet
       </h1>

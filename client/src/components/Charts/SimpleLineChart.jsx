@@ -14,56 +14,49 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    Income: 4000,
-    Expense: 2400,
+    name: "Sunday",
+    Balance: 3900,
     amt: 2400,
   },
   {
-    name: "Page B",
-    Income: 3000,
-    Expense: 1398,
+    name: "Monday",
+    Balance: 3000,
     amt: 2210,
   },
   {
-    name: "Page C",
-    Income: 2000,
-    Expense: 9800,
+    name: "Tuesday",
+    Balance: 0,
     amt: 2290,
   },
   {
-    name: "Page D",
-    Income: 2780,
-    Expense: 3908,
+    name: "Wednesday",
+    Balance: 0,
     amt: 2000,
   },
   {
-    name: "Page E",
-    Income: 1890,
-    Expense: 4800,
+    name: "Thursday",
+    Balance: 0,
     amt: 2181,
   },
   {
-    name: "Page F",
-    Income: 2390,
-    Expense: 3800,
+    name: "Friday",
+    Balance: 0,
     amt: 2500,
   },
   {
-    name: "Page G",
-    Income: 3490,
-    Expense: 4300,
+    name: "Saturday",
+    Balance: 0,
     amt: 2100,
   },
 ];
 
-function IEBiaxialLineChart({ headerText }) {
+function SimpleLineChart({ headerText, subHeaderText }) {
   return (
     <div
-      style={{ width: "100%", height: 400 }}
-      className="flex flex-wrap justify-center items-center my-10"
+      style={{ width: "100%", height: 500 }}
+      className="flex flex-col justify-center items-center my-20"
     >
-      <h1 className="text-2xl mb-10 text-slate-500">{headerText}</h1>
+      <h1 className="text-2xl mb-20 text-slate-500">{headerText}</h1>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
@@ -78,22 +71,13 @@ function IEBiaxialLineChart({ headerText }) {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis yAxisId="left" />
-          <YAxis yAxisId="right" orientation="right" />
+          <YAxis />
           <Tooltip />
           <Legend />
           <Line
-            yAxisId="left"
             type="monotone"
-            dataKey="Income"
+            dataKey="Balance"
             stroke="#82ca9d"
-            activeDot={{ r: 8 }}
-          />
-          <Line
-            yAxisId="right"
-            type="monotone"
-            dataKey="Expense"
-            stroke="#f02b11"
             activeDot={{ r: 8 }}
           />
         </LineChart>
@@ -102,4 +86,4 @@ function IEBiaxialLineChart({ headerText }) {
   );
 }
 
-export default IEBiaxialLineChart;
+export default SimpleLineChart;

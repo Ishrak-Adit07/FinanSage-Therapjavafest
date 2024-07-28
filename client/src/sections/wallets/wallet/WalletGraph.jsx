@@ -11,7 +11,7 @@ const gridSquareVariants = {
 
 const WalletGraph = () => {
   return (
-    <div className="layoutSection text-slate-200 p-40">
+    <div className="layoutSection text-slate-200 my-10">
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center justify-center"
