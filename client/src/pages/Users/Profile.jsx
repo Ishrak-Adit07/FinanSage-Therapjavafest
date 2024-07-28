@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ProfileHero from "../../sections/user/ProfileHero";
 import ProfileShrotcuts from "../../sections/user/ProfileShrotcuts";
 import Contact from "../../sections/company/Contact";
+import MerchantSection from "../../sections/user/MerchantSection";
 
 const Profile = () => {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ const Profile = () => {
           <div>
             <ProfileHero />
             <ProfileShrotcuts />
+            <MerchantSection />
             <Contact />
           </div>
         )}

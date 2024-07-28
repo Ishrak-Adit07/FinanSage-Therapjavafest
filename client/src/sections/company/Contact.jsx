@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import ContactCard from "../../components/Cards/ContactCard";
 import MailForm from "../../components/Forms/MailForm";
 import Footer from "../Footer";
+import GroupContactCard from "../../components/Cards/GroupContactCard";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -41,7 +42,7 @@ const Contact = ({ scrollToContact }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <ContactCard />
+            <GroupContactCard />
           </motion.div>
 
           <motion.div

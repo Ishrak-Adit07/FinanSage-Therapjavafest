@@ -47,6 +47,8 @@ import BusinessPage from "./pages/resources/BusinessPage";
 import TaxPage from "./pages/Financials/tax/TaxPage";
 import RegisterAccount from "./pages/Users/RegisterAccount";
 import ProfileSettings from "./pages/Users/ProfileSettings";
+import MerchantLogin from "./pages/MerchantUser/MerchantLogin";
+import MerchantRegister from "./pages/MerchantUser/MerchantRegister";
 
 const App = () => {
   return (
@@ -56,7 +58,6 @@ const App = () => {
           <Route index element={<Home />} />
 
           <Route element={<AuthRoutes />}>
-
             <Route path="register/account" element={<RegisterAccount />} />
 
             <Route path="user/dashboard" element={<Dashboard />} />
@@ -162,6 +163,8 @@ const App = () => {
           <Route element={<GuestRoutes />}>
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="merchant/login" element={<MerchantLogin />} />
+            <Route path="merchant/register" element={<MerchantRegister />} />
           </Route>
         </Route>
       </Routes>
