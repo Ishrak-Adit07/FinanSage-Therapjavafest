@@ -22,6 +22,10 @@ const MerchantSection = () => {
     navigate("/merchant/register");
   };
 
+  const goToMerchantDashboard = () => {
+    navigate("/merchant/dashboard");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full my-40">
       <h1 className="text-4xl bg-gradient-to-r from-blue-400 to-blue-600 text-slate-200 rounded-lg shadow-md text-center py-4 px-10 mt-20 mb-5 w-1/3">
@@ -51,6 +55,12 @@ const MerchantSection = () => {
             <div className="flex items-center justify-center gap-10 mt-6 w-full">
               <button className="chbtn" onClick={goToMerchantRegister}>
                 Register as Merchant
+              </button>
+            </div>
+
+            <div className="flex items-center justify-center gap-10 mt-6 w-full">
+              <button className="chbtn" onClick={goToMerchantDashboard}>
+                Current Merchant Dashboard
               </button>
             </div>
           </div>

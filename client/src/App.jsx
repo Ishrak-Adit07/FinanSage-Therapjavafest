@@ -50,6 +50,7 @@ import ProfileSettings from "./pages/Users/ProfileSettings";
 import MerchantLogin from "./pages/MerchantUser/MerchantLogin";
 import MerchantRegister from "./pages/MerchantUser/MerchantRegister";
 import MerchantDashboard from "./pages/MerchantUser/MerchantDashboard";
+import Cashout from "./sections/finances/Cashout";
 
 const App = () => {
   return (
@@ -107,6 +108,7 @@ const App = () => {
               element={<MakePayment />}
             />
             <Route path="user/transactions/bill/pay" element={<PayBill />} />
+            <Route path="user/transactions/cashout" element={<Cashout />} />
 
             <Route
               path="user/cashFlow/edit/:type/:id"

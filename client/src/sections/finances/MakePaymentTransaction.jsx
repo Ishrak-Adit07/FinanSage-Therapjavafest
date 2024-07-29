@@ -3,8 +3,7 @@
 import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
-import { PropContext } from "../../contexts/PropContext";
-import { FRIENDS, REGISTERED_MERCHANTS } from "../../constants";
+import { REGISTERED_MERCHANTS } from "../../constants";
 import { UserContext } from "../../contexts/UserContext";
 
 const gridSquareVariants = {

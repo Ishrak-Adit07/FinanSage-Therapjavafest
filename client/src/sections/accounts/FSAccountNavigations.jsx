@@ -22,6 +22,10 @@ const FSAccountNavigations = () => {
     navigate("/user/transactions/bill/pay");
   };
 
+  const goToCashOut = () => {
+    navigate("/user/transactions/cashout");
+  };
+
   return (
     <section className="w-full text-center justify-center items-center my-10">
       <div>
@@ -37,6 +41,10 @@ const FSAccountNavigations = () => {
 
             <button className="chbtn" onClick={goToPayBill}>
               Pay Bill
+            </button>
+
+            <button className="chbtn" onClick={goToCashOut}>
+              Cash Out
             </button>
 
             <button className="chbtn" onClick={goToBankTransactions}>
