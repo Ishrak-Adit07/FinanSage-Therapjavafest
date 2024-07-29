@@ -31,6 +31,12 @@
 
 ## Home
 
+### Introduction to FinanSage
+
+### Advertising Features
+
+### Sign in, Sign up and Contact Options
+
 ## User
 
 ### Registration
@@ -336,4 +342,15 @@
 ### Regular News
 - **Latest news on relevant topics**
 - **Link to relevant websites to get more news**
+
+## Contact
+
+### Link and Information
+- **Email ID with direct link to send mail**
+- **Facebook page ID with direct link to send mail**
+- **Same for LinkedIn, Github, Instagram and X**
+
+### Direct Mail Option
+- **Form provided to send mail directly from FinanSage Application**
+
 

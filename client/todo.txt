@@ -1,2 +1,5 @@
-Pass wallet information to edit wallet page
-Create edit wallet apis and controllers
+Notifications - full left
+CSS styling and responsive styling
+Mobile phone no integration
+Merchant routing 
+Connection to backend
