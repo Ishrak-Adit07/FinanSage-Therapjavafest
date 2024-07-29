@@ -8,8 +8,6 @@ import RecentCashFlows from "../../sections/finances/RecentCashFlows";
 import InterUserTransactions from "../../sections/finances/InterUserTransaction";
 import BrushBarChart from "../../components/Charts/BrushBarChart";
 import WalletAddCashFlow from "../../sections/wallets/wallet/WalletAddCashFlow";
-import Footer from "../../sections/Footer";
-import CustomizedDotLineChart from "../../components/Charts/CustomizedDotLineChart";
 import SimpleLineChart from "../../components/Charts/SimpleLineChart";
 
 const Dashboard = () => {
@@ -39,7 +37,7 @@ const Dashboard = () => {
 
         {!loading && (
           <div className="w-full flex flex-col items-center justify-center">
-            <div className="flex flex-wrap items-center justify-center mb-40 mt-10">
+            <div className="w-full flex flex-wrap items-center justify-center mb-40 mt-10">
               <div className="w-1/2">
                 <BrushBarChart headerText={"Monthly Cashflows' Overview"} />
               </div>
@@ -53,12 +51,13 @@ const Dashboard = () => {
                 headerText={"FinanSage Account Net Balnace Over the Week"}
               />
             </div>
-            <RecentCashFlows />
-            <WalletAddCashFlow />
-            <RecentTransactions />
-            <InterUserTransactions />
-            {true && <Contact />}
-            <Footer />
+            <div>
+              <RecentCashFlows />
+              <WalletAddCashFlow />
+              <RecentTransactions />
+              <InterUserTransactions />
+              <Contact />
+            </div>
           </div>
         )}
       </div>

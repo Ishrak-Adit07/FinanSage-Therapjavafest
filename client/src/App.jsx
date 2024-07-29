@@ -49,6 +49,7 @@ import RegisterAccount from "./pages/Users/RegisterAccount";
 import ProfileSettings from "./pages/Users/ProfileSettings";
 import MerchantLogin from "./pages/MerchantUser/MerchantLogin";
 import MerchantRegister from "./pages/MerchantUser/MerchantRegister";
+import MerchantDashboard from "./pages/MerchantUser/MerchantDashboard";
 
 const App = () => {
   return (
@@ -59,6 +60,11 @@ const App = () => {
 
           <Route element={<AuthRoutes />}>
             <Route path="register/account" element={<RegisterAccount />} />
+
+            <Route path="merchant/login" element={<MerchantLogin />} />
+            <Route path="merchant/register" element={<MerchantRegister />} />
+
+            <Route path="merchant/dashboard" element={<MerchantDashboard />} />
 
             <Route path="user/dashboard" element={<Dashboard />} />
             <Route path="user/profile" element={<Profile />} />
@@ -163,8 +169,6 @@ const App = () => {
           <Route element={<GuestRoutes />}>
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
-            <Route path="merchant/login" element={<MerchantLogin />} />
-            <Route path="merchant/register" element={<MerchantRegister />} />
           </Route>
         </Route>
       </Routes>

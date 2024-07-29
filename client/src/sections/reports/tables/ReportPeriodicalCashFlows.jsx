@@ -26,7 +26,7 @@ const ReportPeriodicalCashFlows = ({ date, period, reportFlows }) => {
           reportFlows.map((cashFlow, index) => (
             <motion.div
               key={index}
-              className="w-full lg:w-1/2"
+              className="w-full lg:w-3/5"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}

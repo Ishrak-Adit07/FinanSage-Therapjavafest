@@ -21,11 +21,11 @@ const Contact = ({ scrollToContact }) => {
   }, [scrollToContact]);
 
   return (
-    <section ref={sectionRef} id="target-contact">
-      <div className="layoutSection text-slate-200 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg shadow-md pb-4 items-center py-4 lg:items-start">
+    <section ref={sectionRef} id="target-contact" className="w-full">
+      <div className="layoutSection text-slate-200 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg shadow-md pb-4 items-center py-4 w-full lg:items-start">
         <motion.div
           variants={gridSquareVariants}
-          className="flex flex-wrap justify-center lg:justify-start"
+          className=" w-full flex flex-wrap justify-center lg:justify-start"
         >
           <motion.div
             className="w-full lg:w-1/4 p-4"

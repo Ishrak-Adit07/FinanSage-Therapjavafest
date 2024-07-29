@@ -454,6 +454,49 @@ export const RECENT_CASHFLOWS = [
   },
 ];
 
+export const RECENT_USER_TRANSACTIONS = [
+  {
+    id: "1",
+    username: "langdon07",
+    userID: "87927172",
+    type: "Sent",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "2",
+    username: "holmes",
+    userID: "87927172",
+    type: "Sent",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "3",
+    username: "langdon07",
+    userID: "87927172",
+    type: "Received",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "4",
+    username: "pcmitro",
+    userID: "87927172",
+    type: "Sent",
+    amount: 100,
+    date: "27-06-2024",
+  },
+  {
+    id: "5",
+    username: "musa",
+    userID: "87927172",
+    type: "Received",
+    amount: 100,
+    date: "27-06-2024",
+  },
+];
+
 export const RECENT_TRANSACTIONS = [
   {
     id: "98230832",

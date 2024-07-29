@@ -5,21 +5,25 @@ import React, { useEffect, useState } from "react";
 import UserTransactionDocCard from "../../../components/Cards/UserTransactionDocCard";
 
 const ReportPeriodicalTransactions = ({ date, period, reportTS }) => {
-    const [loading, setLoading] = useState(true);
-    const [showTransacions, setShowTransactions] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [showTransacions, setShowTransactions] = useState(true);
 
-    useEffect(() => {
-      setTimeout(async () => {
-        setLoading(false);
-        if (reportTS.length === 0) setShowTransactions(false);
-      }, 1000);
-    }, [reportTS]);
+  useEffect(() => {
+    setTimeout(async () => {
+      setLoading(false);
+      if (reportTS.length === 0) setShowTransactions(false);
+    }, 1000);
+  }, [reportTS]);
 
   return (
     <section className="layoutSection w-full flex flex-col justify-center items-center my-10">
-      <div>
-        <h1 className="text-slate-900 text-4xl text-center">Transactions History</h1>
-        <h1 className="text-slate-700 text-2xl text-center mt-2">in this time period</h1>
+      <div className="w-1/2">
+        <h1 className="text-slate-900 text-4xl text-center">
+          Transactions History
+        </h1>
+        <h1 className="text-slate-700 text-2xl text-center mt-2">
+          in this time period
+        </h1>
         {showTransacions &&
           reportTS.map((transaction, index) => (
             <motion.div
@@ -33,7 +37,8 @@ const ReportPeriodicalTransactions = ({ date, period, reportTS }) => {
                 <UserTransactionDocCard
                   className="w-full"
                   id={transaction.id}
-                  walletName={transaction.wallet.name}
+                  username={transaction.username}
+                  userID={transaction.userID}
                   amount={transaction.amount}
                   date={transaction.date}
                   type={transaction.type}

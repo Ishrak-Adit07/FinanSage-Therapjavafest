@@ -2,57 +2,37 @@
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import GradualText from "../TextAnimations/GradualText";
-import { UserContext } from "../../contexts/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "../../messages/Alert";
-import { EnumContext } from "../../contexts/EnumContext";
-import { PropContext } from "../../contexts/PropContext";
-import { dummyLoginResponse } from "../../constants/responses";
+import { dummyMerchantLoginResponse } from "../../constants/responses";
+import { MerchantContext } from "../../contexts/MerchantContext";
 
-const TestLoginForm = () => {
-  //UserContext
-  const { setUser } = useContext(UserContext);
-  const { setProps } = useContext(PropContext);
-  const { setEnums } = useContext(EnumContext);
-
+const MerchantRegisterForm = () => {
   const navigate = useNavigate();
 
-  const [mail, setMail] = useState("");
+  const { merchant, setMerchant } = useContext(MerchantContext);
+
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const [error, setError] = useState(null);
 
-  const handleLogin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      //const loginResponseData = await loginUser(email, password);
+      //const responseData = await registerUser(email, password, confirmPassword);
 
-      const loginResponseData = true;
+      const responseData = true;
 
-      if (loginResponseData) {
-        setUser({
-          name: dummyLoginResponse.name,
-          firstName: dummyLoginResponse.firstName,
-          lastName: dummyLoginResponse.lastName,
-          username: dummyLoginResponse.username,
-          userID: dummyLoginResponse.userID,
-          email: mail,
+      if (responseData) {
+        setMerchant({
+          ...merchant,
+          username: username,
+          merchantID: dummyMerchantLoginResponse.merchantID,
+          balance: dummyMerchantLoginResponse.balance,
         });
 
-        setProps({
-          wallets: dummyLoginResponse.wallets,
-          budgets: dummyLoginResponse.budgets,
-          accounts: dummyLoginResponse.accounts,
-          friends: dummyLoginResponse.friends,
-          fsAccount: dummyLoginResponse.fsAccount,
-        });
-
-        setEnums({
-          currencies: dummyLoginResponse.currencies,
-          taxRates: dummyLoginResponse.taxRates,
-          banks: dummyLoginResponse.banks,
-        });
-
-        navigate("/user/dashboard");
+        navigate("/merchant/dashboard");
         setError(null);
       }
     } catch (err) {
@@ -70,25 +50,25 @@ const TestLoginForm = () => {
       >
         <h1 className="text-3xl font-semibold text-red-400 text-slate-300 mb-6 text-center">
           {false && <GradualText text={"Send a Mail!"} />}
-          Log in to your account
+          Create New Merchant Account
         </h1>
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleRegister}>
           <div className="relative mb-8">
             <motion.input
               whileFocus={{ scale: 1.05 }}
-              type="email"
-              id="email"
-              value={mail}
-              onChange={(e) => setMail(e.target.value)}
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=""
             />
-            {!mail && (
+            {!username && (
               <label
                 className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
-                htmlFor="email"
+                htmlFor="username"
               >
-                Email
+                Mechant username
               </label>
             )}
           </div>
@@ -111,21 +91,22 @@ const TestLoginForm = () => {
               </label>
             )}
           </div>
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
             className="w-full p-3 bg-slate-200 text-gray-900 rounded-lg font-semibold hover:bg-slate-300 focus:outline-none"
           >
-            Log in
+            Register
           </motion.button>
         </form>
 
         <p className="text-slate-300 text-center mt-4">
-          Don`t have an account?
-          <Link to="/register" title="Register">
+          Already have a merhcant account?
+          <Link to="/login" title="Merchant Login">
             {" "}
-            <span className="underline">Sign up!</span>
+            <span className="underline">Log in!</span>
           </Link>
         </p>
       </motion.div>
@@ -135,4 +116,4 @@ const TestLoginForm = () => {
   );
 };
 
-export default TestLoginForm;
+export default MerchantRegisterForm;
