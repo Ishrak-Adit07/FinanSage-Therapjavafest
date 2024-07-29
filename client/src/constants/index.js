@@ -789,7 +789,7 @@ export const MAJOR_FEATURES = [
       "Track daily income and expense details in respective, relevant wallets",
       "Track relevant expenses in respective budget plans",
       "See overview and details of past activities in graphs and numbers at any time",
-      "Get graphic analysis and periodic reports of your activities"
+      "Get graphic analysis and periodic reports of your activities",
     ],
   },
   {
@@ -803,7 +803,7 @@ export const MAJOR_FEATURES = [
       "Use merchant account to receive payments",
       "Pay your bills and fees every month",
       "Recharge and cash out any time from your FinanSage agent",
-      "Track transactions, utilize graphical and numerical reports"
+      "Track transactions, utilize graphical and numerical reports",
     ],
   },
   {
@@ -814,7 +814,7 @@ export const MAJOR_FEATURES = [
       "Mulit-currency support and currency conversion tools",
       "Convenient tax and interest calculator",
       "Gather knowledge and know about best pratices from latest informative articles",
-      "Know about top-ties and fast-growing industries and business ideas"
+      "Know about top-ties and fast-growing industries and business ideas",
     ],
   },
   {

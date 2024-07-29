@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+import MajorFeatureSubCard from "./MajorFeatureSubCard";
 
 const MajorFeatureCard = ({ name, bgLink, features, onClickAction }) => {
   return (
@@ -11,17 +12,20 @@ const MajorFeatureCard = ({ name, bgLink, features, onClickAction }) => {
             <p>
               <i className="fa-solid fa-user text-3xl bg-purple-200 text-slate-700 px-10 py-20 rounded-lg"></i>
             </p>
-            <p className="text-xl font-bold text-slate-200 p-2 rounded-lg text-center my-2">{name}</p>
-            {true && (
-              <p className="text-center p-6">
-                {features.join(", ")}
+            <p className="text-xl font-bold text-slate-200 p-2 rounded-lg text-center my-2">
+              {name}
+            </p>
+            {false && <p className="text-center p-6">{features.join(", ")}</p>}
+            {
+              <p className="text-center w-full">
+                <MajorFeatureSubCard features={features} />
               </p>
-            )}
+            }
           </div>
         </button>
       </div>
     </div>
-  ); 
+  );
 };
 
 export default MajorFeatureCard;
