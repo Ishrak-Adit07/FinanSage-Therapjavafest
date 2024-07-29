@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import HeroImage from "../assets/images/Profile.jpg";
+import LogoImage from "../assets/images/Kat1NoBg.png";
 import { motion } from "framer-motion";
 
 const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
@@ -32,16 +33,27 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
 
   return (
     <div>
-      <header className="bg-gradient-to-r from-blue-400 to-purple-400 text-white fixed w-full top-0 z-10 rounded-md shadow-md">
+      <header className="bg-transparent text-white fixed w-full top-0 z-10 rounded-md shadow-lg">
         <nav className="flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
-            <Link
-              title="Home"
-              to="/"
-              className="fa-solid fa-house-chimney nav-link"
-            ></Link>
+            {false && (
+              <Link
+                title="Home"
+                to="/"
+                className="fa-solid fa-house-chimney nav-link"
+              ></Link>
+            )}
+            <span className="bg-transparent">
+              <Link title="Home" to="/">
+                <img
+                  src={LogoImage}
+                  alt="Logo"
+                  className="h-8 w-8 bg-transparent object-cover rounded-full bg-slate-200"
+                />
+              </Link>
+            </span>
             <Link title="Home" to="/">
-              <span>FinanSage</span>
+              <span className="text-black text-lg">FinanSage</span>
             </Link>
 
             {user.email && (
@@ -58,7 +70,7 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
           </div>
 
           {user.email ? (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-slate-700">
               <Link
                 title="Profile"
                 to="user/profile"
@@ -86,7 +98,7 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
               ></button>
             </div>
           ) : (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-slate-700">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
