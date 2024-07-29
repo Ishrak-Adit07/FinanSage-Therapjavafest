@@ -3,3 +3,24 @@ CSS styling and responsive styling
 Mobile phone no integration
 Merchant routing 
 Connection to backend
+
+Features:
+
+Wallets
+Track daily income and expense details in respective, relevant wallets 
+Instant overview/details of past activities of certain or all wallet(s)
+Graphical and numerical analyses of past wallet activites
+Currency control in each wallet
+
+Budgets
+Plan budget for a certain purpose in respective, relevant budgets
+Track relevant expenses
+Regular reminders/ Notifications
+
+Be Strategic
+All You Want
+All You Need
+Keep Connected
+
+
+

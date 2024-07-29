@@ -104,7 +104,7 @@ const MerchantRegisterForm = () => {
 
         <p className="text-slate-300 text-center mt-4">
           Already have a merhcant account?
-          <Link to="/login" title="Merchant Login">
+          <Link to="/merchant/login" title="Merchant Login">
             {" "}
             <span className="underline">Log in!</span>
           </Link>

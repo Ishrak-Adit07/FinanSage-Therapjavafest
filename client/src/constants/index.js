@@ -783,26 +783,47 @@ export const FINANSAGE_FEATURES = [
 
 export const MAJOR_FEATURES = [
   {
-    name: "Seamless Management",
-    imageLink: "",
-    features: ["Smart management tools with easiest user experience"],
-  },
-  {
-    name: "Constant Supervision",
-    imageLink: "",
-    features: ["Instant Reports, graphical analysis, detailed History"],
-  },
-  {
-    name: "Advisory Community",
+    name: "Be Strategic",
     imageLink: "",
     features: [
-      "Share knowledge and skills among your own community in FinanCom",
+      "Track daily income and expense details in respective, relevant wallets",
+      "Track relevant expenses in respective budget plans",
+      "See overview and details of past activities in graphs and numbers at any time",
+      "Get graphic analysis and periodic reports of your activities"
     ],
   },
   {
-    name: "Transfer Money",
+    name: "All You Want",
     imageLink: "",
-    features: ["Send or receive money online to/from other FinanSage users."],
+    features: [
+      "Have your own FinanSage account for money transactions",
+      "Connect to your bank accounts to credit/transfer money",
+      "Send money to other FinanSage Users",
+      "Make your payments with FinanSage account",
+      "Use merchant account to receive payments",
+      "Pay your bills and fees every month",
+      "Recharge and cash out any time from your FinanSage agent",
+      "Track transactions, utilize graphical and numerical reports"
+    ],
+  },
+  {
+    name: "All You Need",
+    imageLink: "",
+    features: [
+      "Regular necessary reminders and notifications",
+      "Mulit-currency support and currency conversion tools",
+      "Convenient tax and interest calculator",
+      "Gather knowledge and know about best pratices from latest informative articles",
+      "Know about top-ties and fast-growing industries and business ideas"
+    ],
+  },
+  {
+    name: "Keep Connected",
+    imageLink: "",
+    features: [
+      "FinanCom is your own community to share knowledge and expertise",
+      "Latest economic and market news from News Portal",
+    ],
   },
 ];
 
