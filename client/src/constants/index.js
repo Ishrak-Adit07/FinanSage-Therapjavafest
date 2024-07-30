@@ -1077,3 +1077,26 @@ export const CONNECTION_REQUESTS = [
     username: "tiqbal",
   },
 ];
+
+export const NAVBAR_DROPLISTS = [
+  {
+    header : "Gadgets",
+    elements : ["Wallets", "Budgets", "Reports", "Calculators", "Coinage"]
+  },
+  {
+    header : "Accounts",
+    elements : ["Bank", "FinanSage", "Merchant"]
+  },
+  {
+    header : "Transactions",
+    elements : ["Send Money", "Make Payment", "Pay Bill", "Bank Transfers", "Cash Out"]
+  },
+  {
+    header : "Resource Hub",
+    elements : ["Articles", "Insights"]
+  },
+  {
+    header : "Connect",
+    elements : ["FinanCom", "Market Trends", "News Portal"]
+  },
+]

@@ -6,6 +6,8 @@ import { UserContext } from "../contexts/UserContext";
 import HeroImage from "../assets/images/Profile.jpg";
 import LogoImage from "../assets/images/Kat1NoBg.png";
 import { motion } from "framer-motion";
+import NavbarCard from "../components/Cards/NavbarCard";
+import { NAVBAR_DROPLISTS } from "../constants";
 
 const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
   const handleTargetContact = () => {
@@ -70,27 +72,16 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
           </div>
 
           {user.email ? (
-            <div className="flex items-center gap-2 text-slate-700">
-              <Link
-                title="Profile"
-                to="user/profile"
-                className="fa-solid fa-user nav-link"
-              ></Link>
-              <Link
-                title="Dashboard"
-                to="user/dashboard"
-                className="fa-solid fa-user nav-link"
-              ></Link>
-              <Link
-                title="Wallets"
-                to="user/wallets"
-                className="fa-solid fa-circle-plus nav-link"
-              ></Link>
-              <Link
-                title="Budgets"
-                to="user/budgets"
-                className="fa-solid fa-circle-plus nav-link"
-              ></Link>
+            <div className="flex items-center gap-8 text-slate-700">
+              {NAVBAR_DROPLISTS.map((element, index) => (
+                <NavbarCard
+                  key={index}
+                  header={element.header}
+                  elements={element.elements}
+                  linkTitle={"User Profile"}
+                  linkTo={"/user/profile"}
+                />
+              ))}
               <button
                 title="Log out"
                 onClick={handleLogOut}
