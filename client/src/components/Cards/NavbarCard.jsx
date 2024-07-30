@@ -17,16 +17,20 @@ const NavbarCard = ({ header, elements, linkTitle, linkTo }) => {
 
   return (
     <div className="relative">
-      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <div className="flex items-center cursor-pointer">
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="cursor-pointer"
+      >
+        <div className="flex items-center">
           <h1 className="font-semibold text-left">{header}</h1>
         </div>
         {isHovered && (
           <motion.div
-            className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md"
+            className="absolute left-0 py-2 w-48 bg-white shadow-lg rounded-md"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
