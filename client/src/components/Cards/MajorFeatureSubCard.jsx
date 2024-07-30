@@ -5,8 +5,12 @@ import { motion } from "framer-motion";
 const MajorFeatureSubCard = ({ features }) => {
   const [featureCount, setFeatureCount] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [initialPosition, setInitialPosition] = useState(-100);
+  const [animatePosition, setAnimatePostition] = useState(100);
 
   const handleShowPrevFeatureCount = () => {
+    setInitialPosition(100);
+    setAnimatePostition(-100);
     setIsVisible(false);
     setTimeout(() => {
       setFeatureCount(
@@ -17,6 +21,8 @@ const MajorFeatureSubCard = ({ features }) => {
   };
 
   const handleShowNextFeatureCount = () => {
+    setInitialPosition(-100);
+    setAnimatePostition(100);
     setIsVisible(false);
     setTimeout(() => {
       setFeatureCount((featureCount + 1) % features.length);
@@ -26,7 +32,6 @@ const MajorFeatureSubCard = ({ features }) => {
 
   return (
     <div className="text-slate-200 w-full">
-
       <div
         className="relative overflow-hidden flex flex-wrap mt-6 w-full"
         style={{ height: "100px" }}
@@ -38,8 +43,11 @@ const MajorFeatureSubCard = ({ features }) => {
           <motion.div
             key={featureCount}
             className=""
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -100 }}
+            initial={{ opacity: 0, x: initialPosition }}
+            animate={{
+              opacity: isVisible ? 1 : 0,
+              x: isVisible ? 0 : animatePosition,
+            }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
             {features[featureCount]}
