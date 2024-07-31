@@ -55,7 +55,7 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
               </Link>
             </span>
             <Link title="Home" to="/">
-              <span className="text-black text-lg">FinanSage</span>
+              <span className="text-customGreen text-lg">FinanSage</span>
             </Link>
 
             {user.email && (

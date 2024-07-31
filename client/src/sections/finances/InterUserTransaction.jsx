@@ -13,26 +13,29 @@ const gridSquareVariants = {
 };
 
 const InterUserTransactions = () => {
-  const { user } = useContext(UserContext);
   const { props } = useContext(PropContext);
 
-  const handleFriendTransaction = (e) => {
-    e.preventDefault();
-    console.log(user.userID);
-    console.log(toFriend, amount);
-    setAmount("");
-    setToFriend("");
-    setToUser("");
-    setPin("");
+  const [filteredFriends, setFilteredFriends] = useState(props.friends);
 
-    setError("");
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setToUser(value);
+
+    const filtered = props.friends.filter((friend) =>
+      friend.username.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredFriends(filtered);
+  };
+
+  const handleOptionClick = (friend) => {
+    setToUser(friend.username);
+    setFilteredFriends([]);
   };
 
   const handleUserTransaction = (e) => {
     e.preventDefault();
     console.log(toUser, amount);
     setAmount("");
-    setToFriend("");
     setToUser("");
     setPin("");
 
@@ -41,7 +44,6 @@ const InterUserTransactions = () => {
 
   // Form data states
 
-  const [toFriend, setToFriend] = useState("");
   const [toUser, setToUser] = useState("");
   const [amount, setAmount] = useState();
   const [pin, setPin] = useState("");
@@ -55,7 +57,7 @@ const InterUserTransactions = () => {
       <div className="lg:w-4/5 w-full">
         <motion.div
           variants={gridSquareVariants}
-          className="flex flex-wrap items-center justify-center lg:justify-start w-full"
+          className="flex flex-wrap items-center justify-center w-full"
         >
           <motion.div
             className="w-full lg:w-1/2"
@@ -63,75 +65,35 @@ const InterUserTransactions = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            <h1 className="text-slate-500 text-xl text-left mb-6">
-              Send money to a friend
-            </h1>
-            <form
-              onSubmit={handleFriendTransaction}
-              className="justify-center items-center  text-slate-700"
-            >
-              <select
-                className="input"
-                value={toFriend}
-                onChange={(e) => setToFriend(e.target.value)}
-              >
-                <option value="" disabled>
-                  Select Friend Handle
-                </option>
-                {props.friends.map((frined, index) => (
-                  <option key={index} value={frined.userID}>
-                    {frined.username}
-                  </option>
-                ))}
-              </select>
-
-              <input
-                type="number"
-                placeholder="Amount"
-                className="input"
-                autoFocus
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-              />
-
-              <input
-                type="password"
-                placeholder="Pin"
-                className="input"
-                autoFocus
-                value={pin}
-                onChange={(e) => setPin(e.target.value)}
-              />
-
-              <button type="submit" className="btn">
-                Send
-              </button>
-              {error && <Alert msg={error} />}
-            </form>
-          </motion.div>
-
-          <motion.div
-            className="w-full lg:w-1/2 py-4 lg:p-10"
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-          >
-            <h1 className="text-slate-500 text-xl text-left mb-6">
-              Send money to any user
-            </h1>
             <form
               onSubmit={handleUserTransaction}
               className="justify-center items-center  text-slate-700"
             >
-              <input
-                type="text"
-                placeholder="Receiver Handle"
-                className="input"
-                autoFocus
-                value={toUser}
-                onChange={(e) => setToUser(e.target.value)}
-              />
+              <h1 className="text-slate-500 text-left mb-2">Type Username</h1>
+              <div className="relative w-full">
+                <input
+                  className="input"
+                  value={toUser}
+                  onChange={handleInputChange}
+                  placeholder="Type username"
+                  list="friend-options"
+                />
+                {toUser && filteredFriends.length > 0 && (
+                  <ul className="absolute bg-white w-full p-2 rounded-md shadow-md cursor-pointer">
+                    {filteredFriends.map((friend, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handleOptionClick(friend)}
+                        className="hover:bg-slate-200 px-2"
+                      >
+                        {friend.username}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
+              <h1 className="text-slate-500 text-left mb-2">Type Amount</h1>
               <input
                 type="number"
                 placeholder="Amount"
@@ -141,6 +103,9 @@ const InterUserTransactions = () => {
                 onChange={(e) => setAmount(e.target.value)}
               />
 
+              <h1 className="text-slate-500 text-left mb-2">
+                FinanSage Account Pin
+              </h1>
               <input
                 type="password"
                 placeholder="Pin"
