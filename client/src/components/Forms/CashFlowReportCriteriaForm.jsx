@@ -3,9 +3,10 @@
 import React, { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
-import { REPORT_PERIODS, USER_WALLETS } from "../../constants";
+import { REPORT_PERIODS } from "../../constants";
 import { useNavigate } from "react-router-dom";
 import { PropContext } from "../../contexts/PropContext";
+import SimpleDateInput from "../InputFields/SimpleDateInput";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -19,42 +20,12 @@ const CashFlowReportCriteriaForm = () => {
 
   const [period, setPeriod] = useState("");
   const [selectedWallets, setSelectedWallets] = useState([]);
-  const [selectedDay, setSelectedDay] = useState("");
-  const [selectedMonth, setSelectedMonth] = useState("");
-  const [selectedYear, setSelectedYear] = useState("");
+  const [date, setDate] = useState({
+    day: "",
+    month: "",
+    year: "",
+  });
   const [error, setError] = useState(null);
-
-  const days = Array.from({ length: 31 }, (_, i) => i + 1);
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
-  const currentYear = new Date().getFullYear();
-  const years = Array.from(
-    { length: currentYear - 2023 + 1 },
-    (_, i) => currentYear - i
-  );
-
-  const handleScroll = (e, items, setSelected) => {
-    e.preventDefault();
-    const currentIndex = items.indexOf(setSelected);
-    if (e.deltaY < 0 && currentIndex > 0) {
-      setSelected(items[currentIndex - 1]);
-    } else if (e.deltaY > 0 && currentIndex < items.length - 1) {
-      setSelected(items[currentIndex + 1]);
-    }
-  };
 
   const handleSelectWallet = (walletID) => {
     setSelectedWallets((prevSelected) =>
@@ -66,18 +37,13 @@ const CashFlowReportCriteriaForm = () => {
 
   const handleSubmitCondition = (e) => {
     e.preventDefault();
-    console.log(
-      period,
-      selectedWallets,
-      selectedDay,
-      selectedMonth,
-      selectedYear
-    );
+    console.log(period, selectedWallets, date);
     setPeriod("");
-    setSelectedWallets("");
-    setSelectedDay("");
-    setSelectedMonth("");
-    selectedYear("");
+    setDate({
+      day: "",
+      month: "",
+      year: "",
+    });
     navigate("/user/report/cashFlow/week");
   };
 
@@ -153,59 +119,7 @@ const CashFlowReportCriteriaForm = () => {
                 Select Start Date for Report
               </h1>
 
-              <div className="flex flex-col mt-6">
-                <div className="mb-4">
-                  <label className="block mb-2 text-lg font-medium text-gray-700">
-                    Select Date
-                  </label>
-                  <div className="flex space-x-2">
-                    <select
-                      value={selectedDay}
-                      onChange={(e) => setSelectedDay(e.target.value)}
-                      className="px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="" disabled>
-                        Day
-                      </option>
-                      {days.map((day) => (
-                        <option key={day} value={day}>
-                          {day}
-                        </option>
-                      ))}
-                    </select>
-
-                    <select
-                      value={selectedMonth}
-                      onChange={(e) => setSelectedMonth(e.target.value)}
-                      className="px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="" disabled>
-                        Month
-                      </option>
-                      {months.map((month, index) => (
-                        <option key={index} value={index}>
-                          {month}
-                        </option>
-                      ))}
-                    </select>
-
-                    <select
-                      value={selectedYear}
-                      onChange={(e) => setSelectedYear(e.target.value)}
-                      className="px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="" disabled>
-                        Year
-                      </option>
-                      {years.map((year) => (
-                        <option key={year} value={year}>
-                          {year}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-              </div>
+              <SimpleDateInput date={date} setDate={setDate} />
 
               <button type="submit" className="btn">
                 Generate Report

@@ -16,7 +16,6 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   const [error, setError] = useState(null);
-  const [deleteSuccess, setDeleteSuccess] = useState(null);
 
   useEffect(() => {
     setTimeout(async () => {
@@ -25,12 +24,12 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <section className="layoutSection w-full flex flex-col justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center">
       <h1 className="title text-4xl my-10 text-blue-400">
         Carpe Diem, <span className="text-blue-600">{user.firstName}</span>!
       </h1>
 
-      <div>
+      <div className="w-full">
         {loading && (
           <i className="fa-solid fa-spinner animate-spin text-3xl text-center-block"></i>
         )}
@@ -51,17 +50,15 @@ const Dashboard = () => {
                 headerText={"FinanSage Account Net Balnace Over the Week"}
               />
             </div>
-            <div>
               <RecentCashFlows />
               <WalletAddCashFlow />
               <RecentTransactions />
               <InterUserTransactions />
               <Contact />
-            </div>
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

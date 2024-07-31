@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Alert from "../../messages/Alert";
 import { BANK_ACCOUNTS, REPORT_PERIODS } from "../../constants";
 import { useNavigate } from "react-router-dom";
+import SimpleDateInput from "../InputFields/SimpleDateInput";
 
 const gridSquareVariants = {
   hidden: { opacity: 0 },
@@ -20,21 +21,22 @@ const TransactionReportCriteriaForm = () => {
 
   const handleSubmitCondition = (e) => {
     e.preventDefault();
-    console.log(period, account, userID, startDate);
+    console.log(period, account, userID, date);
     setPeriod("");
     setAccount("");
     setUserID("");
-    setStartDate("");
     navigate("/user/report/transactions/user");
   };
-
-  // Error state
-  const [error, setError] = useState(null);
 
   const [period, setPeriod] = useState("");
   const [account, setAccount] = useState("");
   const [userID, setUserID] = useState("");
-  const [startDate, setStartDate] = useState("");
+  const [date, setDate] = useState({
+    day: "",
+    month: "",
+    year: "",
+  });
+  const [error, setError] = useState(null);
 
   return (
     <div className="layoutSection text-slate-200 pb-4 flex flex-col items-center my-40">
@@ -125,14 +127,7 @@ const TransactionReportCriteriaForm = () => {
                 Select Start Date for Report
               </h1>
 
-              <input
-                type="text"
-                placeholder="Start Date"
-                className="input"
-                autoFocus
-                value={startDate}
-                onChange={(e) => setStartDate(e.target.value)}
-              />
+              <SimpleDateInput date={date} setDate={setDate} />
 
               <button type="submit" className="btn">
                 Generate Report

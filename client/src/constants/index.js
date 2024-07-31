@@ -2,6 +2,8 @@ export const PROJECT_NAME = "FinanSage";
 
 export const PROJECT_NAME_CAP = "FINAN_SAGE";
 
+export const PROJECT_LAUNCH_YEAR = 2023;
+
 export const HERO_CONTENT = "This is FinanSage, your personal finance manager";
 
 export const USER_WALLETS = [
