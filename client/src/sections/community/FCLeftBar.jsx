@@ -7,8 +7,16 @@ const FCLeftBar = () => {
 
   const { user } = useContext(UserContext);
 
-  const goToFinanSage = () => {
+  const goToHome = () => {
+    navigate("/");
+  };
+
+  const goToDashboard = () => {
     navigate("/user/dashboard");
+  };
+
+  const goToProfile = () => {
+    navigate("/user/profile");
   };
 
   return (
@@ -23,14 +31,14 @@ const FCLeftBar = () => {
       </div>
 
       <div className="my-6 pb-10">
-        <button className="leftBarBtn" onClick={goToFinanSage}>
-          <i className="fa-solid fa-house-chimney mr-2"></i>FinanSage
+        <button className="leftBarBtn" onClick={goToHome}>
+          <i className="fa-solid fa-house-chimney mr-2"></i>Home
         </button>
-        <button className="leftBarBtn" onClick={goToFinanSage}>
-          <i className="fa-solid fa-house-chimney mr-2"></i>FinanSage
+        <button className="leftBarBtn" onClick={goToProfile}>
+          <i className="fa-solid fa-house-chimney mr-2"></i>Profile
         </button>
-        <button className="leftBarBtn" onClick={goToFinanSage}>
-          <i className="fa-solid fa-house-chimney mr-2"></i>FinanSage
+        <button className="leftBarBtn" onClick={goToDashboard}>
+          <i className="fa-solid fa-house-chimney mr-2"></i>Dashboard
         </button>
       </div>
     </div>

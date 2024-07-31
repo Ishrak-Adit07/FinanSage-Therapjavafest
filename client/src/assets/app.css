@@ -119,7 +119,7 @@ body,
 
 @layer components {
   .nav-link {
-    @apply w-10 h-5 rounded-md hover:bg-indigo-600 grid place-items-center;
+    @apply w-10 h-5 px-2 rounded-md hover:bg-slate-300 grid place-items-center;
   }
 
   .card {
