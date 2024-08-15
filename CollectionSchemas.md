@@ -70,3 +70,47 @@
     "datetime": "automatic?",
   }
   ```
+
+### Banks
+
+- **Fields:**
+  ```json
+  {
+    "bankName": "Gringotts",
+    "bankID": "9392829392",
+  }
+  ```
+
+### Friends
+
+- **Fields:**
+  ```json
+  {
+    "userID": "9392829392",
+    "friends": ["9392829392", "9392829392", "9392829392", "9392829392", "9392829392",],
+  }
+  ```
+
+### FinanSage Account
+
+- **Fields:**
+  ```json
+  {
+    "userID": "9392829392",
+    "Balance": 200.00,
+  }
+  ```
+
+### Bank Accounts
+
+- **Fields:**
+  ```json
+  {
+    "userID": "9392829392",
+    "bankName": "Gringotts",
+    "bankID": "9392829392",
+    "Balance": 200.00,
+  }
+  ```
+
+
