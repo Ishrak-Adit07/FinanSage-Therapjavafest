@@ -85,6 +85,12 @@
     "userID": "user_id"
   }
   ```
+- **Response:**
+  ```json
+  {
+    "userID": "user_id"
+  }
+  ```
 
 ## Wallet
 
@@ -94,6 +100,12 @@
 - **Method:** `GET`
 - **Parameters:**
   - `userID` (string): The ID of the User
+- **Response:**
+  ```json
+  {
+    "wallets": [],
+  }
+  ```
 
 ### Get Wallet By ID
 
@@ -102,6 +114,12 @@
 - **Parameters:**
   - `userID` (string): The ID of the User
   - `walletID` (string): The id of the wallet
+- **Response:**
+  ```json
+  {
+    "wallets": [],
+  }
+  ```
 
 ### Create Wallet
 
