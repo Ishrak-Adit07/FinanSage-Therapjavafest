@@ -133,6 +133,12 @@
     "initialBalance": 100
   }
   ```
+- **Response:**
+  ```json
+  {
+    "walletID": "3920182893",
+  }
+  ```
 
 ### Edit Wallet Name
 
@@ -164,6 +170,12 @@
   ```json
   {
     "walletID": "Wallet ID"
+  }
+  ```
+- **Response:**
+  ```json
+  {
+    "walletID": "3920182893",
   }
   ```
 
