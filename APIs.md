@@ -10,9 +10,35 @@
   ```json
   {
     "email": "jonsnow@stark.com",
-    "password": "jonsnow"
+    "password": "jonsnow",
+    "username": "jonsnow",
+    "phone": "01234567891",
+    "firstName": "Jon",
+    "lastName": "Snow"
   }
   ```
+- **Response:**
+  ```json
+  {
+    "email": "jonsnow@stark.com",
+    "name": "Leisel Merminger",
+    "firstName": "Leisel",
+    "lastName": "Merminger",
+    "username": "leisel",
+    "userID": "87892543",
+    "friends": [],
+    "wallets": [],
+    "budgets": [],
+    "accounts": [],
+    "currencies": [],
+    "taxRates": [],
+    "banks": [],
+    "fsAccount": {
+      "username": "leisel",
+      "accID": "87892543",
+      "balance": 3487.95
+    }
+  }
 
 ### Login User
 
@@ -23,6 +49,29 @@
   {
     "email": "jonsnow@stark.com",
     "password": "jonsnow"
+  }
+  ```
+- **Response:**
+  ```json
+  {
+    "email": "jonsnow@stark.com",
+    "name": "Leisel Merminger",
+    "firstName": "Leisel",
+    "lastName": "Merminger",
+    "username": "leisel",
+    "userID": "87892543",
+    "friends": [],
+    "wallets": [],
+    "budgets": [],
+    "accounts": [],
+    "currencies": [],
+    "taxRates": [],
+    "banks": [],
+    "fsAccount": {
+      "username": "leisel",
+      "accID": "87892543",
+      "balance": 3487.95
+    }
   }
   ```
 
@@ -107,6 +156,7 @@
 - **Endpoint:** `http://localhost:4000/api/user/cashflow/get/:userID`
 - **Method:** `GET`
 - **Parameters:**
+
   - `userID` (string): The ID of the User
 
   ### Get All Recent CashFlow Of A User
@@ -138,6 +188,7 @@
   ```
 
 ### Get Recent CashFlows Of A User
+
 - **Function:** 50-100 latest cashflows of the user
 - **Endpoint:** `http://localhost:4000/api/user/cashflow/get/recent/:userID`
 - **Method:** `GET`
