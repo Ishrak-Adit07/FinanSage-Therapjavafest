@@ -41,3 +41,32 @@
     "Balance": 23482.55,
   }
   ```
+
+### Cashflows
+
+- **Fields:**
+  ```json
+  {
+    "cashflowID": "38298392",
+    "walletID": "38298392",
+    "userID": "9392829392",
+    "type": "Income/Expense",
+    "purpose": "Salary/Grocery",
+    "Amount": 200.00,
+    "datetime": "automatic?",
+  }
+  ```
+
+### Transactions
+
+- **Fields:**
+  ```json
+  {
+    "transactionID": "38298392",
+    "bankID": "38298392",
+    "userID": "9392829392",
+    "type": "Credit/Withdraw",
+    "Amount": 200.00,
+    "datetime": "automatic?",
+  }
+  ```
