@@ -26,18 +26,18 @@
     "lastName": "Merminger",
     "username": "leisel",
     "userID": "87892543",
-    "friends": [],
+    <!-- "friends": [], -->
     "wallets": [],
     "budgets": [],
-    "accounts": [],
+    <!-- "accounts": [], -->
     "currencies": [],
     "taxRates": [],
     "banks": [],
-    "fsAccount": {
+    <!-- "fsAccount": {
       "username": "leisel",
       "accID": "87892543",
       "balance": 3487.95
-    }
+    } -->
   }
 
 ### Login User
@@ -60,20 +60,19 @@
     "lastName": "Merminger",
     "username": "leisel",
     "userID": "87892543",
-    "friends": [],
+    <!-- "friends": [], -->
     "wallets": [],
     "budgets": [],
-    "accounts": [],
+    <!-- "accounts": [], -->
     "currencies": [],
     "taxRates": [],
     "banks": [],
-    "fsAccount": {
+    <!-- "fsAccount": {
       "username": "leisel",
       "accID": "87892543",
       "balance": 3487.95
-    }
+    } -->
   }
-  ```
 
 ### Delete User
 
