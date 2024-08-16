@@ -354,3 +354,10 @@
 - **Form provided to send mail directly from FinanSage Application**
 
 
+## Extra Features
+
+### Responsiveness
+- **Responsive to different screen sizes**
+- **Implemented with tailwindcss**
+
+
