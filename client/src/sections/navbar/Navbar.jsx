@@ -2,12 +2,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../contexts/UserContext";
+import { UserContext } from "../../contexts/UserContext";
 import HeroImage from "../assets/images/Profile.jpg";
 import LogoImage from "../assets/images/Kat1NoBg.png";
 import { motion } from "framer-motion";
-import NavbarCard from "../components/Cards/NavbarCard";
-import { NAVBAR_DROPLISTS } from "../constants";
+import NavbarCard from "../../components/Cards/NavbarCard";
+import { NAVBAR_DROPLISTS } from "../../constants";
 
 const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
   const handleTargetContact = () => {

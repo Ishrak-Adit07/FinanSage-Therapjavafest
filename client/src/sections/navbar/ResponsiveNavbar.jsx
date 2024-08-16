@@ -2,14 +2,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../contexts/UserContext";
-import HeroImage from "../assets/images/Profile.jpg";
-import LogoImage from "../assets/images/Kat1NoBg.png";
+import { UserContext } from "../../contexts/UserContext";
+import HeroImage from "../../assets/images/Profile.jpg";
+import LogoImage from "../../assets/images/Kat1NoBg.png";
 import { motion } from "framer-motion";
-import NavbarCard from "../components/Cards/NavbarCard";
-import { NAVBAR_DROPLISTS } from "../constants";
+import NavbarCard from "../../components/Cards/NavbarCard";
+import { NAVBAR_DROPLISTS } from "../../constants";
+import SideNavigation from "./SideNavigation";
 
-const ResponsiveNavbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
+const ResponsiveNavbar = ({
+  scrollToAboutMe,
+  scrollToProjects,
+  scrollToContact,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleTargetContact = () => {
     if (scrollToContact.current) {
