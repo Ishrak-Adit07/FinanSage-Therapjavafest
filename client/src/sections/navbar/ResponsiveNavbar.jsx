@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import NavbarCard from "../../components/Cards/NavbarCard";
 import { NAVBAR_DROPLISTS } from "../../constants";
 import SideNavigation from "./SideNavigation";
+import SideNavbarCard from "../../components/Cards/SideNavbarCard";
 
 const ResponsiveNavbar = ({
   scrollToAboutMe,
@@ -118,23 +119,35 @@ const ResponsiveNavbar = ({
           </div>
 
           {/* Menu Icon for smaller screens */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center items-center gap-8 text-slate-700">
             <button
               onClick={toggleMenu}
               className="text-slate-700 focus:outline-none"
             >
               <i className="fa-solid fa-bars text-xl"></i>
             </button>
+
+            <button
+              title="Log out"
+              onClick={handleLogOut}
+              className="fa-solid fa-right-from-bracket nav-link"
+            ></button>
           </div>
         </nav>
 
         {/* Dropdown Menu for smaller screens */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white text-slate-700 shadow-lg rounded-md mt-2 p-4">
+          <motion.div
+            className="lg:hidden bg-white text-slate-700 shadow-lg rounded-md p-4 w-1/2 absolute right-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
             {user.email ? (
               <>
                 {NAVBAR_DROPLISTS.map((element, index) => (
-                  <NavbarCard
+                  <SideNavbarCard
                     key={index}
                     header={element.header}
                     elements={element.elements}
@@ -142,13 +155,6 @@ const ResponsiveNavbar = ({
                     linkTo={"/user/profile"}
                   />
                 ))}
-                <button
-                  title="Log out"
-                  onClick={handleLogOut}
-                  className="fa-solid fa-right-from-bracket nav-link"
-                >
-                  Log out
-                </button>
               </>
             ) : (
               <div className="flex flex-col gap-4">
@@ -168,7 +174,7 @@ const ResponsiveNavbar = ({
                 </Link>
               </div>
             )}
-          </div>
+          </motion.div>
         )}
       </header>
     </div>
