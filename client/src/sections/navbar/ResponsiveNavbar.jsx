@@ -8,7 +8,6 @@ import LogoImage from "../../assets/images/Kat1NoBg.png";
 import { motion } from "framer-motion";
 import NavbarCard from "../../components/Cards/NavbarCard";
 import { NAVBAR_DROPLISTS } from "../../constants";
-import SideNavigation from "./SideNavigation";
 import SideNavbarCard from "../../components/Cards/SideNavbarCard";
 
 const ResponsiveNavbar = ({
@@ -120,12 +119,23 @@ const ResponsiveNavbar = ({
 
           {/* Menu Icon for smaller screens */}
           <div className="lg:hidden flex items-center items-center gap-8 text-slate-700">
-            <button
-              onClick={toggleMenu}
-              className="text-slate-700 focus:outline-none"
-            >
-              <i className="fa-solid fa-bars text-xl"></i>
-            </button>
+            {!isMenuOpen && (
+              <button
+                onClick={toggleMenu}
+                className="text-slate-700 focus:outline-none"
+              >
+                <i className="fa-solid fa-bars text-xl"></i>
+              </button>
+            )}
+
+            {isMenuOpen && (
+              <button
+                onClick={toggleMenu}
+                className="text-slate-300 focus:outline-none"
+              >
+                <i className="fa-solid fa-bars text-xl"></i>
+              </button>
+            )}
 
             <button
               title="Log out"

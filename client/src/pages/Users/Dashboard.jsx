@@ -50,12 +50,16 @@ const Dashboard = () => {
                 headerText={"FinanSage Account Net Balnace Over the Week"}
               />
             </div>
-            <div className="w-full">
-              <RecentCashFlows />
+            <RecentCashFlows />
+            <div className="w-3/4 lg:w-full">
+              <WalletAddCashFlow />
             </div>
-            <WalletAddCashFlow />
             <RecentTransactions />
-            <InterUserTransactions />
+
+            <div className="w-3/4 lg:w-full">
+              <InterUserTransactions />
+            </div>
+
             <Contact />
           </div>
         )}

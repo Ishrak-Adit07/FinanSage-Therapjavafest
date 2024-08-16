@@ -56,7 +56,7 @@ function SimpleLineChart({ headerText, subHeaderText }) {
       style={{ width: "100%", height: 500 }}
       className="flex flex-col justify-center items-center my-20"
     >
-      <h1 className="text-2xl mb-20 text-slate-500">{headerText}</h1>
+      <h1 className="text-2xl mb-20 text-slate-500 text-center">{headerText}</h1>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
