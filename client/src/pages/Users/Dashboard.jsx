@@ -37,10 +37,10 @@ const Dashboard = () => {
         {!loading && (
           <div className="w-full flex flex-col items-center justify-center">
             <div className="w-full flex flex-wrap items-center justify-center mb-40 mt-10">
-              <div className="w-1/2">
+              <div className="lg:w-1/2">
                 <BrushBarChart headerText={"Monthly Cashflows' Overview"} />
               </div>
-              <div className="w-1/2">
+              <div className="lg:w-1/2">
                 <BrushBarChart headerText={"Monthly Transactions' Overview"} />
               </div>
             </div>
@@ -50,11 +50,13 @@ const Dashboard = () => {
                 headerText={"FinanSage Account Net Balnace Over the Week"}
               />
             </div>
+            <div className="w-full">
               <RecentCashFlows />
-              <WalletAddCashFlow />
-              <RecentTransactions />
-              <InterUserTransactions />
-              <Contact />
+            </div>
+            <WalletAddCashFlow />
+            <RecentTransactions />
+            <InterUserTransactions />
+            <Contact />
           </div>
         )}
       </div>

@@ -32,7 +32,7 @@ const RecentCashFlows = () => {
             >
               {true && (
                 <CashFlowDocCard
-                  className="w-full"
+                  className="lg:w-full"
                   id={cashFlow.id}
                   walletName={cashFlow.wallet.name}
                   amount={cashFlow.amount}
