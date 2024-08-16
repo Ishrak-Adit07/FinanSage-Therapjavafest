@@ -2,8 +2,8 @@
 import React, { useContext, useRef } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { UserContext } from '../contexts/UserContext';
-import Navbar from '../sections/Navbar';
 import Footer from '../sections/Footer';
+import ResponsiveNavbar from '../sections/ResponsiveNavbar';
 
 const Layout = () => {
 
@@ -55,7 +55,7 @@ const Layout = () => {
 
         </header>}
 
-        <Navbar scrollToAboutMe={scrollToAboutMe} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}/>
+        <ResponsiveNavbar scrollToAboutMe={scrollToAboutMe} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}/>
 
         <main className="pt-16 items-center w-full h-full">
 

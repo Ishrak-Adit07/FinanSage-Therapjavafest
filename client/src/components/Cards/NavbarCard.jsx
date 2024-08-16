@@ -27,7 +27,7 @@ const NavbarCard = ({ header, elements, linkTitle, linkTo }) => {
         </div>
         {isHovered && (
           <motion.div
-            className="absolute left-0 py-2 w-48 bg-white shadow-lg rounded-md"
+            className="absolute left-0 py-2 w-48 bg-white shadow-lg rounded-md z-30"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             transition={{ duration: 1 }}

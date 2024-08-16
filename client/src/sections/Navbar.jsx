@@ -36,7 +36,7 @@ const Navbar = ({ scrollToAboutMe, scrollToProjects, scrollToContact }) => {
   return (
     <div>
       <header className="bg-transparent text-white fixed w-full top-0 z-20 rounded-md shadow-lg">
-        <nav className="flex items-center justify-between p-4">
+        <nav className="flex justify-between p-4">
           <div className="flex items-center gap-2">
             {false && (
               <Link
