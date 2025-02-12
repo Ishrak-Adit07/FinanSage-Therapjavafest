@@ -36,7 +36,7 @@ const NavbarCard = ({ header, elements, linkTitle, linkTo }) => {
           >
             {elements.map((element, index) => (
               <p key={index} className="p-2 hover:bg-gray-200">
-                <Link title={linkTitle} to={linkTo} className="px-4">
+                <Link title={linkTitle[index]} to={linkTo[index]} className="px-4">
                   {element}
                 </Link>
               </p>

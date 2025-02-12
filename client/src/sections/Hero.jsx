@@ -30,7 +30,7 @@ const Hero = ({ scrollToContact }) => {
   // };
 
   return (
-    <div className="text-slate-200 px-4 lg:px-20 lg:py-40">
+    <div className="text-slate-200 px-4 lg:px-10 lg:py-40">
       <motion.div
         variants={gridSquareVariants}
         className="flex flex-wrap items-center lg:justify-start"
@@ -78,28 +78,30 @@ const Hero = ({ scrollToContact }) => {
           <div className="bg-blue-200 rounded-xl shadow-md flex flex-col pb-4 pr-4 sm:ml-4 md:ml-10">
             <div className="bg-gradient-to-r from-blue-400 to-purple-400 text-slate-200 p-4 rounded-lg shadow-md w-full">
               <div>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-blue-200 rounded-xl shadow-md flex flex-col pb-4 pr-4 sm:ml-10 lg:ml-20">
+          {/* <div className="bg-blue-200 rounded-xl shadow-md flex flex-col pb-4 pr-4 sm:ml-10 lg:ml-20">
             <div className="bg-gradient-to-r from-blue-400 to-purple-400 text-slate-200 p-4 rounded-lg shadow-md w-full">
               <div>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
-                <p>Harry did you put your name in the goblet of fire?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
               </div>
             </div>
-          </div>
+          </div>*/}
         </motion.div>
       </motion.div>
     </div>

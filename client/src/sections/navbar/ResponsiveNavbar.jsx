@@ -11,8 +11,6 @@ import { NAVBAR_DROPLISTS } from "../../constants";
 import SideNavbarCard from "../../components/Cards/SideNavbarCard";
 
 const ResponsiveNavbar = ({
-  scrollToAboutMe,
-  scrollToProjects,
   scrollToContact,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,8 +81,8 @@ const ResponsiveNavbar = ({
                     key={index}
                     header={element.header}
                     elements={element.elements}
-                    linkTitle={"User Profile"}
-                    linkTo={"/user/profile"}
+                    linkTitle={element.linkTitles}
+                    linkTo={element.linkTo}
                   />
                 ))}
                 <button
@@ -161,8 +159,8 @@ const ResponsiveNavbar = ({
                     key={index}
                     header={element.header}
                     elements={element.elements}
-                    linkTitle={"User Profile"}
-                    linkTo={"/user/profile"}
+                    linkTitle={element.linkTitles}
+                    linkTo={element.linkTo}
                   />
                 ))}
               </>
